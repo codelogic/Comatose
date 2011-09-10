@@ -17,6 +17,8 @@ This project includes several 3rd party libraries listed here:
 * [Cufon](http://github.com/sorccu/cufon)
 * [jQuery](http://jquery.com/)
 * [less.js](https://github.com/cloudhead/less.js)
+* [Golden-Grid-System](http://github.com/jonikorpi/Golden-Grid-System)
+* [html5.js](http://code.google.com/p/html5shim/)
 
 ## The MIT License
 
