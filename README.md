@@ -7,9 +7,9 @@ http://www.paulrohde.com/tags/comatose
 
 ### Project Structure
 
-* *html* - full html template and styling. Wordpress breaks everything up and it's hard to get a contigous look at the document structure. Plus, this might allow the theme to be ported to other platforms at some point.
-* *theme* - wordpress development version of the theme. Not optimized for speed.
-* *optimized* - release version of the theme. CSS in LESS files is compiled, javascript minified etc.
+* **html** - full html template and styling. Wordpress breaks everything up and it's hard to get a contigous look at the document structure. Plus, this might allow the theme to be ported to other platforms at some point.
+* **theme** - wordpress development version of the theme. Not optimized for speed.
+* **optimized** - release version of the theme. CSS in LESS files is compiled, javascript minified etc.
 
 ### The MIT License
 
