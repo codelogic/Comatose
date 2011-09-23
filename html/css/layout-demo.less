@@ -1,8 +1,53 @@
 @import "normalize";
 
 /* main color definitions */
+@red:               #9d261d;
+@orange:            #f89406;
+@yellow:            #ffc40d;
+@green:             #46a546;
+@blue:              #049CDB;
+@purple:            #7a43b6;
+@pink:              #c3325f;
 
 @primary-background: #ffffff;
 @primary-foreground: #353535;
 @primary-accent: #b00000;
 
+@linkColor: #0069d6;
+@linkColorHover: darken(@linkColor, 15);
+
+@basefont: 13px;
+@baseline: 18px;
+
+
+body 
+{
+	background: @primary-background;
+}
+
+/* Table */
+#data-table {
+	border: none; /* Turn off all borders */
+	border-top: 1px solid #ccc;
+	width: 540px;
+}
+#data-table caption {
+	color: #545454;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+	margin: 0 0 20px 0;
+	padding: 0;
+	text-align: center;
+}
+#data-table thead {
+	background: #f0f0f0;
+}
+#data-table th, 
+#data-table td {
+	border: none; /* Turn off all borders */
+	border-bottom: 1px solid #ccc;
+	margin: 0;
+	padding: 10px;
+	text-align: left;	
+}
