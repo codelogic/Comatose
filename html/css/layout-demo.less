@@ -49,96 +49,17 @@ body {
 
 @section-color: #808080;
 
-@line: 20;
 @column: 100% / 18;
-@font-size: 16;
-@em:@font-size*1em;
+@size: 14px;
+@line: 18px;
+
+body {
+	font-size: @size;
+	line-height: @line;
+}
 
 section, header, footer { 
 	background: @section-color;
-}
-
-.clear-fix
-{
-	clear: both;
-}
-
-section, header, footer {
-	margin: 0 @column;
-}
-
-header, footer {
-	.clear-fix;
-}
-
-/* GGS */
-
-body {
-	/* 16px / 24px */
-	font-size: @font-size / 16 * 1em; 
-	line-height: @line / @em;
-}
-
-.small {
-	/* 13px / 18px */
-	font-size: (@font-size*0.8125) / @em;
-	line-height: (@line*0.75) / (@font-size*0.8125) * 1em;
-}
-
-.normal, h3 {
-	/* 16px / 24px */
-	font-size: @font-size / @em;
-	line-height: @line / @em; /* 24 */
-}
-
-.large, h2, h1 {
-	/* 26 / 36px */
-	font-size: 26 / @em;
-	line-height: (@line*1.5) / 26 * 1em;
-}
-
-.huge {
-	/* 42px / 48px */
-	font-size: 42 / @em;
-	line-height: (@line*2) / 42 * 1em;
-}
-
-.massive {
-	/* 68px / 72px */
-	font-size: 68 / @em;
-	line-height: (@line*3) / 68 * 1em;
-}
-
-.gigantic {
-	/* 110px / 120px */
-	font-size: 110 / @em;
-	line-height: (@line*5) / 110 * 1em;
-}
-
-
-/*
-*
-*  Four-column grid active
-*  ----------------------------------------
-*  Margin   | #  1   2   3   4   |   Margin
-*  5.55555% | %  25  50  75  100 | 5.55555%
-*
-*/
-
-header, footer, .content, .sidebar {
-	margin: 0 @column;
-}
-
-h1, h2 {
-	margin: (24/26*1em) 0 (36/26*1em);
-}
-
-h2 {
-	font-weight: normal;
-}
-
-h3 {
-	margin: (24/@em) 0 (24/@em);
 }
 
 /*
@@ -146,177 +67,95 @@ h3 {
 *  Note: box-sizing will not work in IE6-8
 */
 
-.wrapper, .content, .sidebar {
-	padding: 0 (@line/2)/@em;
+.wrapper {
+	padding: 0 (@line - @size);
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 		 -o-box-sizing: border-box;
 			box-sizing: border-box;
 }
 
-
-/*
-*
-*  Fixes for IE6-8
-*  http://jonikorpi.com/leaving-old-IE-behind/
-*
-*/
-
-.ie body {
-	width: 640/@em;
-	margin: 0 auto;
-	font-size: (@font-size + 1) / @em;
+.clear-fix
+{
+	clear: both;
 }
 
-.ie h1 {
-	.huge();
-	margin: (48/42*1em) 0 (24/42*1em);
+/* header and footer span the page margins */
+#page-header {
+	.clear-fix;
 }
 
-/* @media screen and (min-width: 640px) */
-@media screen and (min-width: 40em) {
+/* At level A, there is only margining for the sections */
+#page-content, 
+#page-sidebar {
 	
-	body {
-		/* Zoom baseline grid to 17/16 = 1.0625 */
-		font-size: (@font-size + 1) / @em;
-	}
-	
-	h1 {
-		.huge();
-		margin: (48/42*1em) 0 (24/42*1em);
-	}
-	
+	.wrapper;
 }
 
+/* header and footer span the page margins */
+#page-footer {
+	.clear-fix;
+}
 
-/*
-*
-*  Eight-column grid active
-*  ----------------------------------------------------------------------
-*  Margin   | #  1     2     3     4     5     6     7     8   |   Margin
-*  5.55555% | %  12.5  25.0  37.5  50.0  62.5  75.0  87.5  100 | 5.55555%
-*	
-*
-*/
-
-/* @media screen and (min-width: 720px) */
-@media screen and (min-width: 45em) {
-	
-	body {
-		/* Reset baseline grid to 16/16 = 1 */
-		font-size: (@font-size) / @em;
+/* 4 grid */
+@media screen and (min-width: 640px) {
+	#page-content, 
+	#page-sidebar  {
+		margin: 0 @column/2;
 	}
 	
-	#twoway .wrapper {
-		float: left;
+	#page-sidebar section {
 		width: 50%;
-	}
-	
-}
-
-
-/* @media screen and (min-width: 888px) */
-@media screen and (min-width: 55.5em) {
-	
-	body {
-		/* Zoom baseline grid to 17/16 = 1.0625 */
-		font-size: (@font-size + 1) / @em;
+		float: left;
 	}
 }
 
-
-/* @media screen and (min-width: 984px) */
-@media screen and (min-width: 61.5em) {
-	
-	body {
-		/* Reset baseline grid to 16/16 = 1.0 */
-		font-size: (@font-size) / @em; 
-	}
-	
-	header, #twoway {
-		margin: 0 @column*3;
-	}
+/* 8 grid */
+@media screen and (min-width: 720px) {
 
 }
 
-
-/* @media screen and (min-width: 1200px) */
-@media screen and (min-width: 75em) {
-	
-	body {
-		/* Zoom baseline grid to 17/16 = 1.0625 */
-		font-size: (@font-size + 1) / @em;
+@media screen and (min-width: 888px) {
+	#page-content, 
+	#page-sidebar  {
+		margin: 0 @column;
 	}
-	
 }
 
-
-/* @media screen and (min-width: 1392px) */
-@media screen and (min-width: 87em) {
-	
-	body {
-		/* Reset baseline grid to 16/16 = 1.0 */
-		font-size: (@font-size) / @em;
-	}
-	
-	header, #twoway {
-		margin: 0 @column*5;
-	}
-	
-}
-
-
-/* @media screen and (min-width: 1680px) */
-@media screen and (min-width: 105em) {
-	
-	body {
-		/* Zoom baseline grid to 17/16 = 1.0625 */
-		font-size: (@font-size + 1) / @em;
-	}
-	
-}
-
-
-/*
-*
-*  Sixteen-column grid active
-*  ----------------------------------------------------------------------------------------------------------------------
-*  Margin   | #  1     2     3     4     5     6     7     8     9     10    11    12    13    14    15    16  |   Margin
-*  5.55555% | %  6.25  12.5  18.75 25.0  31.25 37.5  43.75 50.0  56.25 62.5  68.75 75.0  81.25 87.5  93.75 100 | 5.55555%
-*	
-*
-*/
-
-/* @media screen and (min-width: 1872px) */
-@media screen and (min-width: 117em) {
-	
-	header, #twoway {
-		margin: 0 @column*1;
-	}
-	
-	header .wrapper {
-		width: 37.5%;
-		margin-left: 25%;
-	}
-	
-	#twoway .wrapper {
+@media screen and (min-width: 984px) {
+	#page-sidebar section {
 		width: 25%;
+		float: left;
 	}
-	
-	#twoway .wrapper:first-child {
-		margin-left: 25%;
-	}
-	
 }
 
-
-/* @media screen and (min-width: 2080px) */
-@media screen and (min-width: 130em) {
-
-	body {
-		/* Zoom baseline grid to 18/16 = 1.125 */
-		font-size: (@font-size + 2) / @em;
-		max-width: 2560/em;
+@media screen and (min-width: 1200px) {
+	#page-content {
+		float: left;
+		width: @column*12;
+		margin: 0 0 0 @column;
 	}
 	
+	#page-sidebar {
+		float: right;
+		width:  @column*4;
+		margin: 0 @column 0 0;
+	}
+	
+	#page-sidebar section {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1392px) {
+}
+
+@media screen and (min-width: 1680px) {
+}
+
+/* 16 column grid */
+@media screen and (min-width: 1872px) {
+}
+
+@media screen and (min-width: 2080px) {
 }
