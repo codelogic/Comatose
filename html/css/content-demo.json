@@ -1,20 +1,5 @@
 @import "layout";
-
-/* main color definitions */
-@red:               #9d261d;
-@orange:            #f89406;
-@yellow:            #ffc40d;
-@green:             #46a546;
-@blue:              #049CDB;
-@purple:            #7a43b6;
-@pink:              #c3325f;
-
-@primary-background: #fcfbfb;
-@primary-foreground: #303030;
-@primary-accent: #b00000;
-
-@linkColor: #808080;
-@linkColorHover: darken(@linkColor, 15);
+@import "variables";
 
 @header-size: 14px;
 @header-foreground: #202020;
@@ -23,9 +8,8 @@
 body {
 	background: @primary-background;
 	color: @primary-foreground;
-	font-size: @size;
-	line-height: @line;
-	font-family: Verdana, 'BitStream vera Sans', Helvetica, sans-serif;
+	
+	#font.sans-serif();
 }
 
 
@@ -33,14 +17,17 @@ body {
 
 a {
 	color: @linkColor;
-}
-a:hover,
-a:visited:hover {
-	color: @linkColorHover;
-	
-}
-a:visited {
-	color: @linkColor;
+	text-decoration: none;
+	line-height: inherit;
+	font-weight: inherit;
+	&:hover,
+	&:visited:hover {
+		color: @linkColorHover;
+		text-decoration: underline;
+	}
+	&:visited {
+		color: @linkColor;
+	}
 }
 
 
@@ -48,105 +35,124 @@ a:visited {
 
 p {
 	max-width: 700px;
-	font-size: @size;
-	margin-top: @line * 0.5;
-	margin-bottom: @line * 0.5;
-	line-height: @line;
-}
-p.right {
-	margin-left: auto;
-	text-align: right;
-}
-p.center {
-	margin: 0 auto;
-	text-align: center;
-}
-p.justify {
-	width: 100%;
-	text-align: justify;
+	font-size: @basefont;
+	margin-top: @baseline * 0.5;
+	margin-bottom: @baseline * 0.5;
+	line-height: @baseline;
+	
+	&.right {
+		margin-left: auto;
+		text-align: right;
+	}
+	&.center  {
+		margin: 0 auto;
+		text-align: center;
+	}
+	&.justify {
+		width: 100%;
+		text-align: justify;
+	}
 }
 
 /* UL and OL lists */
-
 ul, ol 
 {
-	margin-left: @line + 3px;
+	margin-left: @baseline + 3px;
+	
+	&.unstyled {
+		margin-left: 0;
+		list-style-type:none;
+	}
 }
 
 ul ul, ul ol, ol ol {
-	margin-left: @line;
+	margin-left: @baseline;
 }
 
 /* Images */
 figure, img {
 	max-width: 100%;
-	margin: (@line - @size) @size (@line - @size) auto;
+	margin: (@baseline - @basefont) @basefont (@baseline - @basefont) auto;
+	
+	&.right {
+		margin-left: auto;
+		margin-right: 0;
+		display: block;
+	}
+	&.center {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	&.fill {
+		width: 100%;
+	}
 }
 
-figure.right, img.right {
-	margin-left: auto;
-	margin-right: 0;
-	display: block;
-}
-figure.center, img.center {
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-}
-
-figure.fill, img.fill {
-	width: 100%;
-}
-
-p img, p figure {
+p img, 
+p figure {
 	float: left;
+	display: inline;
+	
+	&.right {
+		float: right;
+		margin-left: @basefont;
+		margin-right: auto;
+
+	}
+	
+	&.center {
+		float: center;
+		margin-left: @basefont;
+		margin-right: @basefont;
+	}
 }
 
 /* Sizing */
 
 .xsmall {
 	font-size: 10px;
-	line-height: @line;
+	line-height: @baseline;
 }
 
 .small {
 	font-size: 12px;
-	line-height: @line;
+	line-height: @baseline;
 }
 
 .normal {
 	font-size: @header-size;
-	line-height: @line;
-	margin-top: @line * 1.75;
-	margin-bottom: @line * 0.25;
+	line-height: @baseline;
+	margin-top: @baseline * 1.75;
+	margin-bottom: @baseline * 0.25;
 }
 
 .large {
 	font-size: @header-size * 1.2;
-	line-height: @line;
-	margin-top: @line * 1.75;
-	margin-bottom: @line * 0.25;
+	line-height: @baseline;
+	margin-top: @baseline * 1.75;
+	margin-bottom: @baseline * 0.25;
 }
 
 .huge {
 	font-size: @header-size * 1.5;
-	line-height: @line * 2;
-	margin-top: @line * 1.75;
-	margin-bottom: @line * 0.25;
+	line-height: @baseline * 2;
+	margin-top: @baseline * 1.75;
+	margin-bottom: @baseline * 0.25;
 }
 
 .massive {
 	font-size: @header-size * 2;
-	line-height: @line * 2;
-	margin-top: @line * 1.75;
-	margin-bottom: @line * 0.25;
+	line-height: @baseline * 2;
+	margin-top: @baseline * 1.75;
+	margin-bottom: @baseline * 0.25;
 }
 
 .gigantic {
 	font-size:  @header-size * 3;
-	line-height: @line * 4;
-	margin-top: @line * 2;
-	margin-bottom: @line;
+	line-height: @baseline * 4;
+	margin-top: @baseline * 2;
+	margin-bottom: @baseline;
 }
 
 h1, h2, h3, h4, h5, h6 {

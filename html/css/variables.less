@@ -1,0 +1,79 @@
+/* main color definitions */
+@red:               #9d261d;
+@orange:            #f89406;
+@yellow:            #ffc40d;
+@green:             #46a546;
+@blue:              #049CDB;
+@purple:            #7a43b6;
+@pink:              #c3325f;
+
+/*  Grays  */
+@black:             #000;
+@grayDark:          lighten(@black, 25%);
+@gray:              lighten(@black, 50%);
+@grayLight:         lighten(@black, 70%);
+@grayLighter:       lighten(@black, 90%);
+@white:             #fff;
+
+@primary-background: #fcfbfb;
+@primary-foreground: #303030;
+@primary-accent: #b00000;
+
+@linkColor: #808080;
+@linkColorHover: darken(@linkColor, 15);
+
+@basefont:	12px;
+@baseline:	20px;
+
+
+/*  Font stacks  */
+#font {
+  .shorthand(@weight: normal, @size: @basefont, @lineHeight: @baseline) {
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+  .sans-serif(@weight: normal, @size: @basefont, @lineHeight: @baseline) {
+    font-family: Verdana, 'BitStream vera Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+  .serif(@weight: normal, @size: @basefont, @lineHeight: @baseline) {
+    font-family: "Georgia", Times New Roman, Times, serif;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+  .monospace(@weight: normal, @size: @basefont, @lineHeight: @baseline) {
+    font-family: Consolas, "Monaco", Courier New, monospace;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+}
+
+/*  Border Radius  */
+.border-radius(@radius: 5px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+/*  Drop shadows  */
+.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+
+/* Transitions  */
+.transition(@transition) {
+	-webkit-transition: @transition;
+	   -moz-transition: @transition;
+ 	    -ms-transition: @transition;
+	     -o-transition: @transition;
+	        transition: @transition;
+}
+
+
