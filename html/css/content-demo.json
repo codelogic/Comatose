@@ -20,12 +20,17 @@
 body {
 	background: @primary-background;
 	color: @primary-foreground;
+	font-size: @size;
+	line-height: @line;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+
+/* Links */
 
 a {
 	color: @linkColor;
 }
-
 a:hover,
 a:visited:hover {
 	color: @linkColorHover;
@@ -35,19 +40,117 @@ a:visited {
 	color: @linkColor;
 }
 
+
+/* Paragraphs */
+
 p {
 	max-width: 700px;
+	font-size: 1em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	line-height: 1.5em;
+}
+p.right {
+	margin-left: auto;
+	text-align: right;
+}
+p.center {
+	margin: 0 auto;
+	text-align: center;
+}
+p.justify {
+	width: 100%;
+	text-align: justify;
 }
 
-p.right {
-		margin-left: auto;
-		text-align: right;
+/* UL and OL lists */
+
+ul, ol 
+{
+	margin-left: @line + 3px;
+}
+
+ul ul, ul ol, ol ol {
+	margin-left: @line;
+}
+
+/* Sizing */
+
+.xsmall {
+	font-size: 10px;
+	line-height: @line;
+}
+
+.small {
+	font-size: 12px;
+	line-height: @line;
+}
+
+.normal {
+	font-size: @size;
+	line-height: @line;
+	margin-top: @line;
+	margin-bottom: @line;
+}
+
+.large {
+	font-size: @size * 1.2;
+	line-height: @line;
+	margin-top: @line;
+	margin-bottom: @line;
+}
+
+.huge {
+	font-size: @size * 1.5;
+	line-height: @line * 2;
+	margin-top: @line;
+	margin-bottom: @line;
+}
+
+.massive {
+	font-size: @size * 2;
+	line-height: @line * 2;
+	margin-top: @line;
+	margin-bottom: @line;
+}
+
+.gigantic {
+	font-size:  @size * 3;
+	line-height: @line * 4;
+	margin-top: @line;
+	margin-bottom: @line;
+}
+
+
+#page-header, 
+#page-footer {
+	h1 {
+		.gigantic
 	}
-p.center {
-		margin: 0 auto;
-		text-align: center;
+	h2 {
+		.massive;
 	}
-p.justify {
-		width: 100%;
-		text-align: justify;
+	
+	h3 {
+		.huge;
 	}
+	
+	h4, h5 {
+		.large;
+	}
+}
+
+#page-content, 
+#page-sidebar {
+	h1 {
+		.massive;
+	}
+	
+	h2{
+		.huge;
+	}
+	
+	h3, h4, h5 {
+		.large;
+	}
+}
