@@ -1,4 +1,4 @@
-@import "";
+@import "layout";
 
 /* main color definitions */
 @red:               #9d261d;
@@ -9,328 +9,45 @@
 @purple:            #7a43b6;
 @pink:              #c3325f;
 
-@primary-background: #00ffff;
+@primary-background: #ffffff;
 @primary-foreground: #353535;
 @primary-accent: #b00000;
 
-@linkColor: #0069d6;
+@linkColor: #808080;
 @linkColorHover: darken(@linkColor, 15);
 
-@basefont: 13px;
-@baseline: 18px;
-
-
-@line: 27;
-@column: 100% / 18;
-@font-size: 18;
-@em:@font-size*1em;
-
-/*
-*
-*	Zoomable baseline grid
-*	type size presets
-*
-*/
 
 body {
-	/* 16px / 24px */
-	font-size: @font-size / 16 * 1em; 
-	line-height: @line / @em;
+	background: @primary-background;
+	color: @primary-foreground;
 }
 
-.small {
-	/* 13px / 18px */
-	font-size: (@font-size*0.8125) / @em;
-	line-height: (@line*0.75) / (@font-size*0.8125) * 1em;
+a {
+	color: @linkColor;
 }
 
-.normal, h3 {
-	/* 16px / 24px */
-	font-size: @font-size / @em;
-	line-height: @line / @em; /* 24 */
-}
-
-.large, h2, h1 {
-	/* 26 / 36px */
-	font-size: 26 / @em;
-	line-height: (@line*1.5) / 26 * 1em;
-}
-
-.huge {
-	/* 42px / 48px */
-	font-size: 42 / @em;
-	line-height: (@line*2) / 42 * 1em;
-}
-
-.massive {
-	/* 68px / 72px */
-	font-size: 68 / @em;
-	line-height: (@line*3) / 68 * 1em;
-}
-
-.gigantic {
-	/* 110px / 120px */
-	font-size: 110 / @em;
-	line-height: (@line*5) / 110 * 1em;
-}
-
-
-body,
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-th,
-td,
-article,
-aside,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
-html {
-	height: 100%; 
-	-webkit-text-size-adjust: 100%; 
-	-ms-text-size-adjust: 100%;
-}
-body {
-	min-height: 100%; 
-	font-size: 100%;
-}
-
-@section-color: #d0d0d0;
-
-@column: 100% / 18;
-@size: 14px;
-@line: 18px;
-
-body {
-	font-size: @size;
-	line-height: @line;
-}
-
-#content > section, body > header, body > footer { 
-	background: @section-color;
-}
-
-#content > section > section  {
-	background: darken(@section-color, 10);
-}
-
-.small {
-	font-size: @size * 0.75;
-	line-height: @line * 0.75;
-}
-
-.normal {
-	font-size: @size;
-	line-height: @line;
-}
-
-.large {
-	font-size: @size * 1.5;
-	line-height: @line * 1.5;
-}
-
-.huge {
-	font-size: @size * 2;
-	line-height: @line * 2;
-}
-
-.massive {
-	font-size: @size * 2.5;
-	line-height: @line * 2.5;
-}
-
-.gigantic {
-	font-size: @size * 3;
-	line-height: @line * 3;
-}
-
-/*
-*  Simple elastic gutters
-*  Note: box-sizing will not work in IE6-8
-*/
-
-.wrapper {
-	padding: 0 (@line - @size);
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-		 -o-box-sizing: border-box;
-			box-sizing: border-box;
-}
-
-.clear-fix
-{
-	clear: both;
-}
-
-/* header and footer span the page margins */
-#page-header, 
-#page-footer {
-	.clear-fix;
+a:hover,
+a:visited:hover {
+	color: @linkColorHover;
 	
-	h1 {
-		.massive;
-	}
-	h2 {
-		.huge;
-	}
-	
-	h3 {
-		.large;
-	}
-	
-	h4, h5 {
-		.normal;
-	}
-	
-	h1, h2, h3, nav, section, div {
-		.wrapper;
-	}
+}
+a:visited {
+	color: @linkColor;
 }
 
-/* At level A, there is only margining for the sections */
-#page-content, 
-#page-sidebar {
-	.wrapper;
-	
-	h1 {
-		.huge;
-	}
-	
-	h2{
-		.large;
-	}
-	
-	h3, h4, h5 {
-		.normal;
-	}
+p {
+	max-width: 700px;
 }
 
-
-/* 4 grid */
-@media screen and (min-width: 640px) {
-	#page-header, 
-	#page-footer {
-		h1, h2, h3, nav, section, div {
-			margin: 0 @column/2;
-		}
+p.right {
+		margin-left: auto;
+		text-align: right;
 	}
-	
-	#page-content, 
-	#page-sidebar  {
-		margin: 0 @column/2;
-	}
-	
-	#page-sidebar section {
-		width: 50%;
-		float: left;
-	}
-}
-
-/* 8 grid */
-@media screen and (min-width: 720px) {
-
-}
-
-@media screen and (min-width: 888px) {
-	#page-header, 
-	#page-footer {
-		h1, h2, h3, nav, section, div {
-			margin: 0 @column;
-		}
-	}
-
-	#page-content, 
-	#page-sidebar  {
-		margin: 0 @column;
-	}
-}
-
-@media screen and (min-width: 984px) {
-	#page-sidebar section {
-		width: 25%;
-		float: left;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	#page-content {
-		float: left;
-		width: @column*12;
-		margin: 0 0 0 @column;
-	}
-	
-	#page-sidebar {
-		float: right;
-		width:  @column*4;
-		margin: 0 @column 0 0;
-	}
-	
-	#page-sidebar section {
-		width: 100%;
-	}
-}
-
-@media screen and (min-width: 1440px) {
-	#page-header, 
-	#page-footer {
-		h1, h2, h3, nav, section, div {
-			width: 1280px;
-			margin: 0 auto;
-		}
-	}
-
-	#page-content {
-		float: left;
-		width: 960px;
-		margin: 0 ;
-	}
-	
-	#page-sidebar {
-		float: right;
-		width:  320px;
-		margin: 0;
-	}
-	
-	#content {
-		width: 1280px;
+p.center {
 		margin: 0 auto;
+		text-align: center;
 	}
-}
-
-@media screen and (min-width: 1680px) {
-}
-
-/* 16 column grid */
-@media screen and (min-width: 1872px) {
-	
-}
-
-@media screen and (min-width: 2080px) {
-}
+p.justify {
+		width: 100%;
+		text-align: justify;
+	}
