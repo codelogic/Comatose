@@ -9,12 +9,15 @@
 @purple:            #7a43b6;
 @pink:              #c3325f;
 
-@primary-background: #ffffff;
-@primary-foreground: #353535;
+@primary-background: #fcfbfb;
+@primary-foreground: #303030;
 @primary-accent: #b00000;
 
 @linkColor: #808080;
 @linkColorHover: darken(@linkColor, 15);
+
+@header-size: 14px;
+@header-foreground: #202020;
 
 
 body {
@@ -22,7 +25,7 @@ body {
 	color: @primary-foreground;
 	font-size: @size;
 	line-height: @line;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Verdana, 'BitStream vera Sans', Helvetica, sans-serif;
 }
 
 
@@ -45,10 +48,10 @@ a:visited {
 
 p {
 	max-width: 700px;
-	font-size: 1em;
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
-	line-height: 1.5em;
+	font-size: @size;
+	margin-top: @line * 0.5;
+	margin-bottom: @line * 0.5;
+	line-height: @line;
 }
 p.right {
 	margin-left: auto;
@@ -74,6 +77,31 @@ ul ul, ul ol, ol ol {
 	margin-left: @line;
 }
 
+/* Images */
+figure, img {
+	max-width: 100%;
+	margin: (@line - @size) @size (@line - @size) auto;
+}
+
+figure.right, img.right {
+	margin-left: auto;
+	margin-right: 0;
+	display: block;
+}
+figure.center, img.center {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+figure.fill, img.fill {
+	width: 100%;
+}
+
+p img, p figure {
+	float: left;
+}
+
 /* Sizing */
 
 .xsmall {
@@ -87,40 +115,44 @@ ul ul, ul ol, ol ol {
 }
 
 .normal {
-	font-size: @size;
+	font-size: @header-size;
 	line-height: @line;
-	margin-top: @line;
-	margin-bottom: @line;
+	margin-top: @line * 1.75;
+	margin-bottom: @line * 0.25;
 }
 
 .large {
-	font-size: @size * 1.2;
+	font-size: @header-size * 1.2;
 	line-height: @line;
-	margin-top: @line;
-	margin-bottom: @line;
+	margin-top: @line * 1.75;
+	margin-bottom: @line * 0.25;
 }
 
 .huge {
-	font-size: @size * 1.5;
+	font-size: @header-size * 1.5;
 	line-height: @line * 2;
-	margin-top: @line;
-	margin-bottom: @line;
+	margin-top: @line * 1.75;
+	margin-bottom: @line * 0.25;
 }
 
 .massive {
-	font-size: @size * 2;
+	font-size: @header-size * 2;
 	line-height: @line * 2;
-	margin-top: @line;
-	margin-bottom: @line;
+	margin-top: @line * 1.75;
+	margin-bottom: @line * 0.25;
 }
 
 .gigantic {
-	font-size:  @size * 3;
+	font-size:  @header-size * 3;
 	line-height: @line * 4;
-	margin-top: @line;
+	margin-top: @line * 2;
 	margin-bottom: @line;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	color: @header-foreground;
+	clear: left;
+}
 
 #page-header, 
 #page-footer {
@@ -135,7 +167,7 @@ ul ul, ul ol, ol ol {
 		.huge;
 	}
 	
-	h4, h5 {
+	h4, h5, h6 {
 		.large;
 	}
 }
@@ -150,7 +182,7 @@ ul ul, ul ol, ol ol {
 		.huge;
 	}
 	
-	h3, h4, h5 {
+	h3, h4, h5, h6 {
 		.large;
 	}
 }
