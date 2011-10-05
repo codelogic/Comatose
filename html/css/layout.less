@@ -86,7 +86,6 @@ html {
 	}
 }
 
-
 /* 4 grid */
 @media screen and (min-width: 640px) {
 	#page-header, 
@@ -99,6 +98,13 @@ html {
 	#page-content, 
 	#page-sidebar  {
 		margin: 0 @column/2;
+		
+		aside {
+			clear: right;
+			width: @column*6;
+			float: right;
+			margin-left: @baseline;
+		}
 	}
 	
 	#page-sidebar section {
@@ -116,18 +122,26 @@ html {
 	#page-header, 
 	#page-footer {
 		h1, h2, h3, nav, section, div {
-			margin: 0 @column;
+			margin: 0 auto;
+			max-width: 800px + (@baseline*2);
 		}
 	}
 
 	#page-content, 
 	#page-sidebar  {
-		margin: 0 @column;
-		max-width: 800px + (@baseline - @basefont);
+		margin: 0 auto;
+		max-width: 800px + (@baseline*2);
 	}
 }
 
 @media screen and (min-width: 984px) {
+	#page-content, 
+	#page-sidebar  {
+		aside {
+			width: 320px;
+		}
+	}
+	
 	#page-sidebar section {
 		width: 25%;
 		float: left;
@@ -135,6 +149,13 @@ html {
 }
 
 @media screen and (min-width: 1200px) {
+	#page-header, 
+	#page-footer {
+		h1, h2, h3, nav, section, div {
+			margin: 0 @column;
+		}
+	}
+
 	#page-content {
 		float: left;
 		width: @column*12;

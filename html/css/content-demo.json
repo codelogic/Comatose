@@ -9,6 +9,7 @@ body {
 	color: @primary-foreground;
 	
 	#font.sans-serif();
+	border-top: 5px solid @strong-foreground;
 }
 
 
@@ -33,7 +34,7 @@ a {
 /* Paragraphs */
 
 p {
-	max-width: 700px;
+	max-width: 800px;
 	font-size: @basefont;
 	margin-top: @baseline * 0.5;
 	margin-bottom: @baseline * 0.5;
@@ -107,6 +108,12 @@ p figure {
 	}
 }
 
+/* Block quote */
+
+blockquote {
+	margin-left: @baseline * 2;
+}
+
 /* Sizing */
 
 .xsmall {
@@ -156,7 +163,7 @@ p figure {
 
 h1, h2, h3, h4, h5, h6 {
 	color: @header-foreground;
-	clear: left;
+	clear: both;
 }
 
 /* header styling */
@@ -192,6 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 	h3, h4, h5, h6 {
 		.large;
 	}
+
 	
 	article {
 		h1, h2 {
@@ -210,6 +218,24 @@ h1, h2, h3, h4, h5, h6 {
 			}
 			h2{
 				.huge;
+			}
+		}
+		
+		aside {
+			margin-bottom: @baseline;
+			margin-top: @baseline - @basefont;
+			
+			h1 {
+				.huge;
+				
+				margin-top: 0;
+				line-height: 0;
+			}
+			
+			h2, h3, h4, h5, h6 {
+				.large;
+				
+				margin-top: 0;
 			}
 		}
 	}
