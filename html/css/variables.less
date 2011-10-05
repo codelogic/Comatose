@@ -15,18 +15,23 @@
 @grayLighter:       lighten(@black, 90%);
 @white:             #fff;
 
-@primary-background: #fcfbfb;
+@primary-background: #fffefe;
 @primary-foreground: #303030;
-@primary-accent: #b00000;
+@strong-foreground: #202020;
+@primary-accent: @blue;
+//@primary-accent: #b00000;
 
-@linkColor: #808080;
+@linkColor: @primary-accent;
 @linkColorHover: darken(@linkColor, 15);
 
 @basefont:	12px;
 @baseline:	20px;
 
+@headerfont: 14px;
+@header-foreground: @strong-foreground;
 
 /*  Font stacks  */
+
 #font {
   .shorthand(@weight: normal, @size: @basefont, @lineHeight: @baseline) {
     font-size: @size;

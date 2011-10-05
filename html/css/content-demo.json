@@ -1,8 +1,7 @@
 @import "layout";
 @import "variables";
 
-@header-size: 14px;
-@header-foreground: #202020;
+
 
 
 body {
@@ -121,35 +120,35 @@ p figure {
 }
 
 .normal {
-	font-size: @header-size;
+	font-size: @headerfont;
 	line-height: @baseline;
 	margin-top: @baseline * 1.75;
 	margin-bottom: @baseline * 0.25;
 }
 
 .large {
-	font-size: @header-size * 1.2;
+	font-size: @headerfont * 1.2;
 	line-height: @baseline;
 	margin-top: @baseline * 1.75;
 	margin-bottom: @baseline * 0.25;
 }
 
 .huge {
-	font-size: @header-size * 1.5;
+	font-size: @headerfont * 1.5;
 	line-height: @baseline * 2;
 	margin-top: @baseline * 1.75;
 	margin-bottom: @baseline * 0.25;
 }
 
 .massive {
-	font-size: @header-size * 2;
+	font-size: @headerfont * 2;
 	line-height: @baseline * 2;
 	margin-top: @baseline * 1.75;
 	margin-bottom: @baseline * 0.25;
 }
 
 .gigantic {
-	font-size:  @header-size * 3;
+	font-size:  @headerfont * 3;
 	line-height: @baseline * 4;
 	margin-top: @baseline * 2;
 	margin-bottom: @baseline;
@@ -159,6 +158,8 @@ h1, h2, h3, h4, h5, h6 {
 	color: @header-foreground;
 	clear: left;
 }
+
+/* header styling */
 
 #page-header, 
 #page-footer {
@@ -190,5 +191,26 @@ h1, h2, h3, h4, h5, h6 {
 	
 	h3, h4, h5, h6 {
 		.large;
+	}
+	
+	article {
+		h1, h2 {
+			border-bottom: 5px solid @strong-foreground;
+			margin-bottom: @baseline - 5px;
+			margin-top: @baseline * 2;
+		}
+		
+		header {
+			h1, h2 {
+				border-bottom: none;
+			}
+			
+			h1 {
+				.massive;
+			}
+			h2{
+				.huge;
+			}
+		}
 	}
 }
