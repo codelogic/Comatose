@@ -1,9 +1,6 @@
 @import "layout";
 @import "variables";
 
-
-
-
 body {
 	background: @primary-background;
 	color: @primary-foreground;
@@ -11,6 +8,7 @@ body {
 	#font.sans-serif();
 	border-top: 5px solid @strong-foreground;
 }
+
 
 
 /* Links */
@@ -57,10 +55,9 @@ p {
 /* UL and OL lists */
 ul, ol 
 {
-	margin-left: @baseline + 3px;
+    list-style-position:inside;
 	
 	&.unstyled {
-		margin-left: 0;
 		list-style-type:none;
 	}
 }
@@ -110,8 +107,66 @@ p figure {
 
 /* Block quote */
 
+.bordered-indent{
+	margin-left: 0;
+	padding: 0 0 0 @baseline - 5px;
+	border-left: 5px solid @inset-color;
+	background: #faf8f8;
+	max-width: 600px;
+}
+
+pre, blockquote, address, table
+{
+	.bordered-indent;
+}
+
+pre, code, var, textarea
+{
+    #font.monospace();
+	max-width: 100%;
+}
+
+dl {
+    margin: @baseline 0 (@baseline - @basefont) 0;
+}
+
+dt {
+	.bordered-indent;
+
+    font-weight: bold;
+    margin: 0 0 0 0;
+    padding: (@basespace / 2) @baseline * 2 (@basespace / 2) @baseline;
+}
+
+dd {
+	.bordered-indent;
+
+    font-style: italic;
+    margin: 0 0 @basespace 0;
+    padding: (@basespace / 2) @baseline (@basespace / 2) @baseline * 2;
+}
+
 blockquote {
-	margin-left: @baseline * 2;
+    font-style: italic;
+    max-width: 600px;
+}
+
+blockquote  blockquote {
+    padding: 0 0 @basespace @baseline;
+}
+
+blockquote p:first-child {
+    margin: 0;
+}
+
+cite {
+    margin: 8px 0px 5px 35px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+cite a {
+    text-decoration: none;
 }
 
 /* Sizing */
