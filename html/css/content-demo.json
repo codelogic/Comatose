@@ -113,11 +113,15 @@ p figure {
 	border-left: 5px solid @inset-color;
 	background: #faf8f8;
 	max-width: 600px;
+	
 }
 
-pre, blockquote, address, table
+pre, blockquote, address
 {
 	.bordered-indent;
+	
+	padding-top: (@basespace / 2);
+	padding-bottom: (@basespace / 2);
 }
 
 pre, code, var, textarea
@@ -149,6 +153,7 @@ dd {
 blockquote {
     font-style: italic;
     max-width: 600px;
+
 }
 
 blockquote  blockquote {
@@ -157,15 +162,16 @@ blockquote  blockquote {
 
 blockquote p:first-child {
     margin: 0;
+	padding: 0;
 }
 
-cite {
+blockquote cite {
     margin: 8px 0px 5px 35px;
     font-style: normal;
     font-weight: bold;
 }
 
-cite a {
+blockquote cite a {
     text-decoration: none;
 }
 
