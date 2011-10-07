@@ -284,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
 		}
 		
 		aside {
-			margin-bottom: 0;
+			margin-bottom: @baseline - 5px;
 			margin-top: @baseline - 5px;
 			
 			h1 {
