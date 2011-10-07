@@ -132,7 +132,7 @@ pre, code, var, textarea
 }
 
 dl {
-    margin: @baseline 0 (@baseline - @basefont) 0;
+    margin: @baseline 0 @baseline 0;
 }
 
 dt {
@@ -140,15 +140,15 @@ dt {
 
     font-weight: bold;
     margin: 0 0 0 0;
-    padding: (@basespace / 2) @baseline * 2 (@basespace / 2) @baseline;
+    padding: (@baseline / 2) @baseline * 1.5 0 @baseline;
 }
 
 dd {
 	.bordered-indent;
 
     font-style: italic;
-    margin: 0 0 @basespace 0;
-    padding: (@basespace / 2) @baseline (@basespace / 2) @baseline * 2;
+    margin: 0 0 0 0;
+    padding: 0 @baseline / 2 (@baseline / 2) @baseline * 2;
 }
 
 blockquote {
@@ -185,27 +185,26 @@ blockquote cite a {
 
 .xsmall {
 	font-size: 10px;
-	line-height: @baseline;
+	height: @baseline;
 }
 
 .small {
 	font-size: 12px;
-	line-height: @baseline;
+	height: @baseline;
 }
 
 .normal {
 	font-size: @headerfont;
-	line-height: @baseline;
+	height: @baseline;
 	margin-top: @baseline;
 	margin-bottom: @baseline;
 }
 
-// 60 pixels
 .large {
-	font-size: @headerfont * 1.2; //16.8
-	height: @baseline;  //20px
-	margin-top: @baseline; //35
-	margin-bottom: @baseline; //5
+	font-size: @headerfont * 1.2;
+	height: @baseline;
+	margin-top: @baseline;
+	margin-bottom: @baseline;
 }
 
 .huge {
