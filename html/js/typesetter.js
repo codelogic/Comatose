@@ -3,14 +3,22 @@ $(function() {
 			var bodylineheight = parseInt($('body').css('line-height'));
 			var bodyfontsize = parseInt($('body').css('font-size'));
 			
-			var item = $('#page-content article p');
+			var item = $('article p');
 			
 			var offset = 0;
 			if(item.length !== 0)
 				offset = parseInt(item.offset().top) - 2;
-
-			var baseline = bodylineheight;
-			var fontline = bodyfontsize;
+			
+			var baseline = 18;
+			
+			if(!$.isNaN(bodylineheight))
+				baseline = bodylineheight;
+				
+			var fontline = 12;
+			
+			if(!$.isNaN(bodyfontsize))
+				baseline = bodyfontsize;
+			
 			var color = '#000';
 			var colorFont = '#ddd';
 			var colorAlt = '#fff';
