@@ -1,25 +1,25 @@
 var typeSet = function() {
+	var baselineStartItem = $('article p');
+
+	// Default offset from the top of the page if the baseline start item can't be found.
+	var offset = 0;
+	if(baselineStartItem.length !== 0)
+		offset = parseInt(baselineStartItem.offset().top) - 2;
+	
 	// Default line height if you can't find line-height in the body.
 	var baseline = 18;
 			
-	var bodylineheight = parseInt($('body').css('line-height'));
+	var bodylineheight = parseInt(baselineStartItem.css('line-height'));
 	if(!$.isNaN(bodylineheight))
 		baseline = bodylineheight;
 
 	// Default font size if script can't find font-size for body;
 	var fontline = 12;
 			
-	var bodyfontsize = parseInt($('body').css('font-size'));
+	var bodyfontsize = parseInt(baselineStartItem.css('font-size'));
 	if(!$.isNaN(bodyfontsize))
 		fontline = bodyfontsize;
 		
-	// Default offset from the top of the page if the baseline start item can't be found.
-	var offset = 0;
-			
-	var baselineStartItem = $('article p');
-	if(baselineStartItem.length !== 0)
-		offset = parseInt(baselineStartItem.offset().top) - 2;
-			
 	// Colors for the gridline (color) the font line (colorFont), and alt line (not used)
 	var color = '#000';
 	var colorFont = '#ddd';
@@ -111,7 +111,7 @@ var typeSet = function() {
 	}
 }
 
-
+// make sure jQuery exists
 if (typeof jQuery == 'undefined') {
 	alert('You must have jQuery to use this script.')
 }
