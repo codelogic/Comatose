@@ -34,8 +34,8 @@ a {
 p {
 	max-width: 800px;
 	font-size: @basefont;
-	margin-top: @baseline * 0.5;
-	margin-bottom: @baseline * 0.5;
+	margin-bottom: @baseline;
+	margin-top: @baseline;
 	line-height: @baseline;
 	
 	&.right {
@@ -190,29 +190,30 @@ blockquote cite a {
 .normal {
 	font-size: @headerfont;
 	line-height: @baseline;
-	margin-top: @baseline * 1.75;
-	margin-bottom: @baseline * 0.25;
+	margin-top: @baseline;
+	margin-bottom: @baseline;
 }
 
+// 60 pixels
 .large {
-	font-size: @headerfont * 1.2;
-	line-height: @baseline;
-	margin-top: @baseline * 1.75;
-	margin-bottom: @baseline * 0.25;
+	font-size: @headerfont * 1.2; //16.8
+	height: @baseline;  //20px
+	margin-top: @baseline; //35
+	margin-bottom: @baseline; //5
 }
 
 .huge {
 	font-size: @headerfont * 1.5;
-	line-height: @baseline * 2;
-	margin-top: @baseline * 1.75;
-	margin-bottom: @baseline * 0.25;
+	height: @baseline * 2;
+	margin-top: @baseline;
+	margin-bottom: @baseline;
 }
 
 .massive {
 	font-size: @headerfont * 2;
 	line-height: @baseline * 2;
-	margin-top: @baseline * 1.75;
-	margin-bottom: @baseline * 0.25;
+	margin-top: @baseline * 2;
+	margin-bottom: @baseline;
 }
 
 .gigantic {
@@ -265,8 +266,8 @@ h1, h2, h3, h4, h5, h6 {
 	article {
 		h1, h2 {
 			border-bottom: 5px solid @strong-foreground;
-			margin-bottom: @baseline - 5px;
-			margin-top: @baseline * 2;
+			margin-bottom: @baseline;
+			margin-top: @baseline * 2 - 5px;
 		}
 		
 		header {
@@ -283,8 +284,8 @@ h1, h2, h3, h4, h5, h6 {
 		}
 		
 		aside {
-			margin-bottom: @baseline;
-			margin-top: @baseline - @basefont;
+			margin-bottom: 0;
+			margin-top: @baseline - 5px;
 			
 			h1 {
 				.huge;

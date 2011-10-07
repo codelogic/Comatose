@@ -7,7 +7,7 @@ $(function() {
 			
 			var offset = 0;
 			if(item.length !== 0)
-				offset = parseInt(item.offset().top);
+				offset = parseInt(item.offset().top) - 2;
 
 			var baseline = bodylineheight;
 			var fontline = bodyfontsize;
