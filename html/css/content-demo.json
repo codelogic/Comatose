@@ -69,7 +69,7 @@ ul ul, ul ol, ol ol {
 /* Images */
 figure, img {
 	max-width: 100%;
-	margin: (@baseline - @basefont) @basefont (@baseline - @basefont) auto;
+	margin: @basespace @basefont @basespace auto;
 	
 	&.right {
 		margin-left: auto;
@@ -93,15 +93,15 @@ p figure {
 	
 	&.right {
 		float: right;
-		margin-left: @basefont;
+		margin-left: @baseline;
 		margin-right: auto;
 
 	}
 	
 	&.center {
 		float: center;
-		margin-left: @basefont;
-		margin-right: @basefont;
+		margin-left: @baseline;
+		margin-right: @baseline;
 	}
 }
 
@@ -109,19 +109,20 @@ p figure {
 
 .bordered-indent{
 	margin-left: 0;
-	padding: 0 0 0 @baseline - 5px;
+	padding: 0 @baseline/2 0 @baseline - 5px;
 	border-left: 5px solid @inset-color;
 	background: #faf8f8;
 	max-width: 600px;
-	
+	margin-top: @baseline;
+	margin-bottom: @baseline;
+
+	padding-top: @baseline / 2;
+	padding-bottom: @baseline / 2;
 }
 
 pre, blockquote, address
 {
 	.bordered-indent;
-	
-	padding-top: (@basespace / 2);
-	padding-bottom: (@basespace / 2);
 }
 
 pre, code, var, textarea
@@ -153,11 +154,10 @@ dd {
 blockquote {
     font-style: italic;
     max-width: 600px;
-
 }
 
 blockquote  blockquote {
-    padding: 0 0 @basespace @baseline;
+    padding: @baseline/2 0 @baseline/2 (@baseline - 5px);
 }
 
 blockquote p:first-child {
@@ -165,8 +165,14 @@ blockquote p:first-child {
 	padding: 0;
 }
 
+blockquote p:last-child {
+    margin: 0;
+	padding: 0;
+}
+
 blockquote cite {
-    margin: 8px 0px 5px 35px;
+    margin: (@baseline/2) 0 (@baseline/2) @baseline;
+	display: block; 
     font-style: normal;
     font-weight: bold;
 }
@@ -211,14 +217,14 @@ blockquote cite a {
 
 .massive {
 	font-size: @headerfont * 2;
-	line-height: @baseline * 2;
+	height: @baseline * 2;
 	margin-top: @baseline * 2;
 	margin-bottom: @baseline;
 }
 
 .gigantic {
 	font-size:  @headerfont * 3;
-	line-height: @baseline * 4;
+	height: @baseline * 4;
 	margin-top: @baseline * 2;
 	margin-bottom: @baseline;
 }
@@ -291,7 +297,6 @@ h1, h2, h3, h4, h5, h6 {
 				.huge;
 				
 				margin-top: 0;
-				line-height: 0;
 			}
 			
 			h2, h3, h4, h5, h6 {
