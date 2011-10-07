@@ -69,7 +69,7 @@ ul ul, ul ol, ol ol {
 /* Images */
 figure, img {
 	max-width: 100%;
-	margin: @basespace @basefont @basespace auto;
+	margin: @basespace 0 @basespace auto;
 	
 	&.right {
 		margin-left: auto;
@@ -90,6 +90,7 @@ p img,
 p figure {
 	float: left;
 	display: inline;
+	margin-right: @basespace;
 	
 	&.right {
 		float: right;
