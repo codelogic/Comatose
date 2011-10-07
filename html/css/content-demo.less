@@ -52,6 +52,8 @@ p {
 	}
 }
 
+
+
 /* UL and OL lists */
 ul, ol 
 {
@@ -126,10 +128,19 @@ pre, blockquote, address
 	.bordered-indent;
 }
 
-pre, code, var, textarea
+pre, var, textarea
 {
     #font.monospace();
 	max-width: 100%;
+}
+
+code {
+	#font.monospace();
+}
+
+big, small, code, kbd, tt {
+	line-height: 0;
+	font-size: @basefont;
 }
 
 dl {
