@@ -1,5 +1,46 @@
 /*  Font stacks  */
 
+// Clearfix for clearing floats like a boss h5bp.com/q
+.clearfix() {
+  zoom: 1;
+	&:before,
+  &:after {
+    display: table;
+    content: "";
+    zoom: 1;
+    *display: inline;
+	}
+	&:after {
+    clear: both;
+	}
+}
+
+// Center-align a block level element
+.center-block() {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Sizing shortcuts
+.size(@height: 5px, @width: 5px) {
+	height: @height;
+	width: @width;
+}
+.square(@size: 5px) {
+	.size(@size, @size);
+}
+
+// Input placeholder text
+.placeholder(@color: @grayLight) {
+  :-moz-placeholder {
+    color: @color;
+  }
+  ::-webkit-input-placeholder {
+    color: @color;
+  }
+}
+
 #font {
   .shorthand(@weight: normal, @size: @basefont, @lineHeight: @baseline) {
     font-size: @size;
