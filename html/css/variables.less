@@ -16,23 +16,26 @@
 @white:             #fff;
 
 @primary-background: #fffefe;
-
 @primary-foreground: #303030;
 @strong-foreground: #202020;
 
-@inset-color: @strong-foreground;
-
 @primary-accent: @blue;
-//@primary-accent: #b00000;
-
-@linkColor: @primary-accent;
-@linkColorHover: darken(@linkColor, 15);
 
 @basefont:	12px;
 @baseline:	20px;
 @basespace: (@baseline - @basefont);
 
 @headerfont: 14px;
-@header-foreground: @strong-foreground;
+@headerForeground: @strong-foreground;
 
+@linkColor: @primary-accent;
+@linkColorHover: darken(@linkColor, 15);
 
+@muteColor: @grayLight;
+@codeTagBackground: #F0F0F0;
+@inset-color: @strong-foreground;
+@insColor: saturate(darken(@green, 15%), 15%);
+@delColor: @muteColor;
+
+@tableBorderColor: @muteColor;
+@tableHeaderBorderColor: @inset-color;

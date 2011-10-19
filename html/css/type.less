@@ -1,0 +1,328 @@
+/* Typography.less
+ * Headings, body text, lists, code, and more for a versatile and durable typography system
+ * ---------------------------------------------------------------------------------------- */
+ 
+// BODY TEXT
+// ---------
+
+body {
+	background: @primary-background;
+	color: @primary-foreground;
+	
+	#font.sans-serif();
+	
+	border-top: 5px solid @strong-foreground;
+}
+
+p {
+	max-width: 800px;
+	font-size: @basefont;
+	line-height: @baseline;
+	margin-bottom: @baseline;
+
+	color: @primary-foreground;
+	
+	small {
+		font-size: @basefont - 2;
+		color: @headerForeground;
+	}
+	
+	&.right {
+		margin-left: auto;
+		text-align: right;
+	}
+	&.center  {
+		margin: 0 auto;
+		text-align: center;
+	}
+	&.justify {
+		width: 100%;
+		text-align: justify;
+	}
+}
+
+// Links
+a {
+  color: @linkColor;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+  &:hover {
+    color: @linkColorHover;
+    text-decoration: underline;
+  }
+}
+
+// Quick floats
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+// Toggling content
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+// HEADINGS
+// --------
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: @headerForeground;
+  small {
+    color: @grayLight;
+  }
+}
+h1 {
+  margin-bottom: @baseline;
+  font-size: 30px;
+  line-height: @baseline * 2;
+  small {
+    font-size: 18px;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: @baseline * 2;
+  small {
+    font-size: 14px;
+  }
+}
+h3, h4, h5, h6 {
+  line-height: @baseline * 2;
+}
+h3 {
+  font-size: 18px;
+  small {
+    font-size: 14px;
+  }
+}
+h4 {
+  font-size: 16px;
+  small {
+    font-size: 12px;
+  }
+}
+h5 {
+  font-size: 14px;
+}
+h6 {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+// COLORS
+// ------
+
+// Unordered and Ordered lists
+ul, ol {
+  margin: 0 0 @baseline @baseline;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+li {
+  line-height: @baseline;
+}
+ul.unstyled {
+  list-style: none;
+  margin-left: 0;
+}
+
+// Description Lists
+
+.bordered-indent{
+	margin-left: 0;
+	padding: 0 @baseline/2 0 @baseline - 5px;
+	border-left: 5px solid @inset-color;
+	background: #faf8f8;
+	max-width: 600px;
+	margin-top: @baseline;
+	margin-bottom: @baseline;
+
+	padding-top: @baseline / 2;
+	padding-bottom: @baseline / 2;
+}
+
+dl {
+  margin-bottom: @baseline;
+  
+  dt, dd
+  {
+	.bordered-indent;
+	margin: 0 0 0 0;
+  }
+  dt {
+    font-weight: bold;
+	line-height: @baseline;
+    padding: (@baseline / 2) @baseline * 1.5 0 @baseline;
+  }
+  dd {
+    font-style: italic;
+	line-height: @baseline;
+    padding: 0 @baseline / 2 (@baseline / 2) @baseline * 2;
+  }
+}
+
+//Images
+
+/* Images */
+figure, img {
+	max-width: 100%;
+	margin: @basespace 0 @basespace auto;
+	
+	&.right {
+		margin-left: auto;
+		margin-right: 0;
+		display: block;
+	}
+	&.center {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	&.fill {
+		width: 100%;
+	}
+}
+
+p img, 
+p figure {
+	float: left;
+	display: inline;
+	margin-right: @basespace;
+	
+	&.right {
+		float: right;
+		margin-left: @baseline;
+		margin-right: auto;
+
+	}
+	
+	&.center {
+		float: center;
+		margin-left: @baseline;
+		margin-right: @baseline;
+	}
+}
+
+// MISC
+// ----
+
+// Horizontal rules
+hr {
+  margin: 20px 0 19px;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
+
+// Emphasis
+strong {
+  font-style: inherit;
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+  font-weight: inherit;
+  line-height: inherit;
+}
+.muted {
+  color: @muteColor;
+}
+
+del {
+	color: @delColor;
+}
+
+ins {
+	color: @insColor;
+	text-decoration: none;
+	&:before {
+      content: '+';	  
+    }
+}
+
+// Blockquotes
+blockquote {
+  margin-bottom: @baseline;
+  border-left: 5px solid @primary-foreground;
+  padding-left: @baseline - 5;
+  max-width: 600px;
+  
+  p {
+    #font.shorthand(300,@basefont,@baseline);
+	font-style: italic;
+  }
+
+  cite {
+	margin-bottom: @baseline + (@baseline - @basefont);
+	padding-bottom: @basefont;
+	margin-left: @baseline;
+	display: block;
+	height: @baseline;
+    font-style: normal;
+    font-weight: bold;
+  }
+  small {
+    display: block;
+    #font > .shorthand(300,@basefont - 2,@baseline);
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+// Addresses
+address {
+  display: block;
+  line-height: @baseline;
+  margin-bottom: @baseline;
+}
+
+// Inline and block code styles
+
+code, pre, kbd, tt, var {
+  padding: 0 3px 2px;
+  #font.monospace;
+  .border-radius(4px);
+}
+
+code, var, kbd, tt {
+  background-color: @codeTagBackground;
+  padding: 1px 3px;
+  line-height: 0;
+}
+
+var {
+	font-style: italic;
+}
+
+pre {
+  background-color: #f5f5f5;
+  display: block;
+  padding: (@baseline - 1) / 2;
+  margin: 0 0 @baseline;
+  line-height: @baseline;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.15);
+  .border-radius(3px);
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
