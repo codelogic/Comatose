@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
     color: @grayLight;
   }
 }
-h1 {
+/* h1 {
   margin-bottom: @baseline;
   font-size: 30px;
   line-height: @baseline * 2;
@@ -115,7 +115,7 @@ h5 {
 h6 {
   font-size: 13px;
   text-transform: uppercase;
-}
+} */
 
 // COLORS
 // ------
@@ -289,6 +289,7 @@ blockquote {
 
 // Addresses
 address {
+	.bordered-indent;
   display: block;
   line-height: @baseline;
   margin-bottom: @baseline;
@@ -313,14 +314,13 @@ var {
 }
 
 pre {
-  background-color: #f5f5f5;
+  background-color: @codeTagBackground;
   display: block;
   padding: (@baseline - 1) / 2;
   margin: 0 0 @baseline;
   line-height: @baseline;
   font-size: 12px;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0,0,0,.15);
+  border: 1px solid darken(@codeTagBackground, 10%);
   .border-radius(3px);
   white-space: pre;
   white-space: pre-wrap;
