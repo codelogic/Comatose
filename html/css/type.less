@@ -326,3 +326,131 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+/* Preset sizes. */
+
+.xsmall {
+	font-size: 10px;
+	line-height: @baseline;
+}
+
+.small {
+	font-size: 12px;
+	height: @baseline;
+}
+
+.normal {
+	font-size: @headerfont;
+	height: @baseline;
+	margin-top: @baseline;
+	margin-bottom: @baseline;
+}
+
+.large {
+	font-size: @headerfont * 1.2;
+	height: @baseline;
+	margin-top: @baseline;
+	margin-bottom: @baseline;
+}
+
+.huge {
+	font-size: @headerfont * 1.5;
+	height: @baseline * 2;
+	margin-top: @baseline;
+	margin-bottom: @baseline;
+}
+
+.massive {
+	font-size: @headerfont * 2;
+	height: @baseline * 2;
+	margin-top: @baseline * 2;
+	margin-bottom: @baseline;
+}
+
+.gigantic {
+	font-size:  @headerfont * 3;
+	height: @baseline * 3;
+	margin-top: @baseline * 3;
+	margin-bottom: @baseline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: @headerForeground;
+	clear: both;
+}
+
+/* header styling */
+
+#page-header, 
+#page-footer {
+	h1 {
+		.gigantic;
+		
+		margin-bottom: 0;
+	}
+	h2 {
+		.massive;
+	}
+	
+	h3 {
+		.huge;
+	}
+	
+	h4, h5, h6 {
+		.large;
+	}
+}
+
+#page-content, 
+#page-sidebar {
+	h1 {
+		.massive;
+	}
+	
+	h2{
+		.huge;
+	}
+	
+	h3, h4, h5, h6 {
+		.large;
+	}
+
+	
+	article {
+		h1, h2 {
+			border-bottom: 5px solid @strong-foreground;
+			margin-bottom: @baseline;
+			margin-top: @baseline * 2 - 5px;
+		}
+		
+		header {
+			h1, h2 {
+				border-bottom: none;
+			}
+			
+			h1 {
+				.massive;
+			}
+			h2{
+				.huge;
+			}
+		}
+		
+		aside {
+			margin-bottom: @baseline - 5px;
+			margin-top: @baseline * 2 - 5px;
+			
+			h1 {
+				.huge;
+				
+				margin-top: 0;
+			}
+			
+			h2, h3, h4, h5, h6 {
+				.large;
+				
+				margin-top: 0;
+			}
+		}
+	}
+}
