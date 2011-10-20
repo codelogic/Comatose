@@ -39,7 +39,7 @@ var typeSet = function() {
 	if(overlay.length === 0) {
 		var links = $('<div id="links"></div>');
 		var body = $('body')
-		body.prepend(links);
+		body.append(links);
 			
 		overlay = $('<div id="grid-overlay"></div>');
 		body.prepend(overlay);
