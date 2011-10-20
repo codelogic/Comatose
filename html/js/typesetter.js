@@ -1,3 +1,11 @@
+// Query the device pixel ratio.
+//-------------------------------
+function getDevicePixelRatio() {
+        if(window.devicePixelRatio === undefined) return 1; // No pixel ratio available. Assume 1:1.
+        return window.devicePixelRatio;
+
+}
+
 var typeSet = function() {
 	var baselineStartItem = $('article p');
 
@@ -55,7 +63,12 @@ var typeSet = function() {
 		links.append($('<a id="show-grid" style="float: right;  background-color: #F0F0F0; display: block; padding: 5px;border-radius: 2px;">Show the Grid</a>'));
 						
 		var gridinfo = $('<div id="gridinfo" style="display: none"></div>');
-		gridinfo.append($('<ul style="clear: right; margin-top: '+baseline+'px; list-style: none;"><li>Offset: ' + offset + 'px</li><li>Baseline: ' + baseline + 'px</li><li>Fontsize: ' + fontline + 'px</li></ul>'));
+		gridinfo.append($('<ul style="clear: right; margin-top: '+baseline+'px; list-style: none;"><li>Offset: ' + offset + 'px</li><li>Baseline: ' + baseline + 'px</li><li>Fontsize: ' + fontline + 'px</li><li>Pixel ratio: ' + getDevicePixelRatio() + 'px</li></ul>'));
+		
+		gridinfo.append($('<p>' + (100 / getDevicePixelRatio()) + '%' + '</p>'));
+		gridinfo.append($('<p>' + ((baseline * getDevicePixelRatio())-1) + '</p>'));
+		gridinfo.append($('<p>' + (((baseline * getDevicePixelRatio()) - (fontline * getDevicePixelRatio())) - 1) + '</p>'));
+		
 		links.append(gridinfo);
 		
 		
@@ -88,18 +101,19 @@ var typeSet = function() {
 	});
 	
 	overlay.css('margin-top', offset);
+	
 				
 	var canvas = document.createElement('canvas');
 	canvas.setAttribute('width', 2);
-	canvas.setAttribute('height', baseline);
+	canvas.setAttribute('height', baseline * getDevicePixelRatio());
 	
 	var ctx = canvas.getContext('2d');
 	if (ctx) {
 		ctx.fillStyle = color;  
 		
 		//make the baseline and font line. Note: because the background image is tiled, the fontline will appear dotted.
-		ctx.fillRect(0, baseline-1, 2, 1); // x, y, width, height
-		ctx.fillRect(0, baseline - fontline - 1, 1, 1)
+		ctx.fillRect(0, ((baseline * getDevicePixelRatio())-1), 2, 1); // x, y, width, height
+		ctx.fillRect(0, (((baseline * getDevicePixelRatio()) - (fontline * getDevicePixelRatio())) - 1), 1, 1)
 		
 		
 		//ctx.fillStyle = colorAlt;
@@ -108,6 +122,8 @@ var typeSet = function() {
 		overlay.css('background-image', 'url(' + canvas.toDataURL() + ')');
 		overlay.css('backround-repeat', 'repeat');
 		overlay.css('background-position', offset + ' center');
+		//overlay.css('background-size', (100 / getDevicePixelRatio()) + '%');
+		overlay.css('background-size', (2 / getDevicePixelRatio()) + 'px ' + baseline + 'px');
 	}
 }
 
