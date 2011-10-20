@@ -269,18 +269,14 @@ blockquote {
 	font-style: italic;
   }
 
-  cite {
-	margin-bottom: @baseline + (@baseline - @basefont);
+  small, cite {
+    margin-bottom: @baseline + (@baseline - @basefont);
 	padding-bottom: @basefont;
 	margin-left: @baseline;
 	display: block;
 	height: @baseline;
     font-style: normal;
     font-weight: bold;
-  }
-  small {
-    display: block;
-    #font > .shorthand(300,@basefont - 2,@baseline);
     &:before {
       content: '\2014 \00A0';
     }
