@@ -1,0 +1,32 @@
+/* Note. For print, serif is more readable, and black and white text will avoid wasting ink. */
+
+body {
+	font-family: Georgia, serif;
+	background: #FFF;
+	color: #000;
+	font-size: 12pt;
+}
+
+a:link, a:visited {
+	color: #049CDB;
+	background: transparent;
+	text-decoration: underline;
+}
+
+/* This will spit out the url after the link in brackets */
+a:link:after, a:visited:after {
+	content: " [" attr(href) "] ";
+}
+
+/* Hide elements we don't care about. */
+
+#page-header,
+#page-sidebar,
+nav,
+.noprint {
+	display: none;
+}
+
+pre, code {
+	font-family: Consolas, monospace;
+}
