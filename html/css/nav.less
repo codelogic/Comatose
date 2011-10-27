@@ -1,0 +1,26 @@
+// nav here
+
+hgroup {
+	float: left;
+}
+
+
+nav {
+	float: right;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		
+		li {
+			float: left;
+			a {
+				display: block;
+				padding: @baseline @baseline;
+			}
+			a:hover {
+				border-top: 5px solid @strong-foreground;
+				padding-top: @baseline - 5;
+			}
+		}
+	}
+}
