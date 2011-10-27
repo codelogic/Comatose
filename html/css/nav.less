@@ -7,6 +7,8 @@ hgroup {
 
 nav {
 	float: right;
+	background: @strong-foreground;
+	.border-radius(0 0 5px 5px);
 	ul {
 		list-style-type: none;
 		margin: 0;
@@ -15,11 +17,11 @@ nav {
 			float: left;
 			a {
 				display: block;
-				padding: @baseline @baseline;
+				padding: 5px 20px 10px;
+				color: white;
 			}
 			a:hover {
-				border-top: 5px solid @strong-foreground;
-				padding-top: @baseline - 5;
+				
 			}
 		}
 	}
