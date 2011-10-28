@@ -1,28 +1,38 @@
 // nav here
-
-hgroup {
-	float: left;
-}
-
-
 nav {
-	float: right;
+	
+	
+	//border-top: 5px solid @strong-foreground;
+	//border-bottom: 5px solid @strong-foreground;
 	background: @strong-foreground;
-	.border-radius(0 0 5px 5px);
+	min-height: @baseline * 3;
 	ul {
 		list-style-type: none;
 		margin: 0;
+		font-size: @basefont + 6;
 		
 		li {
 			float: left;
 			a {
+				color: @primary-background;
 				display: block;
-				padding: 5px 20px 10px;
-				color: white;
+				height: @baseline;
+				padding: @baseline;
 			}
 			a:hover {
+				color: @primary-background;
+				background: @primary-foreground;
 				
+				text-decoration: none;
+				padding-top: @baseline - 5;				
+				border-top: 5px solid @primary-foreground;
 			}
 		}
+		
+		li:first-child
+		{
+			//margin-left: 0-@baseline;
+		}
+		.clearfix();
 	}
 }
