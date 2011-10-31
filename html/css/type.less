@@ -142,12 +142,15 @@ li {
 ul.unstyled {
   list-style: none;
   margin-left: 0;
+  ul {
+	list-style: none;
+  }
 }
 
 // Description Lists
 
 .bordered-indent{
-	margin-left: 0;
+	margin-left: @baseline / 2;
 	padding: 0 @baseline/2 0 @baseline - 5px;
 	border-left: 5px solid @inset-color;
 	background: @insetBackground;
@@ -164,18 +167,19 @@ dl {
   
   dt, dd
   {
-	.bordered-indent;
+	//.bordered-indent;
 	margin: 0 0 0 0;
   }
   dt {
     font-weight: bold;
 	line-height: @baseline;
-    padding: (@baseline / 2) @baseline * 1.5 0 @baseline;
+    padding: (@baseline / 2) @baseline * 1.5 0 @baseline / 2;
   }
   dd {
-    font-style: italic;
+    //font-style: italic;
+	font-size: @basefont - 1;
 	line-height: @baseline;
-    padding: 0 @baseline / 2 (@baseline / 2) @baseline * 2;
+    padding: 0 @baseline / 2 (@baseline / 2) @baseline * 1.5;
   }
 }
 
@@ -310,10 +314,19 @@ q {
 
 // Addresses
 address {
-	.bordered-indent;
-  display: block;
-  line-height: @baseline;
-  margin-bottom: @baseline;
+	padding: 0 @baseline/2 0 @baseline - 5px;
+	border-left: 5px solid @inset-color;
+	
+	margin-left: @baseline / 2;
+	margin-top: @baseline;
+	margin-bottom: @baseline;
+
+	//padding-top: @baseline / 2;
+	//padding-bottom: @baseline / 2;
+	
+	display: block;
+	font-size: @basefont - 1;
+	line-height: @baseline;
 }
 
 // Inline and block code styles
@@ -335,13 +348,13 @@ var {
 }
 
 pre {
-  background-color: @codeTagBackground;
+  background-color: @preBackground;
   display: block;
   padding: (@baseline - 1) / 2;
   margin: 0 0 @baseline;
   line-height: @baseline;
   font-size: 12px;
-  border: 1px solid darken(@codeTagBackground, 10%);
+  border: 1px solid @preBorder;
   .border-radius(3px);
   white-space: pre;
   white-space: pre-wrap;
