@@ -266,19 +266,26 @@ ins {
 // Blockquotes
 blockquote {
   margin-bottom: @baseline;
+  margin-left: @baseline / 2;
   border-left: 5px solid @primary-foreground;
   padding-left: @baseline - 5;
   max-width: 600px;
   
+  blockquote {
+	border-left: 5px solid @muteColor;
+  }
+  
   p {
-    #font.shorthand(300,@basefont,@baseline);
-	font-style: italic;
+    #font.shorthand(300,@basefont - 1,@baseline);
+	//font-style: italic;
   }
 
   small, cite {
-    margin-bottom: @baseline + (@baseline - @basefont);
-	padding-bottom: @basefont;
-	margin-left: @baseline;
+    //margin-bottom: @baseline + (@baseline - @basefont);
+	//padding-bottom: @basefont;
+	margin-left: auto;
+	margin-right: @baseline;
+	text-align: right;
 	display: block;
 	height: @baseline;
     font-style: normal;
@@ -287,6 +294,18 @@ blockquote {
       content: '\2014 \00A0';
     }
   }
+}
+
+// Inline Quotes
+q {
+	font-size: @basefont;
+	font-style: italic;
+	&:before {
+      content: '"';	  
+    }
+	&:after{
+      content: '"';	  
+    }
 }
 
 // Addresses
