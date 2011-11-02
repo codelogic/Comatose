@@ -17,20 +17,48 @@ nav {
 				height: @baseline;
 				padding: @baseline;
 			}
-			a:hover {
+			
+			ul {
+				z-index: 1;
+				background: @strong-foreground;
+				position: absolute;
+				left: -9999px;
+				margin: 0;
+				border-left: 5px solid @linkColor;
+			}
+			
+			ul ul {
+				margin-top: 0 - @baseline * 3;
+				margin-left: 190px;
+			}
+			
+			ul li {
+				float: none;
+				margin: 0;
+				width: 190px;
+			}
+			
+			&:hover, &:hover > a
+			{
+				text-decoration: none;
 				color: @primary-background;
 				background: @linkColor;
-				
-				text-decoration: none;
-				//padding-top: @baseline - 5;				
-				//border-top: 5px solid @primary-foreground;
 			}
+			
+			&:hover > ul,
+			li:hover > ul,
+			li li:hover > ul
+			{
+				left: auto;
+			} 
 		}
 		
-		li:first-child
-		{
-			margin-left: 0-@baseline;
-		}
+
 		.clearfix();
+	}
+	
+	> ul > li:first-child
+	{
+		margin-left: 0-@baseline;
 	}
 }
