@@ -448,7 +448,6 @@ h1, h2, h3, h4, h5, h6 {
 	h3, h4, h5, h6 {
 		.large;
 	}
-
 	
 	article {
 		h1, h2 {
@@ -486,5 +485,21 @@ h1, h2, h3, h4, h5, h6 {
 				margin-top: 0;
 			}
 		}
+		
+		footer {
+			border-top: 5px solid lighten(@muteColor, 10%);
+			padding-top: @baseline - 1;
+		}
+	}
+}
+
+#page-sidebar {
+	ul {
+		list-style: none;
+	  margin-left: 0;
+	  ul {
+		list-style: none;
+		margin-left: 0;
+	  }
 	}
 }

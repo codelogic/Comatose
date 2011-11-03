@@ -63,7 +63,7 @@ var typeSet = function() {
 		links.append($('<a id="show-grid" style="float: right;  background-color: #F0F0F0; display: block; padding: 5px;border-radius: 2px;">Show the Grid</a>'));
 						
 		var gridinfo = $('<div id="gridinfo" style="display: none"></div>');
-		gridinfo.append($('<ul style="clear: right; margin-top: '+baseline+'px; list-style: none;"><li>Offset: ' + offset + 'px</li><li>Baseline: ' + baseline + 'px</li><li>Fontsize: ' + fontline + 'px</li><li>Pixel ratio: ' + getDevicePixelRatio() + ':1</li></ul>'));
+		gridinfo.append($('<ul style="clear: right; margin: '+baseline+'px 0 0 0; list-style: none;"><li>Offset: ' + offset + 'px</li><li>Baseline: ' + baseline + 'px</li><li>Fontsize: ' + fontline + 'px</li><li>Pixel ratio: ' + getDevicePixelRatio() + ':1</li></ul>'));
 		
 		links.append(gridinfo);
 		
