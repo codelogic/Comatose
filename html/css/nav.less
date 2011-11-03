@@ -1,64 +1,131 @@
 // nav here
+
+#page-header nav ul.colfull, #page-footer nav ul.colfull
+{
+	padding: 0;
+}
+
 nav {
-	//border-top: 5px solid @strong-foreground;
-	//border-bottom: 5px solid @strong-foreground;
 	background: @strong-foreground;
 	min-height: @baseline * 3;
-	ul {
+	ul
+	{
 		list-style-type: none;
 		margin: 0;
-		font-size: @basefont + 6;
 		
-		li {
-			float: left;
+		font-size: @basefont + 6;	
+		
+		li
+		{
+			
 			a {
+				border-top: 1px solid lighten(@strong-foreground, 5%);
+				border-bottom: 1px solid darken(@strong-foreground, 5%);
+				
 				color: @primary-background;
 				display: block;
 				height: @baseline;
-				padding: @baseline;
+				padding: (@baseline / 2 - 1) @baseline;
 			}
-			
-			ul {
-				z-index: 1;
-				background: @strong-foreground;
-				position: absolute;
-				left: -9999px;
-				margin: 0;
-				border-left: 5px solid @linkColor;
-			}
-			
-			ul ul {
-				margin-top: 0 - @baseline * 3;
-				margin-left: 190px;
-			}
-			
-			ul li {
-				float: none;
-				margin: 0;
-				width: 190px;
-			}
-			
-			&:hover, &:hover > a
+		
+			a:hover
 			{
+				border: none;
+				padding-top: @baseline / 2;
+				padding-bottom: @baseline / 2;
 				text-decoration: none;
 				color: @primary-background;
 				background: @linkColor;
 			}
 			
-			&:hover > ul,
-			li:hover > ul,
-			li li:hover > ul
+			li a
 			{
-				left: auto;
-			} 
+				padding-left: @baseline * 2;
+			}
+			
+			li li a
+			{
+				padding-left: @baseline * 3;
+			}
+			
+			li li li a
+			{
+				padding-left: @baseline * 4;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 640px)
+{
+	#page-header nav ul.colfull, #page-footer nav ul.colfull
+	{
+		padding: 0 (@baseline - @basefont);
+	}
+
+	nav {
+		ul {
+			li {
+				float: left;
+
+				a, li a, li li a, li li li a {
+					padding-left: @baseline
+				}
+				
+				ul {
+					z-index: 1;
+					background: @strong-foreground;
+					position: absolute;
+					left: -9999px;
+					margin: 0;
+					border-left: 5px solid @linkColor;
+				}
+				
+				ul ul {
+					margin-top: 0 - @baseline * 2;
+					margin-left: 190px;
+				}
+				
+				ul li {
+					float: none;
+					margin: 0;
+					width: 190px;
+				}
+				
+				&:hover > a
+				{
+					border: none;
+					padding: @baseline;
+					text-decoration: none;
+					color: @primary-background;
+					background: @linkColor;
+				}
+				
+				li:hover > a
+				{
+					padding: @baseline / 2 @baseline;
+				}
+				
+				&:hover > ul,
+				li:hover > ul,
+				li li:hover > ul
+				{
+					left: auto;
+				} 
+			}
+			
+			.clearfix();
 		}
 		
-
-		.clearfix();
-	}
-	
-	> ul > li:first-child
-	{
-		margin-left: 0-@baseline;
+		> ul > li > a
+		{
+			border: none;
+			padding: @baseline;
+		}
+		
+		> ul > li:first-child
+		{
+			margin-left: 0-@baseline;
+		}
 	}
 }
