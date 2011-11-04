@@ -25,9 +25,9 @@ nav {
 				color: @primary-background;
 				display: block;
 				height: @baseline;
-				padding: (@baseline / 2 - 1) @baseline;
+				padding: (@baseline / 2 - 1) (@baseline / 2);
 			}
-		
+						
 			a:hover
 			{
 				border: none;
@@ -40,17 +40,17 @@ nav {
 			
 			li a
 			{
-				padding-left: @baseline * 2;
+				padding-left: @baseline * 1.5;
 			}
 			
 			li li a
 			{
-				padding-left: @baseline * 3;
+				padding-left: @baseline * 2.5;
 			}
 			
 			li li li a
 			{
-				padding-left: @baseline * 4;
+				padding-left: @baseline * 3.5;
 			}
 		}
 	}
@@ -92,6 +92,37 @@ nav {
 					width: 190px;
 				}
 				
+				a:before {
+					content: "";
+				}
+				
+				a:not(:last-child):after
+				{
+					content:" ";
+					display:inline-block;
+					width: 0;
+					height: 0;
+					margin-left: @baseline / 2;
+					margin-bottom: 3px;
+					border-left: 5px solid transparent;
+					border-right: 5px solid transparent;
+					border-top: 5px solid @primary-background;
+				}
+
+				li a:not(:last-child):after
+				{
+					content:" ";
+					display: inline-block;
+					float: right;
+					width: 0;
+					height: 0;
+					margin-left: @baseline / 2;
+					margin-top: 5px;
+					border-top: 5px solid transparent;
+					border-bottom: 5px solid transparent;
+					border-left: 5px solid @primary-background;
+				}
+				
 				&:hover > a
 				{
 					border: none;
@@ -103,7 +134,7 @@ nav {
 				
 				li:hover > a
 				{
-					padding: @baseline / 2 @baseline;
+					padding: @baseline / 2 @baseline / 2 @baseline / 2 @baseline;
 				}
 				
 				&:hover > ul,
