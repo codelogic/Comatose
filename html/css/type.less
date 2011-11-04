@@ -504,3 +504,54 @@ h1, h2, h3, h4, h5, h6 {
 	  }
 	}
 }
+
+#page-footer
+{
+	clear: both;
+	
+	.colfull
+	{
+		border-top: 1px solid @muteColor;
+		margin-top: @baseline;
+		padding-top: @baseline;
+		margin-bottom: @baseline;
+	}
+
+	p {
+		font-size: @basefont - 2;
+		color: @muteColor;
+		text-align: center;
+		margin-bottom: @baseline / 2;
+	}
+}
+
+@media screen and (min-width: 888px)
+{
+	#page-footer {
+		padding-bottom: @baseline * 2;
+		
+		.colfull
+		{
+			border-top: 0;
+			border-bottom: 1px solid @muteColor;
+		}
+		
+		p {
+			margin-top: @baseline;
+		}
+	
+		.footercopyright {
+			float: left;
+		}
+		
+		.footerfeedlinks {
+			float: left;
+			margin-left: @basefont;
+			display: block;
+		}
+		
+		.footerpoweredby {
+			float: right;
+		}
+	}
+}
