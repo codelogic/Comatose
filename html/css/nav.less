@@ -17,7 +17,9 @@ nav {
 		
 		li
 		{
-			
+			&.pull-right {
+				float: none;
+			}
 			a {
 				border-top: 1px solid lighten(@strong-foreground, 5%);
 				border-bottom: 1px solid darken(@strong-foreground, 5%);
@@ -72,7 +74,15 @@ nav {
 		ul {
 			li {
 				float: left;
-
+				
+				&.pull-right {
+					float: right;
+				}
+				
+				&.pull-right &:last-child {
+					margin-right: 0px;
+				}
+				
 				a, li a, li li a, li li li a, li li li li a {
 					padding-left: @baseline
 				}
