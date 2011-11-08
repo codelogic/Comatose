@@ -1,0 +1,177 @@
+// nav here
+
+#page-header nav ul.colfull, #page-footer nav ul.colfull
+{
+	padding: 0;
+}
+
+nav {
+	background: @strong-foreground;
+	min-height: @baseline * 3;
+	ul
+	{
+		list-style-type: none;
+		margin: 0;
+		
+		font-size: @basefont + 6;	
+		
+		li
+		{
+			&.pull-right {
+				float: none;
+			}
+			a {
+				border-top: 1px solid lighten(@strong-foreground, 5%);
+				border-bottom: 1px solid darken(@strong-foreground, 5%);
+				
+				color: @primary-background;
+				display: block;
+				height: @baseline;
+				padding: (@baseline / 2 - 1) (@baseline / 2);
+			}
+						
+			a:hover
+			{
+				border: none;
+				padding-top: @baseline / 2;
+				padding-bottom: @baseline / 2;
+				text-decoration: none;
+				color: @primary-background;
+				background: @linkColor;
+			}
+			
+			li a
+			{
+				padding-left: @baseline * 1.5;
+			}
+			
+			li li a
+			{
+				padding-left: @baseline * 2.5;
+			}
+			
+			li li li a
+			{
+				padding-left: @baseline * 3.5;
+			}
+			
+			li li li li a
+			{
+				padding-left: @baseline * 4.5;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 640px)
+{
+	#page-header nav ul.colfull, #page-footer nav ul.colfull
+	{
+		padding: 0 (@baseline - @basefont);
+	}
+
+	nav {
+		ul {
+			li {
+				float: left;
+				
+				&.pull-right {
+					float: right;
+				}
+				
+				&.pull-right &:last-child {
+					margin-right: 0px;
+				}
+				
+				a, li a, li li a, li li li a, li li li li a {
+					padding-left: @baseline
+				}
+				
+				ul {
+					z-index: 1;
+					background: @strong-foreground;
+					position: absolute;
+					left: -9999px;
+					margin: 0;
+					border-left: 5px solid @linkColor;
+				}
+				
+				ul ul {
+					margin-top: 0 - @baseline * 2;
+					margin-left: 190px;
+				}
+				
+				ul li {
+					float: none;
+					margin: 0;
+					width: 190px;
+				}
+				
+				a:before {
+					content: "";
+				}
+				
+				a:not(:last-child):after
+				{
+					content:" ";
+					display:inline-block;
+					width: 0;
+					height: 0;
+					margin-left: @baseline / 2;
+					margin-bottom: 3px;
+					border-left: 5px solid transparent;
+					border-right: 5px solid transparent;
+					border-top: 5px solid @primary-background;
+				}
+
+				li a:not(:last-child):after
+				{
+					content:" ";
+					display: inline-block;
+					float: right;
+					width: 0;
+					height: 0;
+					margin-left: @baseline / 2;
+					margin-top: 5px;
+					border-top: 5px solid transparent;
+					border-bottom: 5px solid transparent;
+					border-left: 5px solid @primary-background;
+				}
+				
+				&:hover > a
+				{
+					border: none;
+					padding: @baseline;
+					text-decoration: none;
+					color: @primary-background;
+					background: @linkColor;
+				}
+				
+				li:hover > a
+				{
+					padding: @baseline / 2 @baseline / 2 @baseline / 2 @baseline;
+				}
+				
+				&:hover > ul,
+				li:hover > ul,
+				li li:hover > ul
+				{
+					left: auto;
+				} 
+			}
+			
+			.clearfix();
+		}
+		
+		> ul > li > a
+		{
+			border: none;
+			padding: @baseline;
+		}
+		
+		> ul > li:first-child
+		{
+			margin-left: 0-@baseline;
+		}
+	}
+}

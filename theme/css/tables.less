@@ -1,0 +1,62 @@
+// tables here
+
+table {
+  width: 100%;
+  margin-top: @baseline;
+  margin-bottom: @baseline;
+  padding: 0;
+  border-collapse: separate; // Done so we can round those corners!
+  *border-collapse: collapse; /* IE7, collapse table to remove spacing */
+  font-size: @basefont;
+  border: 1px solid @tableBorderColor;
+  .border-radius(4px);
+  th, td {
+    padding: (@baseline/2) @basefont (@baseline/2 - 1) @basefont;
+	font-size: @basefont;
+    line-height: @baseline;
+    text-align: left;
+  }
+  th {
+    padding-top: (@baseline/2) - 1;
+	padding-bottom: (@baseline/2) - 1;
+    font-weight: bold;
+    vertical-align: middle;
+    border-bottom: 1px solid @tableBorderColor;
+  }
+  td {
+    vertical-align: top;
+  }
+  th + th,
+  td + td {
+    border-left: 1px solid @tableBorderColor;
+  }
+  tr + tr td {
+    border-top: 1px solid @tableBorderColor;
+  }
+  tbody tr:first-child td:first-child {
+    .border-radius(3px 0 0 0);
+  }
+  tbody tr:first-child td:last-child {
+    .border-radius(0 3px 0 0);
+  }
+  tbody tr:last-child td:first-child {
+    .border-radius(0 0 0 3px);
+  }
+  tbody tr:last-child td:last-child {
+    .border-radius(0 0 3px 0);
+	padding-top: (@baseline/2) - 1;
+  }
+}
+
+
+// ZEBRA-STRIPING
+// --------------
+
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.zebra-striped {
+  tbody {
+    tr:nth-child(odd) td {
+      background-color: #f9f9f9;
+    }
+  }
+}
