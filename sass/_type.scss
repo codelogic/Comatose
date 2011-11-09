@@ -6,25 +6,25 @@
 // ---------
 
 body {
-	background: @primary-background;
-	color: @primary-foreground;
+	background: $primary-background;
+	color: $primary-foreground;
 	
-	#font.sans-serif();
+	@include sans-serif-font;
 	
-	//border-top: 5px solid @strong-foreground;
+	//border-top: 5px solid $strong-foreground;
 }
 
 p {
 	max-width: 800px;
-	font-size: @basefont;
-	line-height: @baseline;
-	margin-bottom: @baseline;
+	font-size: $basefont;
+	line-height: $baseline;
+	margin-bottom: $baseline;
 
-	color: @primary-foreground;
+	color: $primary-foreground;
 	
 	small {
-		font-size: @basefont - 2;
-		color: @headerForeground;
+		font-size: $basefont - 2;
+		color: $headerForeground;
 	}
 	
 	&.right {
@@ -43,12 +43,12 @@ p {
 
 // Links
 a {
-  color: @linkColor;
+  color: $linkColor;
   text-decoration: none;
   line-height: inherit;
   font-weight: inherit;
   &:hover {
-    color: @linkColorHover;
+    color: $linkColorHover;
     text-decoration: underline;
   }
 }
@@ -74,28 +74,28 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-  color: @headerForeground;
+  color: $headerForeground;
   small {
-    color: @grayLight;
+    color: $grayLight;
   }
 }
 /* h1 {
-  margin-bottom: @baseline;
+  margin-bottom: $baseline;
   font-size: 30px;
-  line-height: @baseline * 2;
+  line-height: $baseline * 2;
   small {
     font-size: 18px;
   }
 }
 h2 {
   font-size: 24px;
-  line-height: @baseline * 2;
+  line-height: $baseline * 2;
   small {
     font-size: 14px;
   }
 }
 h3, h4, h5, h6 {
-  line-height: @baseline * 2;
+  line-height: $baseline * 2;
 }
 h3 {
   font-size: 18px;
@@ -122,7 +122,7 @@ h6 {
 
 // Unordered and Ordered lists
 ul, ol {
-  margin: 0 0 @baseline @baseline;
+  margin: 0 0 $baseline $baseline;
 }
 ul ul,
 ul ol,
@@ -137,7 +137,7 @@ ol {
   list-style: decimal;
 }
 li {
-  line-height: @baseline;
+  line-height: $baseline;
 }
 ul.unstyled {
   list-style: none;
@@ -150,20 +150,20 @@ ul.unstyled {
 // Description Lists
 
 .bordered-indent{
-	margin-left: @baseline / 2;
-	padding: 0 @baseline/2 0 @baseline - 5px;
-	border-left: 5px solid @inset-color;
-	background: @insetBackground;
+	margin-left: $baseline / 2;
+	padding: 0 $baseline/2 0 $baseline - 5px;
+	border-left: 5px solid $inset-color;
+	background: $insetBackground;
 	max-width: 600px;
-	margin-top: @baseline;
-	margin-bottom: @baseline;
+	margin-top: $baseline;
+	margin-bottom: $baseline;
 
-	padding-top: @baseline / 2;
-	padding-bottom: @baseline / 2;
+	padding-top: $baseline / 2;
+	padding-bottom: $baseline / 2;
 }
 
 dl {
-  margin-bottom: @baseline;
+  margin-bottom: $baseline;
   
   dt, dd
   {
@@ -172,14 +172,14 @@ dl {
   }
   dt {
     font-weight: bold;
-	line-height: @baseline;
-    padding: (@baseline / 2) @baseline * 1.5 0 @baseline / 2;
+	line-height: $baseline;
+    padding: ($baseline / 2) $baseline * 1.5 0 $baseline / 2;
   }
   dd {
     //font-style: italic;
-	font-size: @basefont - 1;
-	line-height: @baseline;
-    padding: 0 @baseline / 2 (@baseline / 2) @baseline * 1.5;
+	font-size: $basefont - 1;
+	line-height: $baseline;
+    padding: 0 $baseline / 2 ($baseline / 2) $baseline * 1.5;
   }
 }
 
@@ -188,7 +188,7 @@ dl {
 /* Images */
 figure, img, embed, object, video {
 	max-width: 100%;
-	margin: @basespace 0 @basespace auto;
+	margin: $basespace 0 $basespace auto;
 	
 	&.right {
 		margin-left: auto;
@@ -215,19 +215,19 @@ p img,
 p figure {
 	float: left;
 	display: inline;
-	margin-right: @basespace;
+	margin-right: $basespace;
 	
 	&.right {
 		float: right;
-		margin-left: @baseline;
+		margin-left: $baseline;
 		margin-right: auto;
 
 	}
 	
 	&.center {
 		float: center;
-		margin-left: @baseline;
-		margin-right: @baseline;
+		margin-left: $baseline;
+		margin-right: $baseline;
 	}
 }
 
@@ -252,15 +252,15 @@ em {
   line-height: inherit;
 }
 .muted {
-  color: @muteColor;
+  color: $muteColor;
 }
 
 del {
-	color: @delColor;
+	color: $delColor;
 }
 
 ins {
-	color: @insColor;
+	color: $insColor;
 	text-decoration: none;
 	&:before {
       content: '+';	  
@@ -269,29 +269,29 @@ ins {
 
 // Blockquotes
 blockquote {
-  margin-bottom: @baseline;
-  margin-left: @baseline / 2;
-  border-left: 5px solid @primary-foreground;
-  padding-left: @baseline - 5;
+  margin-bottom: $baseline;
+  margin-left: $baseline / 2;
+  border-left: 5px solid $primary-foreground;
+  padding-left: $baseline - 5;
   max-width: 600px;
   
   blockquote {
-	border-left: 5px solid @muteColor;
+	border-left: 5px solid $muteColor;
   }
   
   p {
-    #font.shorthand(300,@basefont - 1,@baseline);
+    @include shorthand-font(300,$basefont - 1,$baseline);
 	//font-style: italic;
   }
 
   small, cite {
-    //margin-bottom: @baseline + (@baseline - @basefont);
-	//padding-bottom: @basefont;
+    //margin-bottom: $baseline + ($baseline - $basefont);
+	//padding-bottom: $basefont;
 	margin-left: auto;
-	margin-right: @baseline;
+	margin-right: $baseline;
 	text-align: right;
 	display: block;
-	height: @baseline;
+	height: $baseline;
     font-style: normal;
     font-weight: bold;
     &:before {
@@ -302,7 +302,7 @@ blockquote {
 
 // Inline Quotes
 q {
-	font-size: @basefont;
+	font-size: $basefont;
 	font-style: italic;
 	&:before {
       content: '"';	  
@@ -314,31 +314,31 @@ q {
 
 // Addresses
 address {
-	padding: 0 @baseline/2 0 @baseline - 5px;
-	border-left: 5px solid @inset-color;
+	padding: 0 $baseline/2 0 $baseline - 5px;
+	border-left: 5px solid $inset-color;
 	
-	margin-left: @baseline / 2;
-	margin-top: @baseline;
-	margin-bottom: @baseline;
+	margin-left: $baseline / 2;
+	margin-top: $baseline;
+	margin-bottom: $baseline;
 
-	//padding-top: @baseline / 2;
-	//padding-bottom: @baseline / 2;
+	//padding-top: $baseline / 2;
+	//padding-bottom: $baseline / 2;
 	
 	display: block;
-	font-size: @basefont - 1;
-	line-height: @baseline;
+	font-size: $basefont - 1;
+	line-height: $baseline;
 }
 
 // Inline and block code styles
 
 code, pre, kbd, tt, var {
   padding: 0 3px 2px;
-  #font.monospace;
-  .border-radius(4px);
+  @include monospace-font;
+  @include border-radius(4px);
 }
 
 code, var, kbd, tt {
-  background-color: @codeTagBackground;
+  background-color: $codeTagBackground;
   padding: 1px 3px;
   line-height: 0;
 }
@@ -348,14 +348,14 @@ var {
 }
 
 pre {
-  background-color: @preBackground;
+  background-color: $preBackground;
   display: block;
-  padding: (@baseline - 1) / 2;
-  margin: 0 0 @baseline;
-  line-height: @baseline;
+  padding: ($baseline - 1) / 2;
+  margin: 0 0 $baseline;
+  line-height: $baseline;
   font-size: 12px;
-  border: 1px solid @preBorder;
-  .border-radius(3px);
+  border: 1px solid $preBorder;
+  @include border-radius(3px);
   white-space: pre;
   
   overflow:auto;
@@ -364,53 +364,53 @@ pre {
 
 /* Preset sizes. */
 
-.xsmall {
+@mixin xsmall {
 	font-size: 10px;
-	line-height: @baseline;
+	line-height: $baseline;
 }
 
-.small {
+@mixin small {
 	font-size: 12px;
-	height: @baseline;
+	height: $baseline;
 }
 
-.normal {
-	font-size: @headerfont;
-	height: @baseline;
-	margin-top: @baseline;
-	margin-bottom: @baseline;
+@mixin normal {
+	font-size: $headerfont;
+	height: $baseline;
+	margin-top: $baseline;
+	margin-bottom: $baseline;
 }
 
-.large {
-	font-size: @headerfont * 1.2;
-	height: @baseline;
-	margin-top: @baseline;
-	margin-bottom: @baseline;
+@mixin large {
+	font-size: $headerfont * 1.2;
+	height: $baseline;
+	margin-top: $baseline;
+	margin-bottom: $baseline;
 }
 
-.huge {
-	font-size: @headerfont * 1.5;
-	height: @baseline * 2;
-	margin-top: @baseline;
-	margin-bottom: @baseline;
+@mixin huge {
+	font-size: $headerfont * 1.5;
+	height: $baseline * 2;
+	margin-top: $baseline;
+	margin-bottom: $baseline;
 }
 
-.massive {
-	font-size: @headerfont * 2;
-	height: @baseline * 2;
-	margin-top: @baseline * 2;
-	margin-bottom: @baseline;
+@mixin massive {
+	font-size: $headerfont * 2;
+	height: $baseline * 2;
+	margin-top: $baseline * 2;
+	margin-bottom: $baseline;
 }
 
-.gigantic {
-	font-size:  @headerfont * 3;
-	height: @baseline * 3;
-	margin-top: @baseline * 3;
-	margin-bottom: @baseline;
+@mixin gigantic {
+	font-size:  $headerfont * 3;
+	height: $baseline * 3;
+	margin-top: $baseline * 3;
+	margin-bottom: $baseline;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: @headerForeground;
+	color: $headerForeground;
 	clear: both;
 }
 
@@ -419,42 +419,42 @@ h1, h2, h3, h4, h5, h6 {
 #page-header, 
 #page-footer {
 	h1 {
-		.gigantic;
+		@include gigantic;
 		
 		margin-bottom: 0;
 	}
 	h2 {
-		.massive;
+		@include massive;
 	}
 	
 	h3 {
-		.huge;
+		@include huge;
 	}
 	
 	h4, h5, h6 {
-		.large;
+		@include large;
 	}
 }
 
 #page-content, 
 #page-sidebar {
 	h1 {
-		.massive;
+		@include massive;
 	}
 	
 	h2{
-		.huge;
+		@include huge;
 	}
 	
 	h3, h4, h5, h6 {
-		.large;
+		@include large;
 	}
 	
 	article {
 		h1, h2 {
-			border-bottom: 5px solid @strong-foreground;
-			margin-bottom: @baseline;
-			margin-top: @baseline * 2 - 5px;
+			border-bottom: 5px solid $strong-foreground;
+			margin-bottom: $baseline;
+			margin-top: $baseline * 2 - 5px;
 		}
 		
 		header {
@@ -463,33 +463,33 @@ h1, h2, h3, h4, h5, h6 {
 			}
 			
 			h1 {
-				.massive;
+				@include massive;
 			}
 			h2{
-				.huge;
+				@include huge;
 			}
 		}
 		
 		aside {
-			margin-bottom: @baseline - 5px;
-			margin-top: @baseline * 2 - 5px;
+			margin-bottom: $baseline - 5px;
+			margin-top: $baseline * 2 - 5px;
 			
 			h1 {
-				.huge;
+				@include huge;
 				
 				margin-top: 0;
 			}
 			
 			h2, h3, h4, h5, h6 {
-				.large;
+				@include large;
 				
 				margin-top: 0;
 			}
 		}
 		
 		footer {
-			border-top: 5px solid lighten(@muteColor, 10%);
-			padding-top: @baseline - 5;
+			border-top: 5px solid lighten($muteColor, 10%);
+			padding-top: $baseline - 5;
 		}
 	}
 }
@@ -511,33 +511,33 @@ h1, h2, h3, h4, h5, h6 {
 	
 	.colfull
 	{
-		border-top: 1px solid @muteColor;
-		margin-top: @baseline;
-		padding-top: @baseline;
-		margin-bottom: @baseline;
+		border-top: 1px solid $muteColor;
+		margin-top: $baseline;
+		padding-top: $baseline;
+		margin-bottom: $baseline;
 	}
 
 	p {
-		font-size: @basefont - 2;
-		color: @muteColor;
+		font-size: $basefont - 2;
+		color: $muteColor;
 		text-align: center;
-		margin-bottom: @baseline / 2;
+		margin-bottom: $baseline / 2;
 	}
 }
 
 @media screen and (min-width: 888px)
 {
 	#page-footer {
-		padding-bottom: @baseline * 2;
+		padding-bottom: $baseline * 2;
 		
 		.colfull
 		{
 			border-top: 0;
-			border-bottom: 1px solid @muteColor;
+			border-bottom: 1px solid $muteColor;
 		}
 		
 		p {
-			margin-top: @baseline;
+			margin-top: $baseline;
 		}
 	
 		.footercopyright {
@@ -546,7 +546,7 @@ h1, h2, h3, h4, h5, h6 {
 		
 		.footerfeedlinks {
 			float: left;
-			margin-left: @basefont;
+			margin-left: $basefont;
 			display: block;
 		}
 		

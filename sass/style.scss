@@ -8,3 +8,16 @@ Version:        0.1.0
 */
 
 @import "reset";
+@import "variables";
+@import "mixins";
+@import "layout";
+
+/* Styled patterns and elements */
+@import "type";
+@import "forms";
+@import "tables";
+@import "patterns";
+@import "nav";
+
+@import "nivo-slider";
+@import "comatose";

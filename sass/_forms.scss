@@ -5,38 +5,38 @@
  
 form
 {
-	margin-bottom: @baseline;
-	background: @insetBackground;
-	border-left: 5px solid @strong-foreground;
-	padding-left: @baseline - 5px;
-	padding-top: @baseline;
-	line-height: @baseline;	
+	margin-bottom: $baseline;
+	background: $insetBackground;
+	border-left: 5px solid $strong-foreground;
+	padding-left: $baseline - 5px;
+	padding-top: $baseline;
+	line-height: $baseline;	
 	min-width: 230px;
 
 	fieldset {
-		margin-bottom: @baseline;
-		padding-top: @baseline;
+		margin-bottom: $baseline;
+		padding-top: $baseline;
 	}
 	
 	legend
 	{
-		.large;
+		@include large;
 		display: block;
 		line-height: 1;
 		margin-left: 25%;
-		padding-top: @baseline * 1.75;
-		padding-bottom: @baseline * 0.25;
+		padding-top: $baseline * 1.75;
+		padding-bottom: $baseline * 0.25;
 	}
 	
 	fieldset:first-child legend{
-		padding-top: @baseline * 0.5;
-		padding-bottom: @baseline * 0.5;
+		padding-top: $baseline * 0.5;
+		padding-bottom: $baseline * 0.5;
 	}
 }
 
 form .clearfix {
-	margin-bottom: @baseline;
-	.clearfix();
+	margin-bottom: $baseline;
+	@include clearfix;
 }
 
 // Set font for forms
@@ -44,19 +44,19 @@ label,
 input,
 select,
 textarea {
-  #font > .sans-serif(normal, @basefont ,normal);
+  @include sans-serif-font(normal, $basefont ,normal);
 }
 
 // Float labels left
 label {
   padding-top: 2px;
-  font-size: @basefont;
-  line-height: @baseline;
+  font-size: $basefont;
+  line-height: $baseline;
   float: left;
   width: 23%;
   text-align: right;
-  color: @grayDark;
-  padding-right: @basefont;
+  color: $grayDark;
+  padding-right: $basefont;
 }
 
 // Shift over the inside div to align all label's relevant content
@@ -78,18 +78,18 @@ select,
   display: inline-block;
   width: 75%;
   max-width: 250px;
-  height: @baseline;
-  font-size: @basefont;
-  line-height: @baseline;
-  color: @primary-foreground;
+  height: $baseline;
+  font-size: $basefont;
+  line-height: $baseline;
+  color: $primary-foreground;
   border: 1px solid #ccc;
   padding: 2px;
-  .border-radius(3px);
+  @include border-radius(3px);
 }
 
 textarea {
 	max-width: 75%;
-	min-height: @baseline * 5;
+	min-height: $baseline * 5;
 	height: auto;
 }
 
@@ -106,11 +106,11 @@ input[type=radio] {
 }
 
 input[type=file] {
-  background-color: @white;
+  background-color: $white;
   padding: initial;
   border: initial;
   line-height: initial;
-  .box-shadow(none);
+  @include box-shadow(none);
 }
 
 input[type=button],
@@ -122,8 +122,8 @@ input[type=submit] {
 
 select,
 input[type=file] {
-  height: @baseline + 4; // In IE7, the height of the select element cannot be changed by height, only font-size
-  line-height: @baseline + 4;
+  height: $baseline + 4; // In IE7, the height of the select element cannot be changed by height, only font-size
+  line-height: $baseline + 4;
   *margin-top: 4px; /* For IE7, add top margin to align select with labels */
 }
 
@@ -142,27 +142,27 @@ input[readonly],
 select[readonly],
 textarea[readonly],
 .uneditable-input  {
-  background-color: @white;
+  background-color: $white;
   border-color: #eee;
-  .box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
-  color: @muteColor;
+  @include box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
+  color: $muteColor;
    cursor: default;
 }
 
 // Placeholder text gets special styles; can't be bundled together though for some reason
 :-moz-placeholder {
-  color: @muteColor;
+  color: $muteColor;
 }
 ::-webkit-input-placeholder {
-  color: @muteColor;
+  color: $muteColor;
 }
 
 // Help Text
 .help-inline,
 .help-block {
-  font-size: @basefont - 2;
-  line-height: @baseline;
-  color: @muteColor;
+  font-size: $basefont - 2;
+  line-height: $baseline;
+  color: $muteColor;
 }
 .help-inline {
   padding-left: 5px;
@@ -178,7 +178,7 @@ textarea[readonly],
 
 // Inline Fields (input fields that appear as inline objects
 .inline-inputs {
-  color: @primary-foreground;
+  color: $primary-foreground;
   span, input {
     display: inline-block;
   }
@@ -207,14 +207,14 @@ textarea[readonly],
     float: none;
     width: auto;
     padding: 0;
-    line-height: @baseline;
+    line-height: $baseline;
     text-align: left;
     white-space: normal;
     strong {
-      color: @gray;
+      color: $gray;
     }
     small {
-      font-size: @basefont - 2;
+      font-size: $basefont - 2;
       font-weight: normal;
     }
   }
@@ -239,7 +239,7 @@ textarea[readonly],
 .input-prepend,
 .input-append {
   input {
-    .border-radius(0 3px 3px 0);
+    @include border-radius(0 3px 3px 0);
   }
   .add-on {
     position: relative;
@@ -255,14 +255,14 @@ textarea[readonly],
     margin-right: -1px;
     font-weight: normal;
     line-height: 18px;
-    color: @grayLight;
+    color: $grayLight;
     text-align: center;
-    text-shadow: 0 1px 0 @white;
-    .border-radius(3px 0 0 3px);
+    text-shadow: 0 1px 0 $white;
+    @include border-radius(3px 0 0 3px);
   }
   .active {
-    background: lighten(@green, 30);
-    border-color: @green;
+    background: lighten($green, 30);
+    border-color: $green;
   }
 }
 .input-prepend {
@@ -273,10 +273,10 @@ textarea[readonly],
 .input-append {
   input {
     float: left;
-    .border-radius(3px 0 0 3px);
+    @include border-radius(3px 0 0 3px);
   }
   .add-on {
-    .border-radius(0 3px 3px 0);
+    @include border-radius(0 3px 3px 0);
     margin-right: 0;
     margin-left: -1px;
   }
@@ -284,5 +284,5 @@ textarea[readonly],
 
 .actions {
 	margin-left: 25%;
-	padding-bottom: @baseline;
+	padding-bottom: $baseline;
 }

@@ -1,4 +1,4 @@
-@import "reset.less";
+$column: 100% / 18;
 
 body,
 div,
@@ -42,134 +42,60 @@ html {
 	-webkit-text-size-adjust: 100%; 
 	-ms-text-size-adjust: 100%;
 }
-body {
-	min-height: 100%; 
-	font-size: 100%;
-}
 
-@section-color: #d0d0d0;
 
-@column: 100% / 18;
-@size: 14px;
-@line: 18px;
-
-body {
-	font-size: @size;
-	line-height: @line;
-}
-
-#content > section, body > header, body > footer { 
-	background: @section-color;
-}
-
-#content > section > section  {
-	background: darken(@section-color, 10);
-}
-
-.small {
-	font-size: @size * 0.75;
-	line-height: @line * 0.75;
-}
-
-.normal {
-	font-size: @size;
-	line-height: @line;
-}
-
-.large {
-	font-size: @size * 1.5;
-	line-height: @line * 1.5;
-}
-
-.huge {
-	font-size: @size * 2;
-	line-height: @line * 2;
-}
-
-.massive {
-	font-size: @size * 2.5;
-	line-height: @line * 2.5;
-}
-
-.gigantic {
-	font-size: @size * 3;
-	line-height: @line * 3;
-}
 
 /*
 *  Simple elastic gutters
 *  Note: box-sizing will not work in IE6-8
 */
 
-.wrapper {
-	padding: 0 (@line - @size);
+@mixin wrapper {
+	padding: 0 ($baseline - $basefont);
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 		 -o-box-sizing: border-box;
 			box-sizing: border-box;
 }
 
-.clear-fix
-{
-	clear: both;
-}
-
 /* header and footer span the page margins */
 #page-header, 
 #page-footer {
-	.clear-fix;
+	@include clearfix;
 	
-	h1 {
-		.massive;
-	}
-	h2 {
-		.huge;
-	}
-	
-	h3 {
-		.large;
-	}
-	
-	h4, h5 {
-		.normal;
-	}
-	
-	h1, h2, h3, nav, section, div {
-		.wrapper;
+	.colfull {
+		@include wrapper;
 	}
 }
 
 /* At level A, there is only margining for the sections */
 #page-content, 
 #page-sidebar {
-	.wrapper;
-	
-	h1 {
-		.huge;
-	}
-	
-	h2{
-		.large;
-	}
+	@include wrapper;
 	
 	h3, h4, h5 {
-		.normal;
 	}
 }
-
 
 /* 4 grid */
 @media screen and (min-width: 640px) {
 	#page-header, 
 	#page-footer {
-		h1, h2, h3, nav, section, div {
-			margin: 0 @column/2;
+		.colfull {
+			margin: 0 $column/2;
 		}
 	}
 	
 	#page-content, 
 	#page-sidebar  {
-		margin: 0 @column/2;
+		margin: 0 $column/2;
+		
+		aside {
+			clear: right;
+			width: $column*6;
+			float: right;
+			margin-left: $baseline;
+		}
 	}
 	
 	#page-sidebar section {
@@ -178,26 +104,30 @@ body {
 	}
 }
 
-/* 8 grid */
-@media screen and (min-width: 720px) {
-
-}
-
 @media screen and (min-width: 888px) {
 	#page-header, 
 	#page-footer {
-		h1, h2, h3, nav, section, div {
-			margin: 0 @column;
+		.colfull {
+			margin: 0 auto;
+			max-width: 800px + ($baseline*2);
 		}
 	}
 
 	#page-content, 
 	#page-sidebar  {
-		margin: 0 @column;
+		margin: 0 auto;
+		max-width: 800px + ($baseline*2);
 	}
 }
 
 @media screen and (min-width: 984px) {
+	#page-content, 
+	#page-sidebar  {
+		aside {
+			width: 320px;
+		}
+	}
+	
 	#page-sidebar section {
 		width: 25%;
 		float: left;
@@ -205,16 +135,26 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+	#page-header, 
+	#page-footer {
+		.colfull {
+			margin: 0 $column;
+			max-width: 99999px;
+		}
+	}
+
 	#page-content {
 		float: left;
-		width: @column*12;
-		margin: 0 0 0 @column;
+		width: $column*12;
+		margin: 0 0 0 $column;
+		max-width: 99999px;
 	}
 	
 	#page-sidebar {
 		float: right;
-		width:  @column*4;
-		margin: 0 @column 0 0;
+		width:  $column*4;
+		margin: 0 $column 0 0;
+		max-width:  99999px;
 	}
 	
 	#page-sidebar section {
@@ -225,7 +165,7 @@ body {
 @media screen and (min-width: 1440px) {
 	#page-header, 
 	#page-footer {
-		h1, h2, h3, nav, section, div {
+		.colfull {
 			width: 1280px;
 			margin: 0 auto;
 		}
@@ -247,15 +187,4 @@ body {
 		width: 1280px;
 		margin: 0 auto;
 	}
-}
-
-@media screen and (min-width: 1680px) {
-}
-
-/* 16 column grid */
-@media screen and (min-width: 1872px) {
-	
-}
-
-@media screen and (min-width: 2080px) {
 }
