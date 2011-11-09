@@ -4,12 +4,12 @@
 	hgroup {
 	}
 	h1 { 
-		margin-top: $baseline * 3.5;
+		margin-top: $text-lineheight * 3.5;
 	}
 	h2 {
-		color: $muteColor;
-		font-size: $basefont + 4;
-		margin: 0 0 ($baseline * 2.5) ($baseline * 2);
+		color: $text-mute-color;
+		font-size: $text-fontsize + 4;
+		margin: 0 0 ($text-lineheight * 2.5) ($text-lineheight * 2);
 		&:before {
 		  content: '\2014 \00A0';
 		}

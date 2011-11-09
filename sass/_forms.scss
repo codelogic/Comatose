@@ -5,17 +5,17 @@
  
 form
 {
-	margin-bottom: $baseline;
-	background: $insetBackground;
-	border-left: 5px solid $strong-foreground;
-	padding-left: $baseline - 5px;
-	padding-top: $baseline;
-	line-height: $baseline;	
+	margin-bottom: $text-lineheight;
+	background: $form-background;
+	border-left: 5px solid $text-alt-color;
+	padding-left: $text-lineheight - 5px;
+	padding-top: $text-lineheight;
+	line-height: $text-lineheight;	
 	min-width: 230px;
 
 	fieldset {
-		margin-bottom: $baseline;
-		padding-top: $baseline;
+		margin-bottom: $text-lineheight;
+		padding-top: $text-lineheight;
 	}
 	
 	legend
@@ -24,18 +24,18 @@ form
 		display: block;
 		line-height: 1;
 		margin-left: 25%;
-		padding-top: $baseline * 1.75;
-		padding-bottom: $baseline * 0.25;
+		padding-top: $text-lineheight * 1.75;
+		padding-bottom: $text-lineheight * 0.25;
 	}
 	
 	fieldset:first-child legend{
-		padding-top: $baseline * 0.5;
-		padding-bottom: $baseline * 0.5;
+		padding-top: $text-lineheight * 0.5;
+		padding-bottom: $text-lineheight * 0.5;
 	}
 }
 
 form .clearfix {
-	margin-bottom: $baseline;
+	margin-bottom: $text-lineheight;
 	@include clearfix;
 }
 
@@ -44,19 +44,19 @@ label,
 input,
 select,
 textarea {
-  @include sans-serif-font(normal, $basefont ,normal);
+  @include sans-serif-font(normal, $text-fontsize ,normal);
 }
 
 // Float labels left
 label {
   padding-top: 2px;
-  font-size: $basefont;
-  line-height: $baseline;
+  font-size: $text-fontsize;
+  line-height: $text-lineheight;
   float: left;
   width: 23%;
   text-align: right;
   color: $grayDark;
-  padding-right: $basefont;
+  padding-right: $text-fontsize;
 }
 
 // Shift over the inside div to align all label's relevant content
@@ -78,10 +78,10 @@ select,
   display: inline-block;
   width: 75%;
   max-width: 250px;
-  height: $baseline;
-  font-size: $basefont;
-  line-height: $baseline;
-  color: $primary-foreground;
+  height: $text-lineheight;
+  font-size: $text-fontsize;
+  line-height: $text-lineheight;
+  color: $text-color;
   border: 1px solid #ccc;
   padding: 2px;
   @include border-radius(3px);
@@ -89,7 +89,7 @@ select,
 
 textarea {
 	max-width: 75%;
-	min-height: $baseline * 5;
+	min-height: $text-lineheight * 5;
 	height: auto;
 }
 
@@ -122,8 +122,8 @@ input[type=submit] {
 
 select,
 input[type=file] {
-  height: $baseline + 4; // In IE7, the height of the select element cannot be changed by height, only font-size
-  line-height: $baseline + 4;
+  height: $text-lineheight + 4; // In IE7, the height of the select element cannot be changed by height, only font-size
+  line-height: $text-lineheight + 4;
   *margin-top: 4px; /* For IE7, add top margin to align select with labels */
 }
 
@@ -145,24 +145,24 @@ textarea[readonly],
   background-color: $white;
   border-color: #eee;
   @include box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
-  color: $muteColor;
+  color: $text-mute-color;
    cursor: default;
 }
 
 // Placeholder text gets special styles; can't be bundled together though for some reason
 :-moz-placeholder {
-  color: $muteColor;
+  color: $text-mute-color;
 }
 ::-webkit-input-placeholder {
-  color: $muteColor;
+  color: $text-mute-color;
 }
 
 // Help Text
 .help-inline,
 .help-block {
-  font-size: $basefont - 2;
-  line-height: $baseline;
-  color: $muteColor;
+  font-size: $text-fontsize - 2;
+  line-height: $text-lineheight;
+  color: $text-mute-color;
 }
 .help-inline {
   padding-left: 5px;
@@ -178,7 +178,7 @@ textarea[readonly],
 
 // Inline Fields (input fields that appear as inline objects
 .inline-inputs {
-  color: $primary-foreground;
+  color: $text-color;
   span, input {
     display: inline-block;
   }
@@ -207,14 +207,14 @@ textarea[readonly],
     float: none;
     width: auto;
     padding: 0;
-    line-height: $baseline;
+    line-height: $text-lineheight;
     text-align: left;
     white-space: normal;
     strong {
       color: $gray;
     }
     small {
-      font-size: $basefont - 2;
+      font-size: $text-fontsize - 2;
       font-weight: normal;
     }
   }
@@ -284,5 +284,5 @@ textarea[readonly],
 
 .actions {
 	margin-left: 25%;
-	padding-bottom: $baseline;
+	padding-bottom: $text-lineheight;
 }

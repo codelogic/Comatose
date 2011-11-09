@@ -51,7 +51,7 @@ html {
 */
 
 @mixin wrapper {
-	padding: 0 ($baseline - $basefont);
+	padding: 0 ($text-lineheight - $text-fontsize);
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 		 -o-box-sizing: border-box;
@@ -94,7 +94,7 @@ html {
 			clear: right;
 			width: $column*6;
 			float: right;
-			margin-left: $baseline;
+			margin-left: $text-lineheight;
 		}
 	}
 	
@@ -109,14 +109,14 @@ html {
 	#page-footer {
 		.colfull {
 			margin: 0 auto;
-			max-width: 800px + ($baseline*2);
+			max-width: 800px + ($text-lineheight*2);
 		}
 	}
 
 	#page-content, 
 	#page-sidebar  {
 		margin: 0 auto;
-		max-width: 800px + ($baseline*2);
+		max-width: 800px + ($text-lineheight*2);
 	}
 }
 

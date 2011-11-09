@@ -18,33 +18,32 @@ $grayLight:         lighten($black, 70%);
 $grayLighter:       lighten($black, 90%);
 $white:             #fff;
 
-$primary-background: #fffefe;
-$primary-foreground: #303030;
-$strong-foreground: #202020;
+$page-background: #fffefe;
+$text-color: #303030;
+$text-alt-color: #202020;
+$text-accent-color: $blue;
+$text-mute-color: $grayLight;
 
-$primary-accent: $blue;
+$text-fontsize:	12px;
+$text-lineheight: 20px;
+$text-xheight: ($text-lineheight - $text-fontsize);
 
-$basefont:	12px;
-$baseline:	20px;
-$basespace: ($baseline - $basefont);
+$header-fontsize: 14px;
+$header-color: $text-alt-color;
 
-$headerfont: 14px;
-$headerForeground: $strong-foreground;
+$link-color: $text-accent-color;
+$link-color-hover: darken($link-color, 15);
 
-$linkColor: $primary-accent;
-$linkColorHover: darken($linkColor, 15);
+$code-background: #F0F0F0;
+$inset-color: $text-alt-color;
+$ins-color: saturate(darken($green, 15%), 15%);
+$del-color: $text-mute-color;
+$form-background: #f8f8f8;
+$pre-background: #F0F0F0;
+$pre-border-color: darken($pre-background, 10%);
 
-$muteColor: $grayLight;
-$codeTagBackground: #F0F0F0;
-$inset-color: $strong-foreground;
-$insColor: saturate(darken($green, 15%), 15%);
-$delColor: $muteColor;
-$insetBackground: #f8f8f8;
-$preBackground: #F0F0F0;
-$preBorder: darken($preBackground, 10%);
-
-$tableBorderColor: $muteColor;
-$tableHeaderBorderColor: $inset-color;
+$table-border-color: $text-mute-color;
+$th-border-color: $inset-color;
 
 /*
 @fluidKeyframeA: 640px;

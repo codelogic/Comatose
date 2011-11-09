@@ -6,25 +6,25 @@
 // ---------
 
 body {
-	background: $primary-background;
-	color: $primary-foreground;
+	background: $page-background;
+	color: $text-color;
 	
 	@include sans-serif-font;
 	
-	//border-top: 5px solid $strong-foreground;
+	//border-top: 5px solid $text-alt-color;
 }
 
 p {
 	max-width: 800px;
-	font-size: $basefont;
-	line-height: $baseline;
-	margin-bottom: $baseline;
+	font-size: $text-fontsize;
+	line-height: $text-lineheight;
+	margin-bottom: $text-lineheight;
 
-	color: $primary-foreground;
+	color: $text-color;
 	
 	small {
-		font-size: $basefont - 2;
-		color: $headerForeground;
+		font-size: $text-fontsize - 2;
+		color: $header-color;
 	}
 	
 	&.right {
@@ -43,12 +43,12 @@ p {
 
 // Links
 a {
-  color: $linkColor;
+  color: $link-color;
   text-decoration: none;
   line-height: inherit;
   font-weight: inherit;
   &:hover {
-    color: $linkColorHover;
+    color: $link-color-hover;
     text-decoration: underline;
   }
 }
@@ -74,55 +74,18 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-  color: $headerForeground;
+  color: $header-color;
   small {
     color: $grayLight;
   }
 }
-/* h1 {
-  margin-bottom: $baseline;
-  font-size: 30px;
-  line-height: $baseline * 2;
-  small {
-    font-size: 18px;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: $baseline * 2;
-  small {
-    font-size: 14px;
-  }
-}
-h3, h4, h5, h6 {
-  line-height: $baseline * 2;
-}
-h3 {
-  font-size: 18px;
-  small {
-    font-size: 14px;
-  }
-}
-h4 {
-  font-size: 16px;
-  small {
-    font-size: 12px;
-  }
-}
-h5 {
-  font-size: 14px;
-}
-h6 {
-  font-size: 13px;
-  text-transform: uppercase;
-} */
 
 // COLORS
 // ------
 
 // Unordered and Ordered lists
 ul, ol {
-  margin: 0 0 $baseline $baseline;
+  margin: 0 0 $text-lineheight $text-lineheight;
 }
 ul ul,
 ul ol,
@@ -137,7 +100,7 @@ ol {
   list-style: decimal;
 }
 li {
-  line-height: $baseline;
+  line-height: $text-lineheight;
 }
 ul.unstyled {
   list-style: none;
@@ -150,20 +113,20 @@ ul.unstyled {
 // Description Lists
 
 .bordered-indent{
-	margin-left: $baseline / 2;
-	padding: 0 $baseline/2 0 $baseline - 5px;
+	margin-left: $text-lineheight / 2;
+	padding: 0 $text-lineheight/2 0 $text-lineheight - 5px;
 	border-left: 5px solid $inset-color;
-	background: $insetBackground;
+	background: $form-background;
 	max-width: 600px;
-	margin-top: $baseline;
-	margin-bottom: $baseline;
+	margin-top: $text-lineheight;
+	margin-bottom: $text-lineheight;
 
-	padding-top: $baseline / 2;
-	padding-bottom: $baseline / 2;
+	padding-top: $text-lineheight / 2;
+	padding-bottom: $text-lineheight / 2;
 }
 
 dl {
-  margin-bottom: $baseline;
+  margin-bottom: $text-lineheight;
   
   dt, dd
   {
@@ -172,14 +135,14 @@ dl {
   }
   dt {
     font-weight: bold;
-	line-height: $baseline;
-    padding: ($baseline / 2) $baseline * 1.5 0 $baseline / 2;
+	line-height: $text-lineheight;
+    padding: ($text-lineheight / 2) $text-lineheight * 1.5 0 $text-lineheight / 2;
   }
   dd {
     //font-style: italic;
-	font-size: $basefont - 1;
-	line-height: $baseline;
-    padding: 0 $baseline / 2 ($baseline / 2) $baseline * 1.5;
+	font-size: $text-fontsize - 1;
+	line-height: $text-lineheight;
+    padding: 0 $text-lineheight / 2 ($text-lineheight / 2) $text-lineheight * 1.5;
   }
 }
 
@@ -188,7 +151,7 @@ dl {
 /* Images */
 figure, img, embed, object, video {
 	max-width: 100%;
-	margin: $basespace 0 $basespace auto;
+	margin: $text-xheight 0 $text-xheight auto;
 	
 	&.right {
 		margin-left: auto;
@@ -215,19 +178,19 @@ p img,
 p figure {
 	float: left;
 	display: inline;
-	margin-right: $basespace;
+	margin-right: $text-xheight;
 	
 	&.right {
 		float: right;
-		margin-left: $baseline;
+		margin-left: $text-lineheight;
 		margin-right: auto;
 
 	}
 	
 	&.center {
 		float: center;
-		margin-left: $baseline;
-		margin-right: $baseline;
+		margin-left: $text-lineheight;
+		margin-right: $text-lineheight;
 	}
 }
 
@@ -252,15 +215,15 @@ em {
   line-height: inherit;
 }
 .muted {
-  color: $muteColor;
+  color: $text-mute-color;
 }
 
 del {
-	color: $delColor;
+	color: $del-color;
 }
 
 ins {
-	color: $insColor;
+	color: $ins-color;
 	text-decoration: none;
 	&:before {
       content: '+';	  
@@ -269,29 +232,29 @@ ins {
 
 // Blockquotes
 blockquote {
-  margin-bottom: $baseline;
-  margin-left: $baseline / 2;
-  border-left: 5px solid $primary-foreground;
-  padding-left: $baseline - 5;
+  margin-bottom: $text-lineheight;
+  margin-left: $text-lineheight / 2;
+  border-left: 5px solid $text-color;
+  padding-left: $text-lineheight - 5;
   max-width: 600px;
   
   blockquote {
-	border-left: 5px solid $muteColor;
+	border-left: 5px solid $text-mute-color;
   }
   
   p {
-    @include shorthand-font(300,$basefont - 1,$baseline);
+    @include shorthand-font(300,$text-fontsize - 1,$text-lineheight);
 	//font-style: italic;
   }
 
   small, cite {
-    //margin-bottom: $baseline + ($baseline - $basefont);
-	//padding-bottom: $basefont;
+    //margin-bottom: $text-lineheight + ($text-lineheight - $text-fontsize);
+	//padding-bottom: $text-fontsize;
 	margin-left: auto;
-	margin-right: $baseline;
+	margin-right: $text-lineheight;
 	text-align: right;
 	display: block;
-	height: $baseline;
+	height: $text-lineheight;
     font-style: normal;
     font-weight: bold;
     &:before {
@@ -302,7 +265,7 @@ blockquote {
 
 // Inline Quotes
 q {
-	font-size: $basefont;
+	font-size: $text-fontsize;
 	font-style: italic;
 	&:before {
       content: '"';	  
@@ -314,19 +277,19 @@ q {
 
 // Addresses
 address {
-	padding: 0 $baseline/2 0 $baseline - 5px;
+	padding: 0 $text-lineheight/2 0 $text-lineheight - 5px;
 	border-left: 5px solid $inset-color;
 	
-	margin-left: $baseline / 2;
-	margin-top: $baseline;
-	margin-bottom: $baseline;
+	margin-left: $text-lineheight / 2;
+	margin-top: $text-lineheight;
+	margin-bottom: $text-lineheight;
 
-	//padding-top: $baseline / 2;
-	//padding-bottom: $baseline / 2;
+	//padding-top: $text-lineheight / 2;
+	//padding-bottom: $text-lineheight / 2;
 	
 	display: block;
-	font-size: $basefont - 1;
-	line-height: $baseline;
+	font-size: $text-fontsize - 1;
+	line-height: $text-lineheight;
 }
 
 // Inline and block code styles
@@ -338,7 +301,7 @@ code, pre, kbd, tt, var {
 }
 
 code, var, kbd, tt {
-  background-color: $codeTagBackground;
+  background-color: $code-background;
   padding: 1px 3px;
   line-height: 0;
 }
@@ -348,13 +311,13 @@ var {
 }
 
 pre {
-  background-color: $preBackground;
+  background-color: $pre-background;
   display: block;
-  padding: ($baseline - 1) / 2;
-  margin: 0 0 $baseline;
-  line-height: $baseline;
+  padding: ($text-lineheight - 1) / 2;
+  margin: 0 0 $text-lineheight;
+  line-height: $text-lineheight;
   font-size: 12px;
-  border: 1px solid $preBorder;
+  border: 1px solid $pre-border-color;
   @include border-radius(3px);
   white-space: pre;
   
@@ -366,51 +329,51 @@ pre {
 
 @mixin xsmall {
 	font-size: 10px;
-	line-height: $baseline;
+	line-height: $text-lineheight;
 }
 
 @mixin small {
 	font-size: 12px;
-	height: $baseline;
+	height: $text-lineheight;
 }
 
 @mixin normal {
-	font-size: $headerfont;
-	height: $baseline;
-	margin-top: $baseline;
-	margin-bottom: $baseline;
+	font-size: $header-fontsize;
+	height: $text-lineheight;
+	margin-top: $text-lineheight;
+	margin-bottom: $text-lineheight;
 }
 
 @mixin large {
-	font-size: $headerfont * 1.2;
-	height: $baseline;
-	margin-top: $baseline;
-	margin-bottom: $baseline;
+	font-size: $header-fontsize * 1.2;
+	height: $text-lineheight;
+	margin-top: $text-lineheight;
+	margin-bottom: $text-lineheight;
 }
 
 @mixin huge {
-	font-size: $headerfont * 1.5;
-	height: $baseline * 2;
-	margin-top: $baseline;
-	margin-bottom: $baseline;
+	font-size: $header-fontsize * 1.5;
+	height: $text-lineheight * 2;
+	margin-top: $text-lineheight;
+	margin-bottom: $text-lineheight;
 }
 
 @mixin massive {
-	font-size: $headerfont * 2;
-	height: $baseline * 2;
-	margin-top: $baseline * 2;
-	margin-bottom: $baseline;
+	font-size: $header-fontsize * 2;
+	height: $text-lineheight * 2;
+	margin-top: $text-lineheight * 2;
+	margin-bottom: $text-lineheight;
 }
 
 @mixin gigantic {
-	font-size:  $headerfont * 3;
-	height: $baseline * 3;
-	margin-top: $baseline * 3;
-	margin-bottom: $baseline;
+	font-size:  $header-fontsize * 3;
+	height: $text-lineheight * 3;
+	margin-top: $text-lineheight * 3;
+	margin-bottom: $text-lineheight;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: $headerForeground;
+	color: $header-color;
 	clear: both;
 }
 
@@ -452,9 +415,9 @@ h1, h2, h3, h4, h5, h6 {
 	
 	article {
 		h1, h2 {
-			border-bottom: 5px solid $strong-foreground;
-			margin-bottom: $baseline;
-			margin-top: $baseline * 2 - 5px;
+			border-bottom: 5px solid $text-alt-color;
+			margin-bottom: $text-lineheight;
+			margin-top: $text-lineheight * 2 - 5px;
 		}
 		
 		header {
@@ -471,8 +434,8 @@ h1, h2, h3, h4, h5, h6 {
 		}
 		
 		aside {
-			margin-bottom: $baseline - 5px;
-			margin-top: $baseline * 2 - 5px;
+			margin-bottom: $text-lineheight - 5px;
+			margin-top: $text-lineheight * 2 - 5px;
 			
 			h1 {
 				@include huge;
@@ -488,8 +451,8 @@ h1, h2, h3, h4, h5, h6 {
 		}
 		
 		footer {
-			border-top: 5px solid lighten($muteColor, 10%);
-			padding-top: $baseline - 5;
+			border-top: 5px solid lighten($text-mute-color, 10%);
+			padding-top: $text-lineheight - 5;
 		}
 	}
 }
@@ -511,33 +474,33 @@ h1, h2, h3, h4, h5, h6 {
 	
 	.colfull
 	{
-		border-top: 1px solid $muteColor;
-		margin-top: $baseline;
-		padding-top: $baseline;
-		margin-bottom: $baseline;
+		border-top: 1px solid $text-mute-color;
+		margin-top: $text-lineheight;
+		padding-top: $text-lineheight;
+		margin-bottom: $text-lineheight;
 	}
 
 	p {
-		font-size: $basefont - 2;
-		color: $muteColor;
+		font-size: $text-fontsize - 2;
+		color: $text-mute-color;
 		text-align: center;
-		margin-bottom: $baseline / 2;
+		margin-bottom: $text-lineheight / 2;
 	}
 }
 
 @media screen and (min-width: 888px)
 {
 	#page-footer {
-		padding-bottom: $baseline * 2;
+		padding-bottom: $text-lineheight * 2;
 		
 		.colfull
 		{
 			border-top: 0;
-			border-bottom: 1px solid $muteColor;
+			border-bottom: 1px solid $text-mute-color;
 		}
 		
 		p {
-			margin-top: $baseline;
+			margin-top: $text-lineheight;
 		}
 	
 		.footercopyright {
@@ -546,7 +509,7 @@ h1, h2, h3, h4, h5, h6 {
 		
 		.footerfeedlinks {
 			float: left;
-			margin-left: $basefont;
+			margin-left: $text-fontsize;
 			display: block;
 		}
 		

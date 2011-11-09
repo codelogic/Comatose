@@ -2,36 +2,36 @@
 
 table {
   width: 100%;
-  margin-top: $baseline;
-  margin-bottom: $baseline;
+  margin-top: $text-lineheight;
+  margin-bottom: $text-lineheight;
   padding: 0;
   border-collapse: separate; // Done so we can round those corners!
   *border-collapse: collapse; /* IE7, collapse table to remove spacing */
-  font-size: $basefont;
-  border: 1px solid $tableBorderColor;
+  font-size: $text-fontsize;
+  border: 1px solid $table-border-color;
   @include border-radius(4px);
   th, td {
-    padding: ($baseline/2) $basefont ($baseline/2 - 1) $basefont;
-	font-size: $basefont;
-    line-height: $baseline;
+    padding: ($text-lineheight/2) $text-fontsize ($text-lineheight/2 - 1) $text-fontsize;
+	font-size: $text-fontsize;
+    line-height: $text-lineheight;
     text-align: left;
   }
   th {
-    padding-top: ($baseline/2) - 1;
-	padding-bottom: ($baseline/2) - 1;
+    padding-top: ($text-lineheight/2) - 1;
+	padding-bottom: ($text-lineheight/2) - 1;
     font-weight: bold;
     vertical-align: middle;
-    border-bottom: 1px solid $tableBorderColor;
+    border-bottom: 1px solid $table-border-color;
   }
   td {
     vertical-align: top;
   }
   th + th,
   td + td {
-    border-left: 1px solid $tableBorderColor;
+    border-left: 1px solid $table-border-color;
   }
   tr + tr td {
-    border-top: 1px solid $tableBorderColor;
+    border-top: 1px solid $table-border-color;
   }
   tbody tr:first-child td:first-child {
     @include border-radius(3px 0 0 0);
@@ -44,7 +44,7 @@ table {
   }
   tbody tr:last-child td:last-child {
     @include border-radius(0 0 3px 0);
-	padding-top: ($baseline/2) - 1;
+	padding-top: ($text-lineheight/2) - 1;
   }
 }
 
