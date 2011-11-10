@@ -65,6 +65,7 @@ table {
 @fluidKeyframeF: 1440px;
 */
 /*  Font stacks  */
+/* Styled patterns and elements */
 /* header and footer span the page margins */
 #branding,
 #colophon {
@@ -159,7 +160,6 @@ table {
   #main {
     width: 1280px;
     margin: 0 auto; } }
-/* Styled patterns and elements */
 /* Typography.less
  * Headings, body text, lists, code, and more for a versatile and durable typography system
  * ---------------------------------------------------------------------------------------- */
@@ -180,10 +180,10 @@ p {
   p small {
     font-size: 10px;
     color: #202020; }
-  p.right {
+  p.alignright {
     margin-left: auto;
     text-align: right; }
-  p.center {
+  p.aligncenter {
     margin: 0 auto;
     text-align: center; }
   p.justify {
@@ -241,17 +241,6 @@ ul.unstyled {
   ul.unstyled ul {
     list-style: none; }
 
-.bordered-indent {
-  margin-left: 10px;
-  padding: 0 10px 0 15px;
-  border-left: 5px solid #202020;
-  background: #f8f8f8;
-  max-width: 600px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px; }
-
 dl {
   margin-bottom: 20px; }
   dl dt, dl dd {
@@ -269,11 +258,11 @@ dl {
 figure, img, embed, object, video {
   max-width: 100%;
   margin: 8px 0 8px auto; }
-  figure.right, img.right, embed.right, object.right, video.right {
+  figure.alignright, img.alignright, embed.alignright, object.alignright, video.alignright {
     margin-left: auto;
     margin-right: 0;
     display: block; }
-  figure.center, img.center, embed.center, object.center, video.center {
+  figure.aligncenter, img.aligncenter, embed.aligncenter, object.aligncenter, video.aligncenter {
     margin-left: auto;
     margin-right: auto;
     display: block; }
@@ -405,155 +394,137 @@ h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
 /* header styling */
-#page-header h1,
-#page-footer h1 {
+#branding h1,
+#colophon h1 {
   font-size: 42px;
   height: 60px;
   margin-top: 60px;
   margin-bottom: 20px;
   margin-bottom: 0; }
-#page-header h2,
-#page-footer h2 {
+#branding h2,
+#colophon h2 {
   font-size: 28px;
   height: 40px;
   margin-top: 40px;
   margin-bottom: 20px; }
-#page-header h3,
-#page-footer h3 {
+#branding h3,
+#colophon h3 {
   font-size: 21px;
   height: 40px;
   margin-top: 20px;
   margin-bottom: 20px; }
-#page-header h4, #page-header h5, #page-header h6,
-#page-footer h4,
-#page-footer h5,
-#page-footer h6 {
+#branding h4, #branding h5, #branding h6,
+#colophon h4,
+#colophon h5,
+#colophon h6 {
   font-size: 16.8px;
   height: 20px;
   margin-top: 20px;
   margin-bottom: 20px; }
 
-#page-content h1,
-#page-sidebar h1 {
+#main h1 {
   font-size: 28px;
   height: 40px;
   margin-top: 40px;
   margin-bottom: 20px; }
-#page-content h2,
-#page-sidebar h2 {
+#main h2 {
   font-size: 21px;
   height: 40px;
   margin-top: 20px;
   margin-bottom: 20px; }
-#page-content h3, #page-content h4, #page-content h5, #page-content h6,
-#page-sidebar h3,
-#page-sidebar h4,
-#page-sidebar h5,
-#page-sidebar h6 {
+#main h3, #main h4, #main h5, #main h6 {
   font-size: 16.8px;
   height: 20px;
   margin-top: 20px;
   margin-bottom: 20px; }
-#page-content article h1, #page-content article h2,
-#page-sidebar article h1,
-#page-sidebar article h2 {
+#main article h1, #main article h2 {
   border-bottom: 5px solid #202020;
   margin-bottom: 20px;
   margin-top: 35px; }
-#page-content article header h1, #page-content article header h2,
-#page-sidebar article header h1,
-#page-sidebar article header h2 {
+#main article header h1, #main article header h2 {
   border-bottom: none; }
-#page-content article header h1,
-#page-sidebar article header h1 {
+#main article header h1 {
   font-size: 28px;
   height: 40px;
   margin-top: 40px;
   margin-bottom: 20px; }
-#page-content article header h2,
-#page-sidebar article header h2 {
+#main article header h2 {
   font-size: 21px;
   height: 40px;
   margin-top: 20px;
   margin-bottom: 20px; }
-#page-content article aside,
-#page-sidebar article aside {
+#main article aside {
   margin-bottom: 15px;
   margin-top: 35px; }
-  #page-content article aside h1,
-  #page-sidebar article aside h1 {
+  #main article aside h1 {
     font-size: 21px;
     height: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-top: 0; }
-  #page-content article aside h2, #page-content article aside h3, #page-content article aside h4, #page-content article aside h5, #page-content article aside h6,
-  #page-sidebar article aside h2,
-  #page-sidebar article aside h3,
-  #page-sidebar article aside h4,
-  #page-sidebar article aside h5,
-  #page-sidebar article aside h6 {
+  #main article aside h2, #main article aside h3, #main article aside h4, #main article aside h5, #main article aside h6 {
     font-size: 16.8px;
     height: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-top: 0; }
-#page-content article footer,
-#page-sidebar article footer {
+#main article footer {
   border-top: 5px solid #cccccc;
   padding-top: 15px; }
 
-#page-sidebar ul {
+#secondary ul {
   list-style: none;
   margin-left: 0; }
-  #page-sidebar ul ul {
+  #secondary ul ul {
     list-style: none;
     margin-left: 0; }
 
-#page-footer {
+#colophon {
   clear: both; }
-  #page-footer .colfull {
+  #colophon #colophon-container {
     border-top: 1px solid #b3b3b3;
     margin-top: 20px;
     padding-top: 20px;
     margin-bottom: 20px; }
-  #page-footer p {
+  #colophon p {
     font-size: 10px;
     color: #b3b3b3;
     text-align: center;
     margin-bottom: 10px; }
 
 @media screen and (min-width: 888px) {
-  #page-footer {
+  #colophon {
     padding-bottom: 40px; }
-    #page-footer .colfull {
+    #colophon #colophon-container {
       border-top: 0;
       border-bottom: 1px solid #b3b3b3; }
-    #page-footer p {
+    #colophon p {
       margin-top: 20px; }
-    #page-footer .footercopyright {
+    #colophon .site-copyright {
       float: left; }
-    #page-footer .footerfeedlinks {
+    #colophon .site-feed-links {
       float: left;
       margin-left: 12px;
       display: block; }
-    #page-footer .footerpoweredby {
+    #colophon .site-generator {
       float: right; } }
 /* Forms.less
  * Base styles for various input types, form layouts, and states
  * ------------------------------------------------------------- */
-form {
-  margin-bottom: 20px;
-  background: #f8f8f8;
-  border-left: 5px solid #202020;
-  padding-left: 15px;
-  padding-top: 20px;
-  line-height: 20px;
-  min-width: 230px; }
-  form fieldset {
+#primary {
+  /* mini reset for non-html5 file types */ }
+  #primary form {
+    margin-bottom: 20px;
+    background: #f8f8f8;
+    border-left: 5px solid #202020;
+    padding-left: 15px;
+    padding-top: 20px;
+    line-height: 20px;
+    min-width: 230px; }
+  #primary form fieldset {
     margin-bottom: 20px;
     padding-top: 20px; }
-  form legend {
+  #primary form legend {
     font-size: 16.8px;
     height: 20px;
     margin-top: 20px;
@@ -563,237 +534,212 @@ form {
     margin-left: 25%;
     padding-top: 35px;
     padding-bottom: 5px; }
-  form fieldset:first-child legend {
+  #primary form fieldset:first-child legend {
     padding-top: 10px;
     padding-bottom: 10px; }
-
-form .clearfix {
-  margin-bottom: 20px;
-  zoom: 1; }
-  form .clearfix:before, form .clearfix:after {
-    display: table;
-    content: "";
-    zoom: 1;
-    *display: inline; }
-  form .clearfix:after {
-    clear: both; }
-
-label,
-input,
-select,
-textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: normal;
-  line-height: normal; }
-
-label {
-  padding-top: 2px;
-  font-size: 12px;
-  line-height: 20px;
-  float: left;
-  width: 23%;
-  text-align: right;
-  color: #404040;
-  padding-right: 12px; }
-
-form .input {
-  margin-left: 25%; }
-
-input[type=checkbox],
-input[type=radio] {
-  cursor: pointer; }
-
-input,
-textarea,
-select,
-.uneditable-input {
-  display: inline-block;
-  width: 75%;
-  max-width: 250px;
-  height: 20px;
-  font-size: 12px;
-  line-height: 20px;
-  color: #303030;
-  border: 1px solid #ccc;
-  padding: 2px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px; }
-
-textarea {
-  max-width: 75%;
-  min-height: 100px;
-  height: auto; }
-
-/* mini reset for non-html5 file types */
-input[type=checkbox],
-input[type=radio] {
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 3px 0;
-  *margin-top: 0;
-  /* IE6-7 */
-  line-height: normal;
-  border: none; }
-
-input[type=file] {
-  background-color: white;
-  padding: initial;
-  border: initial;
-  line-height: initial;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none; }
-
-input[type=button],
-input[type=reset],
-input[type=submit] {
-  width: auto;
-  height: auto; }
-
-select,
-input[type=file] {
-  height: 24px;
-  line-height: 24px;
-  *margin-top: 4px;
-  /* For IE7, add top margin to align select with labels */ }
-
-select[multiple] {
-  height: inherit; }
-
-input[disabled],
-select[disabled],
-textarea[disabled],
-input[readonly],
-select[readonly],
-textarea[readonly],
-.uneditable-input {
-  background-color: white;
-  border-color: #eee;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  color: #b3b3b3;
-  cursor: default; }
-
-:-moz-placeholder {
-  color: #b3b3b3; }
-
-::-webkit-input-placeholder {
-  color: #b3b3b3; }
-
-.help-inline,
-.help-block {
-  font-size: 10px;
-  line-height: 20px;
-  color: #b3b3b3; }
-
-.help-inline {
-  padding-left: 5px;
-  *position: relative;
-  /* IE6-7 */
-  *top: -5px;
-  /* IE6-7 */ }
-
-.help-block {
-  display: block;
-  max-width: 600px; }
-
-.inline-inputs {
-  color: #303030; }
-  .inline-inputs span, .inline-inputs input {
-    display: inline-block; }
-  .inline-inputs input.mini {
-    width: 60px; }
-  .inline-inputs input.small {
-    width: 90px; }
-  .inline-inputs span {
-    padding: 0 2px 0 1px; }
-
-.inputs-list {
-  margin: 0 0 5px;
-  width: 100%; }
-  .inputs-list li {
-    display: block;
-    padding: 0;
-    width: 100%; }
-  .inputs-list label {
-    display: block;
-    float: none;
-    width: auto;
-    padding: 0;
+  #primary form .clearfix {
+    margin-bottom: 20px;
+    zoom: 1; }
+    #primary form .clearfix:before, #primary form .clearfix:after {
+      display: table;
+      content: "";
+      zoom: 1;
+      *display: inline; }
+    #primary form .clearfix:after {
+      clear: both; }
+  #primary label,
+  #primary input,
+  #primary select,
+  #primary textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: normal; }
+  #primary label {
+    padding-top: 2px;
+    font-size: 12px;
     line-height: 20px;
-    text-align: left;
-    white-space: normal; }
-    .inputs-list label strong {
-      color: gray; }
-    .inputs-list label small {
-      font-size: 10px;
-      font-weight: normal; }
-  .inputs-list .inputs-list {
-    margin-left: 25px;
-    margin-bottom: 10px;
-    padding-top: 0; }
-  .inputs-list:first-child {
-    padding-top: 6px; }
-  .inputs-list li + li {
-    padding-top: 2px; }
-  .inputs-list input[type=radio],
-  .inputs-list input[type=checkbox] {
-    margin-bottom: 0; }
-
-.input-prepend input,
-.input-append input {
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0; }
-.input-prepend .add-on,
-.input-append .add-on {
-  position: relative;
-  background: #f5f5f5;
-  border: 1px solid #ccc;
-  z-index: 2;
-  float: left;
-  display: block;
-  width: auto;
-  min-width: 16px;
-  height: 18px;
-  padding: 3px 4px 3px 5px;
-  margin-right: -1px;
-  font-weight: normal;
-  line-height: 18px;
-  color: #b3b3b3;
-  text-align: center;
-  text-shadow: 0 1px 0 white;
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px; }
-.input-prepend .active,
-.input-append .active {
-  background: #a9dba9;
-  border-color: #46a546; }
-
-.input-prepend .add-on {
-  *margin-top: 1px;
-  /* IE6-7 */ }
-
-.input-append input {
-  float: left;
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px; }
-.input-append .add-on {
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-  margin-right: 0;
-  margin-left: -1px; }
-
-.actions {
-  margin-left: 25%;
-  padding-bottom: 20px; }
+    float: left;
+    width: 23%;
+    text-align: right;
+    color: #404040;
+    padding-right: 12px; }
+  #primary form .input {
+    margin-left: 25%; }
+  #primary input[type=checkbox],
+  #primary input[type=radio] {
+    cursor: pointer; }
+  #primary input,
+  #primary textarea,
+  #primary select,
+  #primary .uneditable-input {
+    display: inline-block;
+    width: 75%;
+    max-width: 250px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #303030;
+    border: 1px solid #ccc;
+    padding: 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; }
+  #primary textarea {
+    max-width: 75%;
+    min-height: 100px;
+    height: auto; }
+  #primary input[type=checkbox],
+  #primary input[type=radio] {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 3px 0;
+    *margin-top: 0;
+    /* IE6-7 */
+    line-height: normal;
+    border: none; }
+  #primary input[type=file] {
+    background-color: white;
+    padding: initial;
+    border: initial;
+    line-height: initial;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+  #primary input[type=button],
+  #primary input[type=reset],
+  #primary input[type=submit] {
+    width: auto;
+    height: auto; }
+  #primary select,
+  #primary input[type=file] {
+    height: 24px;
+    line-height: 24px;
+    *margin-top: 4px;
+    /* For IE7, add top margin to align select with labels */ }
+  #primary select[multiple] {
+    height: inherit; }
+  #primary input[disabled],
+  #primary select[disabled],
+  #primary textarea[disabled],
+  #primary input[readonly],
+  #primary select[readonly],
+  #primary textarea[readonly],
+  #primary .uneditable-input {
+    background-color: white;
+    border-color: #eee;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+    color: #b3b3b3;
+    cursor: default; }
+  #primary :-moz-placeholder {
+    color: #b3b3b3; }
+  #primary ::-webkit-input-placeholder {
+    color: #b3b3b3; }
+  #primary .help-inline,
+  #primary .help-block {
+    font-size: 10px;
+    line-height: 20px;
+    color: #b3b3b3; }
+  #primary .help-inline {
+    padding-left: 5px;
+    *position: relative;
+    /* IE6-7 */
+    *top: -5px;
+    /* IE6-7 */ }
+  #primary .help-block {
+    display: block;
+    max-width: 600px; }
+  #primary .inline-inputs {
+    color: #303030; }
+    #primary .inline-inputs span, #primary .inline-inputs input {
+      display: inline-block; }
+    #primary .inline-inputs input.mini {
+      width: 60px; }
+    #primary .inline-inputs input.small {
+      width: 90px; }
+    #primary .inline-inputs span {
+      padding: 0 2px 0 1px; }
+  #primary .inputs-list {
+    margin: 0 0 5px;
+    width: 100%; }
+    #primary .inputs-list li {
+      display: block;
+      padding: 0;
+      width: 100%; }
+    #primary .inputs-list label {
+      display: block;
+      float: none;
+      width: auto;
+      padding: 0;
+      line-height: 20px;
+      text-align: left;
+      white-space: normal; }
+      #primary .inputs-list label strong {
+        color: gray; }
+      #primary .inputs-list label small {
+        font-size: 10px;
+        font-weight: normal; }
+    #primary .inputs-list .inputs-list {
+      margin-left: 25px;
+      margin-bottom: 10px;
+      padding-top: 0; }
+    #primary .inputs-list:first-child {
+      padding-top: 6px; }
+    #primary .inputs-list li + li {
+      padding-top: 2px; }
+    #primary .inputs-list input[type=radio],
+    #primary .inputs-list input[type=checkbox] {
+      margin-bottom: 0; }
+  #primary .input-prepend input,
+  #primary .input-append input {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0; }
+  #primary .input-prepend .add-on,
+  #primary .input-append .add-on {
+    position: relative;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    z-index: 2;
+    float: left;
+    display: block;
+    width: auto;
+    min-width: 16px;
+    height: 18px;
+    padding: 3px 4px 3px 5px;
+    margin-right: -1px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #b3b3b3;
+    text-align: center;
+    text-shadow: 0 1px 0 white;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px; }
+  #primary .input-prepend .active,
+  #primary .input-append .active {
+    background: #a9dba9;
+    border-color: #46a546; }
+  #primary .input-prepend .add-on {
+    *margin-top: 1px;
+    /* IE6-7 */ }
+  #primary .input-append input {
+    float: left;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px; }
+  #primary .input-append .add-on {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    margin-right: 0;
+    margin-left: -1px; }
+  #primary .actions {
+    margin-left: 25%;
+    padding-bottom: 20px; }
 
 table {
   width: 100%;
@@ -1021,72 +967,74 @@ input[type=submit].btn::-moz-focus-inner {
     -moz-opacity: 0.4;
     opacity: 0.4; }
 
-#page-header nav ul.colfull, #page-footer nav ul.colfull {
+#branding hgroup,
+#branding nav,
+#colophon-container {
   padding: 0; }
 
-nav {
+#branding nav {
   background: #202020;
   min-height: 60px; }
-  nav ul {
+  #branding nav ul {
     list-style-type: none;
     margin: 0;
     font-size: 18px; }
-    nav ul li.pull-right {
+    #branding nav ul li.pull-right {
       float: none; }
-    nav ul li a {
+    #branding nav ul li a {
       border-top: 1px solid #2d2d2d;
       border-bottom: 1px solid #131313;
       color: #fffefe;
       display: block;
       height: 20px;
       padding: 9px 10px; }
-    nav ul li a:hover {
+    #branding nav ul li a:hover {
       border: none;
       padding-top: 10px;
       padding-bottom: 10px;
       text-decoration: none;
       color: #fffefe;
       background: #049cdb; }
-    nav ul li li a {
+    #branding nav ul li li a {
       padding-left: 30px; }
-    nav ul li li li a {
+    #branding nav ul li li li a {
       padding-left: 50px; }
-    nav ul li li li li a {
+    #branding nav ul li li li li a {
       padding-left: 70px; }
-    nav ul li li li li li a {
+    #branding nav ul li li li li li a {
       padding-left: 90px; }
 
 @media screen and (min-width: 640px) {
-  #page-header nav ul.colfull, #page-footer nav ul.colfull {
+  #branding .menu > ul {
     padding: 0 8px; }
 
-  nav ul {
+  #branding .menu ul {
     zoom: 1; }
-    nav ul li {
+    #branding .menu ul li {
       float: left; }
-      nav ul li.pull-right {
+      #branding .menu ul li.pull-right {
         float: right; }
-      nav ul li.pull-right nav ul li:last-child {
+      #branding .menu ul li.pull-right #branding .menu ul li:last-child {
         margin-right: 0px; }
-      nav ul li a, nav ul li li a, nav ul li li li a, nav ul li li li li a, nav ul li li li li li a {
+      #branding .menu ul li a, #branding .menu ul li li a, #branding .menu ul li li li a, #branding .menu ul li li li li a, #branding .menu ul li li li li li a {
         padding-left: 20px; }
-      nav ul li ul {
+      #branding .menu ul li ul {
         z-index: 1;
         background: #202020;
         position: absolute;
         left: -9999px;
         margin: 0;
         border-left: 5px solid #049cdb; }
-      nav ul li ul ul {
+      #branding .menu ul li ul ul {
         margin-top: -40px;
         margin-left: 190px; }
-      nav ul li ul li {
+      #branding .menu ul li ul li {
         float: none;
         margin: 0;
         width: 190px; }
-      nav ul li a:before {
+      #branding .menu ul li a:before {
         content: ""; }
-      nav ul li a:not(:last-child):after {
+      #branding .menu ul li a:not(:last-child):after {
         content: " ";
         display: inline-block;
         width: 0;
@@ -1096,7 +1044,7 @@ nav {
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         border-top: 5px solid #fffefe; }
-      nav ul li li a:not(:last-child):after {
+      #branding .menu ul li li a:not(:last-child):after {
         content: " ";
         display: inline-block;
         float: right;
@@ -1107,29 +1055,29 @@ nav {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         border-left: 5px solid #fffefe; }
-      nav ul li:hover > a {
+      #branding .menu ul li:hover > a {
         border: none;
         padding: 20px;
         text-decoration: none;
         color: #fffefe;
         background: #049cdb; }
-      nav ul li li:hover > a {
+      #branding .menu ul li li:hover > a {
         padding: 10px 10px 10px 20px; }
-      nav ul li:hover > ul,
-      nav ul li li:hover > ul,
-      nav ul li li li:hover > ul {
+      #branding .menu ul li:hover > ul,
+      #branding .menu ul li li:hover > ul,
+      #branding .menu ul li li li:hover > ul {
         left: auto; }
-    nav ul:before, nav ul:after {
+    #branding .menu ul:before, #branding .menu ul:after {
       display: table;
       content: "";
       zoom: 1;
       *display: inline; }
-    nav ul:after {
+    #branding .menu ul:after {
       clear: both; }
-  nav > ul > li > a {
+  #branding .menu > ul > li > a {
     border: none;
     padding: 20px; }
-  nav > ul > li:first-child {
+  #branding .menu > ul > li:first-child {
     margin-left: -20px; } }
 /*
  * jQuery Nivo Slider v2.6
@@ -1289,3 +1237,5 @@ nav {
   margin: 0 0 50px 40px; }
   #branding h2:before {
     content: '\2014 \00A0'; }
+#branding #searchform {
+  display: hidden; }

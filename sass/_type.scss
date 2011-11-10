@@ -27,11 +27,11 @@ p {
 		color: $header-color;
 	}
 	
-	&.right {
+	&.alignright {
 		margin-left: auto;
 		text-align: right;
 	}
-	&.center  {
+	&.aligncenter  {
 		margin: 0 auto;
 		text-align: center;
 	}
@@ -47,6 +47,7 @@ a {
   text-decoration: none;
   line-height: inherit;
   font-weight: inherit;
+  
   &:hover {
     color: $link-color-hover;
     text-decoration: underline;
@@ -75,8 +76,9 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   color: $header-color;
+  
   small {
-    color: $grayLight;
+    color: $text-mute-color;
   }
 }
 
@@ -111,26 +113,11 @@ ul.unstyled {
 }
 
 // Description Lists
-
-.bordered-indent{
-	margin-left: $text-lineheight / 2;
-	padding: 0 $text-lineheight/2 0 $text-lineheight - 5px;
-	border-left: 5px solid $inset-color;
-	background: $form-background;
-	max-width: 600px;
-	margin-top: $text-lineheight;
-	margin-bottom: $text-lineheight;
-
-	padding-top: $text-lineheight / 2;
-	padding-bottom: $text-lineheight / 2;
-}
-
 dl {
   margin-bottom: $text-lineheight;
   
   dt, dd
   {
-	//.bordered-indent;
 	margin: 0 0 0 0;
   }
   dt {
@@ -153,12 +140,12 @@ figure, img, embed, object, video {
 	max-width: 100%;
 	margin: $text-xheight 0 $text-xheight auto;
 	
-	&.right {
+	&.alignright {
 		margin-left: auto;
 		margin-right: 0;
 		display: block;
 	}
-	&.center {
+	&.aligncenter {
 		margin-left: auto;
 		margin-right: auto;
 		display: block;
@@ -379,8 +366,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* header styling */
 
-#page-header, 
-#page-footer {
+#branding,
+#colophon {
 	h1 {
 		@include gigantic;
 		
@@ -399,8 +386,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-#page-content, 
-#page-sidebar {
+#main {
 	h1 {
 		@include massive;
 	}
@@ -457,7 +443,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-#page-sidebar {
+#secondary {
 	ul {
 		list-style: none;
 	  margin-left: 0;
@@ -468,11 +454,11 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-#page-footer
+#colophon
 {
 	clear: both;
 	
-	.colfull
+	#colophon-container
 	{
 		border-top: 1px solid $text-mute-color;
 		margin-top: $text-lineheight;
@@ -490,10 +476,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (min-width: 888px)
 {
-	#page-footer {
+	#colophon {
 		padding-bottom: $text-lineheight * 2;
 		
-		.colfull
+		#colophon-container
 		{
 			border-top: 0;
 			border-bottom: 1px solid $text-mute-color;
@@ -503,17 +489,17 @@ h1, h2, h3, h4, h5, h6 {
 			margin-top: $text-lineheight;
 		}
 	
-		.footercopyright {
+		.site-copyright {
 			float: left;
 		}
 		
-		.footerfeedlinks {
+		.site-feed-links {
 			float: left;
 			margin-left: $text-fontsize;
 			display: block;
 		}
 		
-		.footerpoweredby {
+		.site-generator {
 			float: right;
 		}
 	}

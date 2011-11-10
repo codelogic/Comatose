@@ -1,11 +1,13 @@
 // nav here
 
-#page-header nav ul.colfull, #page-footer nav ul.colfull
+#branding hgroup,
+#branding nav,
+#colophon-container
 {
 	padding: 0;
 }
 
-nav {
+#branding nav {
 	background: $text-alt-color;
 	min-height: $text-lineheight * 3;
 	ul
@@ -65,12 +67,12 @@ nav {
 
 @media screen and (min-width: 640px)
 {
-	#page-header nav ul.colfull, #page-footer nav ul.colfull
+	#branding .menu > ul
 	{
 		padding: 0 ($text-lineheight - $text-fontsize);
 	}
 
-	nav {
+	#branding .menu {
 		ul {
 			li {
 				float: left;
