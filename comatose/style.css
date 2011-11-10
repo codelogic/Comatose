@@ -65,76 +65,17 @@ table {
 @fluidKeyframeF: 1440px;
 */
 /*  Font stacks  */
-body,
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-th,
-td,
-article,
-aside,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  margin: 0;
-  padding: 0;
-  border: 0; }
-
-html {
-  height: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
-
-/*
-*  Simple elastic gutters
-*  Note: box-sizing will not work in IE6-8
-*/
 /* header and footer span the page margins */
-#page-header,
-#page-footer {
-  zoom: 1; }
-  #page-header:before, #page-header:after,
-  #page-footer:before,
-  #page-footer:after {
-    display: table;
-    content: "";
-    zoom: 1;
-    *display: inline; }
-  #page-header:after,
-  #page-footer:after {
-    clear: both; }
-  #page-header .colfull,
-  #page-footer .colfull {
-    padding: 0 8px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box; }
+#branding,
+#colophon {
+  clear: both; }
 
-/* At level A, there is only margining for the sections */
-#page-content,
-#page-sidebar {
+#branding hgroup,
+#branding form,
+#branding .menu > ul,
+#primary,
+#secondary
+#colophon-container {
   padding: 0 8px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -143,78 +84,79 @@ html {
 
 /* 4 grid */
 @media screen and (min-width: 640px) {
-  #page-header .colfull,
-  #page-footer .colfull {
+  #branding hgroup,
+  #branding form,
+  #branding .menu > ul,
+  #primary,
+  #secondary,
+  #colophon-container {
     margin: 0 2.778%; }
 
-  #page-content,
-  #page-sidebar {
-    margin: 0 2.778%; }
-    #page-content aside,
-    #page-sidebar aside {
-      clear: right;
-      width: 33.333%;
-      float: right;
-      margin-left: 20px; }
+  #primary aside {
+    clear: right;
+    width: 33.333%;
+    float: right;
+    margin-left: 20px; }
 
-  #page-sidebar section {
+  #secondary aside {
     width: 50%;
     float: left; } }
 @media screen and (min-width: 888px) {
-  #page-header .colfull,
-  #page-footer .colfull {
-    margin: 0 auto;
-    max-width: 840px; }
-
-  #page-content,
-  #page-sidebar {
+  #branding hgroup,
+  #branding form,
+  #branding .menu > ul,
+  #primary,
+  #secondary,
+  #colophon-container {
     margin: 0 auto;
     max-width: 840px; } }
 @media screen and (min-width: 984px) {
-  #page-content aside,
-  #page-sidebar aside {
+  #secondary aside {
     width: 320px; }
 
-  #page-sidebar section {
+  #secondary aside {
     width: 25%;
     float: left; } }
 @media screen and (min-width: 1200px) {
-  #page-header .colfull,
-  #page-footer .colfull {
+  #branding hgroup,
+  #branding form,
+  #branding .menu > ul,
+  #colophon-container {
     margin: 0 5.556%;
     max-width: 99999px; }
 
-  #page-content {
+  #primary {
     float: left;
     width: 66.667%;
     margin: 0 0 0 5.556%;
     max-width: 99999px; }
 
-  #page-sidebar {
+  #secondary {
     float: right;
     width: 22.222%;
     margin: 0 5.556% 0 0;
     max-width: 99999px; }
-
-  #page-sidebar section {
-    width: 100%; } }
+    #secondary aside {
+      width: 100%; } }
 @media screen and (min-width: 1440px) {
-  #page-header .colfull,
-  #page-footer .colfull {
+  #branding hgroup,
+  #branding form,
+  #branding .menu > ul,
+  #colophon-container {
     width: 1280px;
     margin: 0 auto; }
 
-  #page-content {
+  #primary {
     float: left;
     width: 960px;
     margin: 0; }
 
-  #page-sidebar {
+  #secondary {
     float: right;
     width: 320px;
     margin: 0; }
 
-  #content {
+  #main {
     width: 1280px;
     margin: 0 auto; } }
 /* Styled patterns and elements */
@@ -1339,11 +1281,11 @@ nav {
 .theme-default .nivo-caption a:hover {
   color: #fff; }
 
-#page-header h1 {
+#branding h1 {
   margin-top: 70px; }
-#page-header h2 {
+#branding h2 {
   color: #b3b3b3;
   font-size: 16px;
   margin: 0 0 50px 40px; }
-  #page-header h2:before {
+  #branding h2:before {
     content: '\2014 \00A0'; }
