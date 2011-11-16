@@ -6,8 +6,7 @@ $column: 100% / 18;
 	clear: both;
 }
 
-#branding hgroup,
-#branding form,
+#branding-container,
 #branding .menu > ul,
 #primary,
 #secondary
@@ -20,15 +19,22 @@ $column: 100% / 18;
 			box-sizing: border-box;
 }
 
+#secondary {
+	border-top: 1px solid $text-mute-color;
+}
+
 /* 4 grid */
 @media screen and (min-width: 640px) {
-	#branding hgroup,
-	#branding form,
+	#branding-container,
 	#branding .menu > ul,
 	#primary,
 	#secondary,
 	#colophon-container {
 		margin: 0 $column/2;
+	}
+	
+	#primary {
+		padding: 0;
 	}
 	
 	#primary aside {
@@ -45,8 +51,7 @@ $column: 100% / 18;
 }
 
 @media screen and (min-width: 888px) {
-	#branding hgroup,
-	#branding form,
+	#branding-container,
 	#branding .menu > ul,
 	#primary,
 	#secondary,
@@ -54,12 +59,15 @@ $column: 100% / 18;
 		margin: 0 auto;
 		max-width: 800px + ($text-lineheight*2);
 	}
+	
+	#secondary aside {
+		width: 33%;
+		float: left;
+	}
 }
 
 @media screen and (min-width: 984px) {
-	#secondary aside {
-		width: 320px;
-	}
+
 	
 	#secondary aside {
 		width: 25%;
@@ -68,8 +76,7 @@ $column: 100% / 18;
 }
 
 @media screen and (min-width: 1200px) {
-	#branding hgroup,
-	#branding form,
+	#branding-container,
 	#branding .menu > ul,
 	#colophon-container {
 		margin: 0 $column;
@@ -85,9 +92,15 @@ $column: 100% / 18;
 	
 	#secondary {
 		float: right;
-		width:  $column*4;
+		width: 20.5%;
 		margin: 0 $column 0 0;
 		max-width:  99999px;
+		
+		border-top: none;
+		//border-left: 1px solid $text-mute-color;
+		margin-left: $text-lineheight / 2 - 1;
+		padding-left: $text-lineheight / 2;
+		
 		aside {
 			width: 100%;
 		}
@@ -95,8 +108,7 @@ $column: 100% / 18;
 }
 
 @media screen and (min-width: 1440px) {
-	#branding hgroup,
-	#branding form,
+	#branding-container,
 	#branding .menu > ul,
 	#colophon-container {
 		width: 1280px;
@@ -111,7 +123,7 @@ $column: 100% / 18;
 	
 	#secondary {
 		float: right;
-		width:  320px;
+		width:  320px - $text-lineheight;
 		margin: 0;
 	}
 	

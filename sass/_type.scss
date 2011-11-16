@@ -49,7 +49,7 @@ a {
   font-weight: inherit;
   
   &:hover {
-    color: $link-color-hover;
+    color: $link-hover-color;
     text-decoration: underline;
   }
 }
@@ -270,9 +270,6 @@ address {
 	margin-left: $text-lineheight / 2;
 	margin-top: $text-lineheight;
 	margin-bottom: $text-lineheight;
-
-	//padding-top: $text-lineheight / 2;
-	//padding-bottom: $text-lineheight / 2;
 	
 	display: block;
 	font-size: $text-fontsize - 1;
@@ -309,7 +306,8 @@ pre {
   white-space: pre;
   
   overflow:auto;
-  overflow-x:hidden;
+  overflow-x:scroll;
+  overflow-y:auto;
 }
 
 /* Preset sizes. */
@@ -364,143 +362,4 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
-/* header styling */
 
-#branding,
-#colophon {
-	h1 {
-		@include gigantic;
-		
-		margin-bottom: 0;
-	}
-	h2 {
-		@include massive;
-	}
-	
-	h3 {
-		@include huge;
-	}
-	
-	h4, h5, h6 {
-		@include large;
-	}
-}
-
-#main {
-	h1 {
-		@include massive;
-	}
-	
-	h2{
-		@include huge;
-	}
-	
-	h3, h4, h5, h6 {
-		@include large;
-	}
-	
-	article {
-		h1, h2 {
-			border-bottom: 5px solid $text-alt-color;
-			margin-bottom: $text-lineheight;
-			margin-top: $text-lineheight * 2 - 5px;
-		}
-		
-		header {
-			h1, h2 {
-				border-bottom: none;
-			}
-			
-			h1 {
-				@include massive;
-			}
-			h2{
-				@include huge;
-			}
-		}
-		
-		aside {
-			margin-bottom: $text-lineheight - 5px;
-			margin-top: $text-lineheight * 2 - 5px;
-			
-			h1 {
-				@include huge;
-				
-				margin-top: 0;
-			}
-			
-			h2, h3, h4, h5, h6 {
-				@include large;
-				
-				margin-top: 0;
-			}
-		}
-		
-		footer {
-			border-top: 5px solid lighten($text-mute-color, 10%);
-			padding-top: $text-lineheight - 5;
-		}
-	}
-}
-
-#secondary {
-	ul {
-		list-style: none;
-	  margin-left: 0;
-	  ul {
-		list-style: none;
-		margin-left: 0;
-	  }
-	}
-}
-
-#colophon
-{
-	clear: both;
-	
-	#colophon-container
-	{
-		border-top: 1px solid $text-mute-color;
-		margin-top: $text-lineheight;
-		padding-top: $text-lineheight;
-		margin-bottom: $text-lineheight;
-	}
-
-	p {
-		font-size: $text-fontsize - 2;
-		color: $text-mute-color;
-		text-align: center;
-		margin-bottom: $text-lineheight / 2;
-	}
-}
-
-@media screen and (min-width: 888px)
-{
-	#colophon {
-		padding-bottom: $text-lineheight * 2;
-		
-		#colophon-container
-		{
-			border-top: 0;
-			border-bottom: 1px solid $text-mute-color;
-		}
-		
-		p {
-			margin-top: $text-lineheight;
-		}
-	
-		.site-copyright {
-			float: left;
-		}
-		
-		.site-feed-links {
-			float: left;
-			margin-left: $text-fontsize;
-			display: block;
-		}
-		
-		.site-generator {
-			float: right;
-		}
-	}
-}

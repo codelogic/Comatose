@@ -100,7 +100,7 @@
     @include border-radius(6px);
   }
   &.small {
-    padding: 7px 14px 0 14px;
+    //padding: 7px 14px 0 14px;
     font-size: $text-fontsize - 2px;
   }
 }

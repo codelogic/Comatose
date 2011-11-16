@@ -2,17 +2,7 @@
  * Base styles for various input types, form layouts, and states
  * ------------------------------------------------------------- */
 
-#primary {
-	 
-	form {
-		margin-bottom: $text-lineheight;
-		background: $form-background;
-		border-left: 5px solid $text-alt-color;
-		padding-left: $text-lineheight - 5px;
-		padding-top: $text-lineheight;
-		line-height: $text-lineheight;	
-		min-width: 230px;
-	}
+	
 	 
 	form
 	{
@@ -50,22 +40,8 @@
 	  @include sans-serif-font(normal, $text-fontsize ,normal);
 	}
 
-	// Float labels left
-	label {
-	  padding-top: 2px;
-	  font-size: $text-fontsize;
-	  line-height: $text-lineheight;
-	  float: left;
-	  width: 23%;
-	  text-align: right;
-	  color: $grayDark;
-	  padding-right: $text-fontsize;
-	}
 
-	// Shift over the inside div to align all label's relevant content
-	form .input {
-	  margin-left: 25%;
-	}
+
 
 	// Checkboxs and radio buttons
 	input[type=checkbox],
@@ -91,9 +67,12 @@
 	}
 
 	textarea {
-		max-width: 75%;
 		min-height: $text-lineheight * 5;
 		height: auto;
+	}
+	
+	#primary textarea {
+		max-width: 75%;
 	}
 
 	/* mini reset for non-html5 file types */
@@ -238,6 +217,35 @@
 	  }
 	}
 
+	
+
+	#primary form {
+		margin-bottom: $text-lineheight;
+		background: $form-background;
+		border-left: 5px solid $text-alt-color;
+		padding-left: $text-lineheight - 5px;
+		padding-top: $text-lineheight;
+		line-height: $text-lineheight;	
+		min-width: 230px;
+	}
+	
+	// Float labels left
+	label {
+	  padding-top: 2px;
+	  font-size: $text-fontsize;
+	  line-height: $text-lineheight;
+	  float: left;
+	  width: 23%;
+	  text-align: right;
+	  color: $grayDark;
+	  padding-right: $text-fontsize;
+	}
+
+	// Shift over the inside div to align all label's relevant content
+	form .input {
+	  margin-left: 25%;
+	}
+	
 	// Allow us to put symbols and text within the input field for a cleaner look
 	.input-prepend,
 	.input-append {
@@ -289,4 +297,5 @@
 		margin-left: 25%;
 		padding-bottom: $text-lineheight;
 	}
-}
+
+	 

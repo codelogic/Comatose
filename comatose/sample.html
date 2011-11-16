@@ -37,34 +37,37 @@
 				<!-- header 'n branding 'n stuff -->
 				<hgroup>
 					<h1 id="site-title">Comatose</h1>
-					<h2 id="site-description">Subtle thoughts.</h2>
+					<h2 id="site-description">HTML5 Zen.</h2>
 				</hgroup>
 				
 				<!-- main search form -->
-				<form method="get" id="searchform" action="./">
-					<label for="s" class="assistive-text">Search</label>
-					<input type="text" class="field" name="s" id="s" placeholder="Search" />
-					<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
-				</form>
-				
-				<!-- main navigation -->
-				<nav id="access" role="navigation">
-					<div class="menu">
-						<ul>
-							<li class="current_page_item"><a href="#">Page 1</a></li>
-							<li class="page_item"><a href="#">Page 2</a>
-								<ul class="children">	
-									<li class="page_item"><a>P2 Subpage 1</a></li>
-									<li class="page_item"><a>P2 Subpage 2</a></li>
-									<li class="page_item"><a>P2 Subpage 3</a></li>
-									<li class="page_item"><a>P2 Subpage 4</a></li>
-								</ul>
-							</li>
-							<li class="page_item"><a href="#">Page 3</a></li>
-						</ul>
-					</div>
-				</nav>
+				<div class="searchform">
+					<form method="get" id="searchform" action="./">
+						<label for="s" class="assistive-text">Search</label>
+						<input type="text" class="field" name="s" id="s" placeholder="c#, linq, html, code, photography etc.." />
+						<input type="submit" class="submit add-on" name="submit" id="searchsubmit" value="Search" />
+					</form>
+				</div>
+			
 			</div>
+				
+			<!-- main navigation -->
+			<nav id="access" role="navigation">
+				<div class="menu">
+					<ul>
+						<li class="current_page_item"><a href="#">Page 1</a></li>
+						<li class="page_item"><a href="#">Page 2</a>
+							<ul class="children">	
+								<li class="page_item"><a>P2 Subpage 1</a></li>
+								<li class="page_item"><a>P2 Subpage 2</a></li>
+								<li class="page_item"><a>P2 Subpage 3</a></li>
+								<li class="page_item"><a>P2 Subpage 4</a></li>
+							</ul>
+						</li>
+						<li class="page_item"><a href="#">Page 3</a></li>
+					</ul>
+				</div>
+			</nav>
 		</header>
 		
 		<!-- main content container -->
@@ -111,6 +114,19 @@
 						
 						<!-- entry content -->
 						<div class="entry-content">
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed odio nibh, tincidunt
+								adipiscing, pretium nec, tincidunt id, enim. Fusce scelerisque nunc vitae nisl.
+								Quisque quis urna in velit dictum pellentesque. Vivamus a quam. Curabitur eu tortor
+								id turpis tristique adipiscing. Morbi blandit. Maecenas vel est. Nunc aliquam, orci
+								at accumsan commodo, libero nibh euismod augue, a ullamcorper velit dui et purus.
+								Aenean volutpat, ipsum ac imperdiet fermentum, dui dui suscipit arcu, vitae dictum
+								purus diam ac ligula. Praesent enim nunc, pretium eget, tincidunt in, semper at,
+								mauris. Etiam nec ligula. Aenean purus pede, sagittis at, blandit a, dignissim nec,
+								elit. Etiam nunc. Praesent molestie consectetuer leo. Etiam blandit leo mollis velit.
+								Aenean varius. Maecenas in magna nec justo ornare feugiat. Mauris elit. Nunc volutpat
+								lectus fermentum nibh.</p>
+						
 							<h2>
 							Lorem Ipsum</h2>
 						
@@ -171,13 +187,13 @@
 							<!-- Ads. Stupid crap. Etc. -->
 							<a class="entry-unrelated" href="http://fake.site/">Find Great Vacations</a>
 
-							<div class="page-link">
+							<nav class="page-link">
 								<span>Pages:</span>
 								<a href="#">1</a>
 								<a href="#">2</a>
 								<a href="#">3</a>
 								<a href="#">4</a>
-							</div>
+							</nav>
 							
 						</div>
 						
@@ -192,6 +208,16 @@
 							</div>
 						</footer>
 					</article>
+				
+					<!-- primary content navigation top -->
+					<nav id="nav-below" role="main">
+						<div class="nav-previous">
+							<a href="#">Previous</a>
+						</div>
+						<div class="nav-next">
+							<a href="#">Next</a>
+						</div>
+					</nav>
 				</div>
 			</div>
 			
