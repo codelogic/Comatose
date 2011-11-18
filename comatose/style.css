@@ -337,7 +337,7 @@ blockquote {
     text-align: right;
     display: block;
     height: 20px;
-    font-style: normal;
+    font-style: italic;
     font-weight: bold; }
     blockquote small:before, blockquote cite:before {
       content: '\2014 \00A0'; }
@@ -1233,6 +1233,8 @@ input[type=submit].btn::-moz-focus-inner {
     margin-bottom: 20px; }
   #main article div {
     margin-bottom: 20px; }
+  #main article div.entry-meta {
+    margin-bottom: 0; }
   #main article .entry-unrelated {
     display: block;
     margin-bottom: 20px; }

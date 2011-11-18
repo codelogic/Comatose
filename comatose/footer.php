@@ -11,14 +11,14 @@
 ?>
 		</div> <!-- main -->
 		
-		<div id="footer-bar">
+		<!--<div id="footer-bar">
 			<?php
 				/* A sidebar in the footer? Yep. You can can customize
 				 * your footer with three columns of widgets.
 				 */
-				get_sidebar( 'footer' );
+				//get_sidebar( 'footer' );
 			?>
-		</div>
+		</div>-->
 		
 		<!-- page footer -->
 		<footer id="colophon"> <!-- note to self: colophon: A brief description of publication or production notes relevant to the edition, in modern books usually located at the reverse of the title page, but can also sometimes be located at the end of the book. Also, a printer's mark or logotype -->
@@ -39,14 +39,14 @@
 	
 	<!-- Remote jQuery with local fallback; taken from HTML5 Boilerplate http://html5boilerplate.com -->
 	<!-- jQuery version might not be the latest; check jquery.com -->
-	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
-	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/lib/jquery-1.6.3.js"%3E%3C/script%3E'))</script> -->
-	<script src="js/lib/jquery-1.6.3.js"></script>
-	<script src="js/lib/cufon.js"></script>
-	<script src="js/lib/bebas-neue-400.font.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="<?php echo(get_template_directory_uri() . '/js/lib/jquery-1.6.3.js'); ?>"%3E%3C/script%3E'))</script>
+	<script src="<?php echo(get_template_directory_uri() . '/js/lib/cufon.js'); ?>"></script>
+	<script src="<?php echo(get_template_directory_uri() . '/js/lib/bebas-neue-400.font.js'); ?>"></script>
 
+	
 	<!-- Below is your script file -->
-	<script src="js/general.js"></script>
+	<script src="<?php echo(get_template_directory_uri() . '/js/general.js'); ?>"></script>
 
 	<!-- Change UAXXXXXXXX1 to be your site's ID -->
 	<!-- <script>

@@ -235,14 +235,14 @@ blockquote {
   }
 
   small, cite {
-    //margin-bottom: $text-lineheight + ($text-lineheight - $text-fontsize);
-	//padding-bottom: $text-fontsize;
+    // margin-bottom: $text-lineheight + ($text-lineheight - $text-fontsize);
+	// padding-bottom: $text-fontsize;
 	margin-left: auto;
 	margin-right: $text-lineheight;
 	text-align: right;
 	display: block;
 	height: $text-lineheight;
-    font-style: normal;
+    font-style: italic;
     font-weight: bold;
     &:before {
       content: '\2014 \00A0';

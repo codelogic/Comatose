@@ -53,7 +53,7 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-	<?php wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.0.6.js' );
+	<?php wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.0.6.js' ); ?>
 
 <?php
 	/* We add some JavaScript to pages with the comment form
@@ -72,7 +72,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed">
 	<div id="page" class="hfeed">
 		<header id="branding" role="banner">
 			<div id="branding-container">
@@ -102,9 +101,9 @@
 				</a>
 				<?php endif; // end check for removed header image ?>
 
-				<div class="searchform">
-					<?php get_search_form(); ?>
-				</div>
+				
+				<?php get_search_form(); ?>
+				
 
 				</div>
 				
