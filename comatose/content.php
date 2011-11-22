@@ -13,7 +13,7 @@
 			<?php if ( is_sticky() ) : ?>
 				<hgroup>
 					<?php if ( function_exists('woo_tumblog_the_title') ) :
-						woo_tumblog_the_title('entry-title');
+						woo_tumblog_the_title($class= "entry-title", $icon = false, $before = "", $after = "", $return = false, $outer_element = "h1");
 					else : ?>
 						<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'comatose' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 					<?php endif; ?>
@@ -22,7 +22,7 @@
 			<?php else : ?>
 			
 			<?php if ( function_exists('woo_tumblog_the_title') ) :
-				woo_tumblog_the_title('entry-title');
+				woo_tumblog_the_title($class= "entry-title", $icon = false, $before = "", $after = "", $return = false, $outer_element = "h1");
 			else : ?>
 						
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'comatose' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>

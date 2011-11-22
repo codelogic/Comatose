@@ -26,7 +26,7 @@
 				<div id="colophon-container2">
 					<p class="site-copyright">&copy; <a href="#">Blog Name Owner Stuff</a>. All Rights Reserved.</p>
 					<p class="site-generator">
-						Powered by <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'comatose' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyeleven' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'comatose' ), 'WordPress' ); ?></a> and <a href="http://paulrohde.com/tags/comatose" title="Subtle thoughts.">Comatose</a></p>
+						Proudly powered by <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'comatose' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyeleven' ); ?>" rel="generator"><?php printf( __( '%s', 'comatose' ), 'WordPress' ); ?></a> and <a href="http://paulrohde.com/tags/comatose" title="Subtle thoughts.">Comatose</a></p>
 					<p class="site-feed-links">
 						<a href="#">Entries Feed</a> and <a href="#">Comments Feed</a></p>
 				</div>
