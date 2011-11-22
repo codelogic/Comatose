@@ -174,7 +174,9 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
-  line-height: 20px; }
+  line-height: 20px;
+  font-size: 12px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
 
 p {
   max-width: 800px;
@@ -1154,6 +1156,12 @@ input[type=submit].btn::-moz-focus-inner {
   margin-top: 60px;
   margin-bottom: 20px;
   margin-bottom: 0; }
+  #branding h1 a,
+  #colophon h1 a {
+    color: #202020; }
+    #branding h1 a:hover,
+    #colophon h1 a:hover {
+      color: #202020; }
 #branding h2,
 #colophon h2 {
   font-size: 28px;
@@ -1229,27 +1237,10 @@ input[type=submit].btn::-moz-focus-inner {
       margin-bottom: 20px; }
     #main article header .updated:before {
       content: "On "; }
-  #main article .entry-content {
-    margin-bottom: 20px; }
   #main article div {
     margin-bottom: 20px; }
   #main article div.entry-meta {
     margin-bottom: 0; }
-  #main article .entry-unrelated {
-    display: block;
-    margin-bottom: 20px; }
-  #main article .page-link a {
-    display: inline-block;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 5px;
-    border-bottom: 5px solid #049cdb; }
-  #main article .page-link a:hover {
-    display: inline-block;
-    text-decoration: none;
-    background: #049cdb;
-    color: #FFFFFF;
-    border-bottom: 5px solid #049cdb; }
   #main article aside {
     margin-bottom: 15px;
     margin-top: 35px; }
@@ -1267,11 +1258,34 @@ input[type=submit].btn::-moz-focus-inner {
       margin-top: 0; }
   #main article footer {
     font-size: 10px;
-    color: #b3b3b3; }
+    color: #b3b3b3;
+    clear: both; }
     #main article footer p, #main article footer div {
       font-size: 10px;
       color: #b3b3b3;
       margin-bottom: 0; }
+
+.entry-content {
+  margin-bottom: 20px; }
+
+.entry-unrelated {
+  display: block;
+  margin-bottom: 20px; }
+
+.page-link {
+  clear: both; }
+  .page-link a {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5px;
+    border-bottom: 5px solid #049cdb; }
+  .page-link a:hover {
+    display: inline-block;
+    text-decoration: none;
+    background: #049cdb;
+    color: #FFFFFF;
+    border-bottom: 5px solid #049cdb; }
 
 #primary-content-title,
 #nav-above {

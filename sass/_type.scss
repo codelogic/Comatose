@@ -11,6 +11,9 @@ body {
 	
 	@include sans-serif-font;
 	
+	font-size: $text-fontsize;
+	text-shadow: 0 1px 0 $text-shadow-color;
+	
 	//border-top: 5px solid $text-alt-color;
 }
 

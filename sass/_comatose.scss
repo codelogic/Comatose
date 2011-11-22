@@ -6,6 +6,13 @@
 		@include gigantic;
 		
 		margin-bottom: 0;
+		
+		a {
+			color: $text-alt-color;
+			&:hover {
+				color: $text-alt-color;
+			}
+		}
 	}
 	h2 {
 		@include massive;
@@ -82,9 +89,7 @@
 			*/
 		}
 		
-		.entry-content {
-			margin-bottom: $text-lineheight
-		}
+		
 		
 		div {
 			margin-bottom: $text-lineheight;
@@ -92,29 +97,6 @@
 		
 		div.entry-meta {
 			margin-bottom: 0;
-		}
-		
-		.entry-unrelated {
-			display: block;
-			margin-bottom: $text-lineheight;
-		}
-		
-		.page-link {
-			a {
-				display: inline-block;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-left: 5px;
-				border-bottom: 5px solid $link-color;
-			}
-			
-			a:hover {
-				display: inline-block;
-				text-decoration: none;
-				background: $link-color;
-				color: #FFFFFF;
-				border-bottom: 5px solid $link-color;
-			}
 		}
 		
 		aside {
@@ -140,6 +122,7 @@
 			
 			font-size: $text-fontsize - 2;
 			color: $text-mute-color;
+			clear: both;
 			
 			p, div {	
 				font-size: $text-fontsize - 2;
@@ -147,6 +130,35 @@
 				margin-bottom: 0;
 			}
 		}
+	}
+}
+
+.entry-content {
+	margin-bottom: $text-lineheight
+}
+		
+.entry-unrelated {
+	display: block;
+	margin-bottom: $text-lineheight;
+}
+		
+.page-link {
+	clear: both;
+	
+	a {
+		display: inline-block;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: 5px;
+		border-bottom: 5px solid $link-color;
+	}
+	
+	a:hover {
+		display: inline-block;
+		text-decoration: none;
+		background: $link-color;
+		color: #FFFFFF;
+		border-bottom: 5px solid $link-color;
 	}
 }
 
