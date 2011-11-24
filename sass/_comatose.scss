@@ -8,9 +8,9 @@
 		margin-bottom: 0;
 		
 		a {
-			color: $text-alt-color;
+			color: $text-color;
 			&:hover {
-				color: $text-alt-color;
+				color: $text-color;
 			}
 		}
 	}
@@ -67,13 +67,15 @@
 				@include huge;
 			}
 			
-			time,
+			time {
+				//color: $text-mute-color;
+				//font-size: $text-fontsize - 2;
+				display: inline-block;
+			}
 			.byline {
+				margin-bottom: $text-lineheight;
 				color: $text-mute-color;
 				font-size: $text-fontsize - 2;
-				display: inline-block;
-				position: relative;
-				margin-bottom: $text-lineheight;
 			}
 			
 			.updated:before {
@@ -130,6 +132,10 @@
 				margin-bottom: 0;
 			}
 		}
+		
+		img {
+			height: auto !important;
+		}
 	}
 }
 
@@ -160,6 +166,36 @@
 		color: #FFFFFF;
 		border-bottom: 5px solid $link-color;
 	}
+}
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin: $text-xheight $text-xheight $text-xheight 0;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin: $text-xheight 0 $text-xheight $text-xheight;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+}
+
+.wp-caption-text {
+	color: $text-mute-color;
+	font-size: $text-fontsize - 2;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #primary-content-title,
@@ -250,7 +286,8 @@
 	.searchform 
 	{
 		margin: 0 auto $text-lineheight / 2;
-		width: 250px;
+		//width: 250px;
+		min-width: 230px;
 		clear: both;
 		
 		.assistive-text {
@@ -276,11 +313,14 @@
 			
 			margin-right: 0;
 			margin-left: -1px;
+			width: 22%;
 			@include border-radius(0 3px 3px 0);
 		}
 		
 		.field {
 			float: left;
+			max-width: none;
+			width: 74%; 
 			@include border-radius(3px 0 0 3px);
 		}
 	}

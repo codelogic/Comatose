@@ -5,7 +5,7 @@
 
 			<?php if ( have_posts() ) : ?>
 
-				<?php /* twentyeleven_content_nav( 'nav-above' ); */ ?>
+				<?php comatose_content_nav( 'nav-above' ); ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -14,7 +14,7 @@
 
 				<?php endwhile; ?>
 
-				<?php /* twentyeleven_content_nav( 'nav-below' ); */ ?>
+				<?php comatose_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 
