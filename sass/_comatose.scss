@@ -77,21 +77,7 @@
 				color: $text-mute-color;
 				font-size: $text-fontsize - 2;
 			}
-			
-			.updated:before {
-				content: "On ";
-			}
-			/*
-			time {
-				min-width: 35%;
-				display: block;
-				border-top: 1px solid $text-mute-color;
-				padding-top: $text-lineheight / 4;
-			}
-			*/
 		}
-		
-		
 		
 		div {
 			margin-bottom: $text-lineheight;
@@ -203,8 +189,8 @@
 	display: none;
 }
 
-
-#nav-below {
+#nav-below,
+#nav-single {
 	margin-top: $text-lineheight * 1;
 	margin-bottom: $text-lineheight * 1;
 	padding-bottom: $text-lineheight;
@@ -215,6 +201,8 @@
 		display: block;
 		vertical-align: center;
 	}
+}
+
 	
 	.nav-previous {
 		float: left;
@@ -247,7 +235,6 @@
 			color: $link-hover-color;
 		}
 	}
-}
 
 #secondary {
 	padding-top: $text-lineheight;

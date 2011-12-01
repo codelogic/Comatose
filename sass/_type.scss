@@ -191,6 +191,7 @@ hr {
   margin: 20px 0 19px;
   border: 0;
   border-bottom: 1px solid #eee;
+  text-shadow: none;
 }
 
 // Emphasis
@@ -209,6 +210,11 @@ em {
 
 del {
 	color: $del-color;
+	text-shadow: none;
+}
+
+strike, s {
+	text-shadow: none;
 }
 
 ins {
@@ -284,12 +290,14 @@ code, pre, kbd, tt, var {
   padding: 0 3px 2px;
   @include monospace-font;
   @include border-radius(4px);
+  text-shadow: none;
 }
 
 code, var, kbd, tt {
-  background-color: $code-background;
-  padding: 1px 3px;
-  line-height: 0;
+	background-color: $code-background;
+	padding: 1px 3px;
+	line-height: 0;
+    text-shadow: none;
 }
 
 var {
@@ -308,8 +316,9 @@ pre {
   white-space: pre;
   
   overflow:auto;
-  overflow-x:scroll;
-  overflow-y:auto;
+  overflow-x:auto;
+  overflow-y:none;
+    text-shadow: none;
 }
 
 /* Preset sizes. */

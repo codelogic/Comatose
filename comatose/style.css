@@ -296,7 +296,8 @@ p figure {
 hr {
   margin: 20px 0 19px;
   border: 0;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #eee;
+  text-shadow: none; }
 
 strong {
   font-style: inherit;
@@ -311,7 +312,11 @@ em {
   color: #b3b3b3; }
 
 del {
-  color: #b3b3b3; }
+  color: #b3b3b3;
+  text-shadow: none; }
+
+strike, s {
+  text-shadow: none; }
 
 ins {
   color: #237b23;
@@ -368,12 +373,14 @@ code, pre, kbd, tt, var {
   line-height: 20px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px; }
+  border-radius: 4px;
+  text-shadow: none; }
 
 code, var, kbd, tt {
   background-color: #f0f0f0;
   padding: 1px 3px;
-  line-height: 0; }
+  line-height: 0;
+  text-shadow: none; }
 
 var {
   font-style: italic; }
@@ -391,8 +398,9 @@ pre {
   border-radius: 3px;
   white-space: pre;
   overflow: auto;
-  overflow-x: scroll;
-  overflow-y: auto; }
+  overflow-x: auto;
+  overflow-y: none;
+  text-shadow: none; }
 
 /* Preset sizes. */
 h1, h2, h3, h4, h5, h6 {
@@ -1207,15 +1215,7 @@ input[type=submit].btn::-moz-focus-inner {
     margin-top: 35px;
     max-width: 800px; }
   #main article header {
-    max-width: 800px;
-    /*
-    time {
-    	min-width: 35%;
-    	display: block;
-    	border-top: 1px solid $text-mute-color;
-    	padding-top: $text-lineheight / 4;
-    }
-    */ }
+    max-width: 800px; }
     #main article header h1, #main article header h2 {
       border-bottom: none; }
     #main article header h1 {
@@ -1235,8 +1235,6 @@ input[type=submit].btn::-moz-focus-inner {
       margin-bottom: 20px;
       color: #b3b3b3;
       font-size: 10px; }
-    #main article header .updated:before {
-      content: "On "; }
   #main article div {
     margin-bottom: 20px; }
   #main article div.entry-meta {
@@ -1317,39 +1315,43 @@ input[type=submit].btn::-moz-focus-inner {
 #nav-above {
   display: none; }
 
-#nav-below {
+#nav-below,
+#nav-single {
   margin-top: 20px;
   margin-bottom: 20px;
   padding-bottom: 20px; }
-  #nav-below a {
+  #nav-below a,
+  #nav-single a {
     line-height: 40px;
     height: 40px;
     display: block;
     vertical-align: center; }
-  #nav-below .nav-previous {
-    float: left; }
-    #nav-below .nav-previous a:before {
-      margin-right: 12px;
-      font-size: 24px;
-      float: left;
-      content: '\00ab';
-      /* http://css-tricks.com/snippets/html/glyphs/ */
-      color: #049cdb; }
-    #nav-below .nav-previous > *:hover {
-      text-decoration: none;
-      color: #036690; }
-  #nav-below .nav-next {
-    float: right; }
-    #nav-below .nav-next a:before {
-      margin-right: 12px;
-      font-size: 24px;
-      float: right;
-      content: '\00A0\00bb';
-      /* http://css-tricks.com/snippets/html/glyphs/ */
-      color: #049cdb; }
-    #nav-below .nav-next > *:hover {
-      text-decoration: none;
-      color: #036690; }
+
+.nav-previous {
+  float: left; }
+  .nav-previous a:before {
+    margin-right: 12px;
+    font-size: 24px;
+    float: left;
+    content: '\00ab';
+    /* http://css-tricks.com/snippets/html/glyphs/ */
+    color: #049cdb; }
+  .nav-previous > *:hover {
+    text-decoration: none;
+    color: #036690; }
+
+.nav-next {
+  float: right; }
+  .nav-next a:before {
+    margin-right: 12px;
+    font-size: 24px;
+    float: right;
+    content: '\00A0\00bb';
+    /* http://css-tricks.com/snippets/html/glyphs/ */
+    color: #049cdb; }
+  .nav-next > *:hover {
+    text-decoration: none;
+    color: #036690; }
 
 #secondary {
   padding-top: 20px; }
@@ -1448,3 +1450,53 @@ input[type=submit].btn::-moz-focus-inner {
       display: block; }
     #colophon .site-generator {
       float: right; } }
+#comments > ol {
+  margin-left: 0;
+  list-style-type: none; }
+#comments > ol > li {
+  border-left: 5px solid #303030;
+  margin-top: 20px;
+  clear: both; }
+#comments li.pingback {
+  margin-top: 0;
+  padding-left: 40px;
+  border-left: none;
+  border-top: 1px solid #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
+  margin-bottom: 20px; }
+  #comments li.pingback p {
+    color: #b3b3b3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 10px;
+    margin-bottom: 0px; }
+#comments .children {
+  list-style-type: none;
+  margin-left: 20px; }
+#comments article.comment {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px; }
+#comments .avatar {
+  width: 40px;
+  height: auto;
+  float: left; }
+#comments .nocomments {
+  margin: 40px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px; }
+#comments .comment-author {
+  font-size: 12px; }
+  #comments .comment-author img {
+    margin: 0 20px 0 0; }
+#comments .comment-content {
+  margin-left: 60px; }
+#comments .reply {
+  margin-bottom: 0; }
+  #comments .reply a {
+    display: inline-block;
+    width: auto;
+    margin-left: auto;
+    margin-right: 0;
+    text-decoration: none; }
