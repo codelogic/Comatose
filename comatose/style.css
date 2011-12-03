@@ -73,14 +73,16 @@ table {
 
 #branding-container,
 #branding .menu > ul,
-#primary,
-#secondary
-#colophon-container {
+#primary {
   padding: 0 8px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box; }
+
+#colophon-container,
+#secondary {
+  margin: 0 8px; }
 
 #secondary {
   border-top: 1px solid #b3b3b3; }
@@ -415,7 +417,7 @@ form fieldset {
   padding-top: 20px; }
 form legend {
   font-size: 16.8px;
-  height: 20px;
+  line-height: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
   display: block;
@@ -911,7 +913,7 @@ input[type=submit].btn::-moz-focus-inner {
       border-bottom: 1px solid #131313;
       color: #fffefe;
       display: block;
-      height: 20px;
+      min-height: 20px;
       padding: 9px 10px; }
     #branding nav ul li a:hover {
       border: none;
@@ -955,11 +957,11 @@ input[type=submit].btn::-moz-focus-inner {
         border-left: 5px solid #049cdb; }
       #branding .menu ul li ul ul {
         margin-top: -40px;
-        margin-left: 190px; }
+        margin-left: 220px; }
       #branding .menu ul li ul li {
         float: none;
         margin: 0;
-        width: 190px; }
+        width: 220px; }
       #branding .menu ul li a:before {
         content: ""; }
       #branding .menu ul li a:not(:last-child):after {
@@ -1161,7 +1163,7 @@ input[type=submit].btn::-moz-focus-inner {
 #branding h1,
 #colophon h1 {
   font-size: 42px;
-  height: 60px;
+  line-height: 60px;
   margin-top: 60px;
   margin-bottom: 20px;
   margin-bottom: 0; }
@@ -1174,13 +1176,13 @@ input[type=submit].btn::-moz-focus-inner {
 #branding h2,
 #colophon h2 {
   font-size: 28px;
-  height: 40px;
+  line-height: 40px;
   margin-top: 40px;
   margin-bottom: 20px; }
 #branding h3,
 #colophon h3 {
   font-size: 21px;
-  height: 40px;
+  line-height: 40px;
   margin-top: 20px;
   margin-bottom: 20px; }
 #branding h4, #branding h5, #branding h6,
@@ -1188,7 +1190,7 @@ input[type=submit].btn::-moz-focus-inner {
 #colophon h5,
 #colophon h6 {
   font-size: 16.8px;
-  height: 20px;
+  line-height: 20px;
   margin-top: 20px;
   margin-bottom: 20px; }
 
@@ -1196,17 +1198,17 @@ input[type=submit].btn::-moz-focus-inner {
   margin-top: 20px; }
   #main h1 {
     font-size: 28px;
-    height: 40px;
+    line-height: 40px;
     margin-top: 40px;
     margin-bottom: 20px; }
   #main h2 {
     font-size: 21px;
-    height: 40px;
+    line-height: 40px;
     margin-top: 20px;
     margin-bottom: 20px; }
   #main h3, #main h4, #main h5, #main h6 {
     font-size: 16.8px;
-    height: 20px;
+    line-height: 20px;
     margin-top: 20px;
     margin-bottom: 20px; }
   #main article h1, #main article h2 {
@@ -1220,13 +1222,13 @@ input[type=submit].btn::-moz-focus-inner {
       border-bottom: none; }
     #main article header h1 {
       font-size: 28px;
-      height: 40px;
+      line-height: 40px;
       margin-top: 40px;
       margin-bottom: 20px;
       margin-bottom: 0; }
     #main article header h2 {
       font-size: 21px;
-      height: 40px;
+      line-height: 40px;
       margin-top: 20px;
       margin-bottom: 20px; }
     #main article header time {
@@ -1244,13 +1246,13 @@ input[type=submit].btn::-moz-focus-inner {
     margin-top: 35px; }
     #main article aside h1 {
       font-size: 21px;
-      height: 40px;
+      line-height: 40px;
       margin-top: 20px;
       margin-bottom: 20px;
       margin-top: 0; }
     #main article aside h2, #main article aside h3, #main article aside h4, #main article aside h5, #main article aside h6 {
       font-size: 16.8px;
-      height: 20px;
+      line-height: 20px;
       margin-top: 20px;
       margin-bottom: 20px;
       margin-top: 0; }
@@ -1439,16 +1441,23 @@ input[type=submit].btn::-moz-focus-inner {
     padding-bottom: 40px; }
     #colophon #colophon-container {
       border-top: 0;
-      border-bottom: 1px solid #b3b3b3; }
+      border-top: 1px solid #b3b3b3; }
     #colophon p {
-      margin-top: 20px; }
+      margin-top: 20px;
+      max-width: none; }
     #colophon .site-copyright {
+      margin: 0;
+      display: inline-block;
       float: left; }
     #colophon .site-feed-links {
-      float: left;
-      margin-left: 12px;
-      display: block; }
+      margin: 0;
+      display: block;
+      text-align: center;
+      position: relative; }
     #colophon .site-generator {
+      margin: 0;
+      display: inline-block;
+      width: 200px;
       float: right; } }
 #comments > ol {
   margin-left: 0;

@@ -369,24 +369,32 @@
 		#colophon-container
 		{
 			border-top: 0;
-			border-bottom: 1px solid $text-mute-color;
+			border-top: 1px solid $text-mute-color;
 		}
 		
 		p {
 			margin-top: $text-lineheight;
+			max-width: none;
 		}
 	
 		.site-copyright {
+			margin: 0;
+			display: inline-block;
 			float: left;
 		}
 		
 		.site-feed-links {
-			float: left;
-			margin-left: $text-fontsize;
+			margin: 0;
 			display: block;
+			text-align: center;
+			
+			position: relative;
 		}
 		
 		.site-generator {
+			margin: 0;
+			display: inline-block;
+			width: 200px;
 			float: right;
 		}
 	}

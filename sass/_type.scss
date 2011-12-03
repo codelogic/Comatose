@@ -330,40 +330,40 @@ pre {
 
 @mixin small {
 	font-size: 12px;
-	height: $text-lineheight;
+	line-height: $text-lineheight;
 }
 
 @mixin normal {
 	font-size: $header-fontsize;
-	height: $text-lineheight;
+	line-height: $text-lineheight;
 	margin-top: $text-lineheight;
 	margin-bottom: $text-lineheight;
 }
 
 @mixin large {
 	font-size: $header-fontsize * 1.2;
-	height: $text-lineheight;
+	line-height: $text-lineheight;
 	margin-top: $text-lineheight;
 	margin-bottom: $text-lineheight;
 }
 
 @mixin huge {
 	font-size: $header-fontsize * 1.5;
-	height: $text-lineheight * 2;
+	line-height: $text-lineheight * 2;
 	margin-top: $text-lineheight;
 	margin-bottom: $text-lineheight;
 }
 
 @mixin massive {
 	font-size: $header-fontsize * 2;
-	height: $text-lineheight * 2;
+	line-height: $text-lineheight * 2;
 	margin-top: $text-lineheight * 2;
 	margin-bottom: $text-lineheight;
 }
 
 @mixin gigantic {
 	font-size:  $header-fontsize * 3;
-	height: $text-lineheight * 3;
+	line-height: $text-lineheight * 3;
 	margin-top: $text-lineheight * 3;
 	margin-bottom: $text-lineheight;
 }

@@ -29,7 +29,7 @@
 				
 				color: $page-background;
 				display: block;
-				height: $text-lineheight;
+				min-height: $text-lineheight;
 				padding: ($text-lineheight / 2 - 1) ($text-lineheight / 2);
 			}
 						
@@ -103,13 +103,13 @@
 				
 				ul ul {
 					margin-top: 0 - $text-lineheight * 2;
-					margin-left: 190px;
+					margin-left: 220px;
 				}
 				
 				ul li {
 					float: none;
 					margin: 0;
-					width: 190px;
+					width: 220px;
 				}
 				
 				a:before {

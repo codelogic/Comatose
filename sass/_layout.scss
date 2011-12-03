@@ -8,9 +8,7 @@ $column: 100% / 18;
 
 #branding-container,
 #branding .menu > ul,
-#primary,
-#secondary
-#colophon-container
+#primary
 {
 	padding: 0 ($text-lineheight - $text-fontsize);
 	-webkit-box-sizing: border-box;
@@ -19,7 +17,13 @@ $column: 100% / 18;
 			box-sizing: border-box;
 }
 
+#colophon-container,
 #secondary {
+	margin: 0 ($text-lineheight - $text-fontsize);
+}
+
+#secondary {
+
 	border-top: 1px solid $text-mute-color;
 }
 
@@ -33,7 +37,7 @@ $column: 100% / 18;
 		margin: 0 $column/2;
 	}
 	
-	#primary {
+	#primary{
 		padding: 0;
 	}
 	
