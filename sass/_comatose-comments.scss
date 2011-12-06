@@ -56,7 +56,7 @@
 	
 	.nocomments {
 		margin: $text-lineheight * 2;
-		width: 100%;
+		display: block;
 		text-align: center;
 		font-size: $text-fontsize + 2;
 	}
