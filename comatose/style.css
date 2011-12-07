@@ -954,10 +954,10 @@ input[type=submit].btn::-moz-focus-inner {
         position: absolute;
         left: -9999px;
         width: 220px;
-        margin: 0;
+        margin: 0 0 0 0;
         border-left: 5px solid #049cdb; }
       #branding .menu ul li ul ul {
-        margin-top: -40px;
+        margin-top: -41px;
         margin-left: 220px; }
       #branding .menu ul li ul li {
         float: none;
@@ -1435,12 +1435,13 @@ input[type=submit].btn::-moz-focus-inner {
   #branding .searchform {
     float: right;
     clear: none;
-    width: 300px;
+    width: 45%;
     margin-top: 90px; }
-    #branding .searchform .submit {
-      width: auto; }
     #branding .searchform .field {
-      width: 75%; } }
+      width: 76%; } }
+@media screen and (min-width: 888px) {
+  #branding .searchform {
+    margin-right: 20px; } }
 /* PAGE FOOTER */
 #colophon {
   clear: both; }

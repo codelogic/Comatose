@@ -352,16 +352,27 @@
 			float: right;
 			clear: none;
 			
-			width: 300px;
+			width: 45%;
 			margin-top: $text-lineheight * 4.5;
 			
+			
 			.submit {
-				width: auto;
+				//width: auto;
 			}
 			
 			.field {
-				width: 75%
+				width: 76%
 			}
+		}
+	}
+}
+
+@media screen and (min-width: 888px)
+{
+	#branding {
+		.searchform 
+		{
+			margin-right: 20px;
 		}
 	}
 }
