@@ -86,6 +86,21 @@ table {
 
 #secondary {
   border-top: 1px solid #b3b3b3; }
+  #secondary aside {
+    zoom: 1;
+    margin-top: 20px; }
+    #secondary aside:before, #secondary aside:after {
+      display: table;
+      content: "";
+      zoom: 1;
+      *display: inline; }
+    #secondary aside:after {
+      clear: both; }
+    #secondary aside > h3 {
+      margin-top: 0; }
+
+#colophon {
+  padding-top: 20px; }
 
 /* 4 grid */
 @media screen and (min-width: 640px) {
@@ -1340,8 +1355,17 @@ p .alignnone {
 #nav-below,
 #nav-single {
   margin-top: 20px;
-  margin-bottom: 20px;
-  padding-bottom: 20px; }
+  zoom: 1; }
+  #nav-below:before, #nav-below:after,
+  #nav-single:before,
+  #nav-single:after {
+    display: table;
+    content: "";
+    zoom: 1;
+    *display: inline; }
+  #nav-below:after,
+  #nav-single:after {
+    clear: both; }
   #nav-below a,
   #nav-single a {
     line-height: 40px;
@@ -1376,7 +1400,8 @@ p .alignnone {
     color: #036690; }
 
 #secondary {
-  padding-top: 20px; }
+  clear: both;
+  margin-top: 20px; }
   #secondary ul {
     list-style: none;
     margin-left: 0; }
@@ -1451,7 +1476,7 @@ p .alignnone {
     width: 45%;
     margin-top: 90px; }
     #branding .searchform .field {
-      width: 76%; } }
+      width: 74%; } }
 @media screen and (min-width: 888px) {
   #branding .searchform {
     margin-right: 20px; } }
@@ -1460,7 +1485,6 @@ p .alignnone {
   clear: both; }
   #colophon #colophon-container {
     border-top: 1px solid #b3b3b3;
-    margin-top: 20px;
     padding-top: 20px;
     margin-bottom: 20px; }
   #colophon p {

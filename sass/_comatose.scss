@@ -212,8 +212,8 @@ p .alignnone {
 #nav-below,
 #nav-single {
 	margin-top: $text-lineheight * 1;
-	margin-bottom: $text-lineheight * 1;
-	padding-bottom: $text-lineheight;
+	
+	@include clearfix();
 	
 	a {
 		line-height: $text-lineheight * 2;
@@ -257,7 +257,8 @@ p .alignnone {
 	}
 
 #secondary {
-	padding-top: $text-lineheight;
+	clear: both;
+	margin-top: $text-lineheight;
 	//border-top: 1px solid $text-mute-color;
 	
 	ul {
@@ -372,7 +373,7 @@ p .alignnone {
 			}
 			
 			.field {
-				width: 76%
+				width: 74%
 			}
 		}
 	}
@@ -397,7 +398,7 @@ p .alignnone {
 	#colophon-container
 	{
 		border-top: 1px solid $text-mute-color;
-		margin-top: $text-lineheight;
+		//margin-top: $text-lineheight;
 		padding-top: $text-lineheight;
 		margin-bottom: $text-lineheight;
 	}

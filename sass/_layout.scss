@@ -23,8 +23,20 @@ $column: 100% / 18;
 }
 
 #secondary {
-
 	border-top: 1px solid $text-mute-color;
+	
+	aside {
+		@include clearfix();
+		margin-top: $text-lineheight;
+		
+		> h3 {
+			margin-top: 0;
+		}
+	}
+}
+
+#colophon {
+	padding-top: $text-lineheight;
 }
 
 /* 4 grid */
