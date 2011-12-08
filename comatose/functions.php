@@ -1,4 +1,23 @@
 <?php
+
+add_action('init', 'register_comatose_menu');
+
+function register_comatose_menu() {
+	register_nav_menu('primary-menu', __('Custom Menu'));
+}
+
+function comatose_widgets_init() {
+	register_sidebar(array(
+		'name' => __( 'primary-sidebar', __('Primary Sidebar') ),
+		'id' => 'sidebar-1',
+		'before_widget' => '<aside class="widget">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+		));
+}
+add_action( 'init', 'comatose_widgets_init' );
+
 /**
  * Display navigation to next/previous pages when applicable
  */

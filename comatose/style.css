@@ -72,7 +72,7 @@ table {
   clear: both; }
 
 #branding-container,
-#branding .menu > ul,
+#access div > ul,
 #primary {
   padding: 0 8px;
   -webkit-box-sizing: border-box;
@@ -90,7 +90,7 @@ table {
 /* 4 grid */
 @media screen and (min-width: 640px) {
   #branding-container,
-  #branding .menu > ul,
+  #access div > ul,
   #primary,
   #secondary,
   #colophon-container {
@@ -110,7 +110,7 @@ table {
     float: left; } }
 @media screen and (min-width: 888px) {
   #branding-container,
-  #branding .menu > ul,
+  #access div > ul,
   #primary,
   #secondary,
   #colophon-container {
@@ -126,7 +126,7 @@ table {
     float: left; } }
 @media screen and (min-width: 1200px) {
   #branding-container,
-  #branding .menu > ul,
+  #access div > ul,
   #colophon-container {
     margin: 0 5.556%;
     max-width: 99999px; }
@@ -149,7 +149,7 @@ table {
       width: 100%; } }
 @media screen and (min-width: 1440px) {
   #branding-container,
-  #branding .menu > ul,
+  #access div > ul,
   #colophon-container {
     width: 1280px;
     margin: 0 auto; }
@@ -283,8 +283,6 @@ figure, img, embed, object, video {
     zoom: 50%; } }
 p img,
 p figure {
-  float: left;
-  display: inline;
   margin-right: 8px; }
   p img.alignright,
   p figure.alignright {
@@ -894,41 +892,41 @@ input[type=submit].btn::-moz-focus-inner {
     opacity: 0.4; }
 
 #branding hgroup,
-#branding .menu > ul,
+#access div > ul,
 #colophon-container {
   padding: 0; }
 
-#branding nav {
+#access {
   background: #202020;
   min-height: 60px; }
-  #branding nav ul {
+  #access ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     font-size: 18px; }
-    #branding nav ul li.pull-right {
+    #access ul li.pull-right {
       float: none; }
-    #branding nav ul li a {
+    #access ul li a {
       border-top: 1px solid #2d2d2d;
       border-bottom: 1px solid #131313;
       color: #fffefe;
       display: block;
       min-height: 20px;
       padding: 9px 10px; }
-    #branding nav ul li a:hover {
+    #access ul li a:hover {
       border: none;
       padding-top: 10px;
       padding-bottom: 10px;
       text-decoration: none;
       color: #fffefe;
       background: #049cdb; }
-    #branding nav ul li li a {
+    #access ul li li a {
       padding-left: 30px; }
-    #branding nav ul li li li a {
+    #access ul li li li a {
       padding-left: 50px; }
-    #branding nav ul li li li li a {
+    #access ul li li li li a {
       padding-left: 70px; }
-    #branding nav ul li li li li li a {
+    #access ul li li li li li a {
       padding-left: 90px; }
 
 @media screen and (min-width: 640px) {
@@ -938,17 +936,17 @@ input[type=submit].btn::-moz-focus-inner {
   	padding: 0 ($text-lineheight - $text-fontsize);
   }
   */
-  #branding .menu ul {
+  #access ul {
     zoom: 1; }
-    #branding .menu ul li {
+    #access ul li {
       float: left; }
-      #branding .menu ul li.pull-right {
+      #access ul li.pull-right {
         float: right; }
-      #branding .menu ul li.pull-right #branding .menu ul li:last-child {
+      #access ul li.pull-right #access ul li:last-child {
         margin-right: 0px; }
-      #branding .menu ul li a, #branding .menu ul li li a, #branding .menu ul li li li a, #branding .menu ul li li li li a, #branding .menu ul li li li li li a {
+      #access ul li a, #access ul li li a, #access ul li li li a, #access ul li li li li a, #access ul li li li li li a {
         padding-left: 20px; }
-      #branding .menu ul li ul {
+      #access ul li ul {
         z-index: 1;
         background: #202020;
         position: absolute;
@@ -956,16 +954,16 @@ input[type=submit].btn::-moz-focus-inner {
         width: 220px;
         margin: 0 0 0 0;
         border-left: 5px solid #049cdb; }
-      #branding .menu ul li ul ul {
+      #access ul li ul ul {
         margin-top: -41px;
         margin-left: 220px; }
-      #branding .menu ul li ul li {
+      #access ul li ul li {
         float: none;
         margin: 0;
         width: 220px; }
-      #branding .menu ul li a:before {
+      #access ul li a:before {
         content: ""; }
-      #branding .menu ul li a:not(:last-child):after {
+      #access ul li a:not(:last-child):after {
         content: " ";
         display: inline-block;
         width: 0;
@@ -975,7 +973,7 @@ input[type=submit].btn::-moz-focus-inner {
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         border-top: 5px solid #fffefe; }
-      #branding .menu ul li li a:not(:last-child):after {
+      #access ul li li a:not(:last-child):after {
         content: " ";
         display: inline-block;
         float: right;
@@ -986,29 +984,29 @@ input[type=submit].btn::-moz-focus-inner {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         border-left: 5px solid #fffefe; }
-      #branding .menu ul li:hover > a {
+      #access ul li:hover > a {
         border: none;
         padding: 20px;
         text-decoration: none;
         color: #fffefe;
         background: #049cdb; }
-      #branding .menu ul li li:hover > a {
+      #access ul li li:hover > a {
         padding: 10px 10px 10px 20px; }
-      #branding .menu ul li:hover > ul,
-      #branding .menu ul li li:hover > ul,
-      #branding .menu ul li li li:hover > ul {
+      #access ul li:hover > ul,
+      #access ul li li:hover > ul,
+      #access ul li li li:hover > ul {
         left: auto; }
-    #branding .menu ul:before, #branding .menu ul:after {
+    #access ul:before, #access ul:after {
       display: table;
       content: "";
       zoom: 1;
       *display: inline; }
-    #branding .menu ul:after {
+    #access ul:after {
       clear: both; }
-  #branding .menu > ul > li > a {
+  #access div > ul > li > a {
     border: none;
     padding: 20px; }
-  #branding .menu > ul > li:first-child {
+  #access div > ul > li:first-child {
     margin-left: -20px; } }
 /*
  * jQuery Nivo Slider v2.6
@@ -1311,6 +1309,21 @@ input[type=submit].btn::-moz-focus-inner {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+.alignnone {
+  zoom: 1; }
+  .alignnone:before, .alignnone:after {
+    display: table;
+    content: "";
+    zoom: 1;
+    *display: inline; }
+  .alignnone:after {
+    clear: both; }
+
+p .alignnone {
+  margin-right: auto;
+  margin-left: 0;
+  display: block; }
 
 .wp-caption-text {
   color: #b3b3b3;

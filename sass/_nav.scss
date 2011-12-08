@@ -1,13 +1,13 @@
 // nav here
 
 #branding hgroup,
-#branding .menu > ul,
+#access div > ul,
 #colophon-container
 {
 	padding: 0;
 }
 
-#branding nav {
+#access {
 	background: $text-alt-color;
 	min-height: $text-lineheight * 3;
 	ul
@@ -75,7 +75,7 @@
 	}
 	*/
 
-	#branding .menu {
+	#access {
 		ul {
 			li {
 				float: left;
@@ -169,13 +169,13 @@
 			@include clearfix();
 		}
 		
-		> ul > li > a
+		div > ul > li > a
 		{
 			border: none;
 			padding: $text-lineheight;
 		}
 		
-		> ul > li:first-child
+		div > ul > li:first-child
 		{
 			margin-left: 0-$text-lineheight;
 		}

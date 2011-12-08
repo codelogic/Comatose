@@ -168,6 +168,7 @@
 	float: left;
 	margin: $text-xheight $text-xheight $text-xheight 0;
 }
+
 .alignright {
 	display: inline;
 	float: right;
@@ -179,6 +180,16 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.alignnone {
+	@include clearfix;
+}
+
+p .alignnone {
+	margin-right: auto;
+	margin-left: 0;
+	display: block;
 }
 
 .wp-caption {

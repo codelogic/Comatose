@@ -7,7 +7,7 @@ if ( 'content' != $current_layout ) :
 ?>
 		<div id="secondary" class="widget-area" role="complementary">
 			<div id="secondary-content">
-				<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+				<?php if ( ! dynamic_sidebar( 'primary-sidebar' ) ) : // note, this will display the primary sidebar, else if none exists, do whatever is below. ?>
 
 					<aside id="archives" class="widget">
 						<h3 class="widget-title"><?php _e( 'Archives', 'comatose' ); ?></h3>
@@ -24,7 +24,6 @@ if ( 'content' != $current_layout ) :
 							<?php wp_meta(); ?>
 						</ul>
 					</aside>
-
 				<?php endif; // end sidebar widget area ?>
 			</div>
 		</div><!-- #secondary .widget-area -->

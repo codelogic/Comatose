@@ -167,8 +167,6 @@ figure, img, embed, object, video {
 
 p img, 
 p figure {
-	float: left;
-	display: inline;
 	margin-right: $text-xheight;
 	
 	&.alignright {

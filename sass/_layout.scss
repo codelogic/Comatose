@@ -7,7 +7,7 @@ $column: 100% / 18;
 }
 
 #branding-container,
-#branding .menu > ul,
+#access div > ul,
 #primary
 {
 	padding: 0 ($text-lineheight - $text-fontsize);
@@ -30,7 +30,7 @@ $column: 100% / 18;
 /* 4 grid */
 @media screen and (min-width: 640px) {
 	#branding-container,
-	#branding .menu > ul,
+	#access div > ul,
 	#primary,
 	#secondary,
 	#colophon-container {
@@ -56,7 +56,7 @@ $column: 100% / 18;
 
 @media screen and (min-width: 888px) {
 	#branding-container,
-	#branding .menu > ul,
+	#access div > ul,
 	#primary,
 	#secondary,
 	#colophon-container {
@@ -81,7 +81,7 @@ $column: 100% / 18;
 
 @media screen and (min-width: 1200px) {
 	#branding-container,
-	#branding .menu > ul,
+	#access div > ul,
 	#colophon-container {
 		margin: 0 $column;
 		max-width: 99999px;
@@ -113,7 +113,7 @@ $column: 100% / 18;
 
 @media screen and (min-width: 1440px) {
 	#branding-container,
-	#branding .menu > ul,
+	#access div > ul,
 	#colophon-container {
 		width: 1280px;
 		margin: 0 auto;
