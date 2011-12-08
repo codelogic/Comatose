@@ -1,3 +1,6 @@
+
+@import "reset";
+
 /* Note. For print, serif is more readable, and black and white text will avoid wasting ink. */
 
 body {
@@ -5,6 +8,8 @@ body {
 	background: #FFF;
 	color: #000;
 	font-size: 12pt;
+	line-height: 14pt;
+	text-shadow: none;
 }
 
 a:link, a:visited {
@@ -18,4 +23,44 @@ a:link:after, a:visited:after {
 	content: " [" attr(href) "] ";
 }
 
+
+blockquote {
+	font-style: italic;
+	margin: 14pt 0 14pt 20pt;
+	border: none;
+	blockquote {
+		border: none;
+	}
+}
+
+address {
+	margin: 14pt 0 14pt 20pt;
+	font-style: italic;
+	border: none;
+}
+
+pre {
+	font-family: Consolas, monospace;
+	font-size: 9pt;
+}
+
+code, var, tt, kbd {
+	font-family: Consolas, monospace;
+	font-size: 11pt;
+}
+
+strong {
+	font-weight: bold;
+}
+
+q, 
+
+ul, ol {
+	margin-left: 20pt
+}
+
 /* Hide elements we don't care about. */
+#searchform, #access, #secondary, #nav-above, #nav-below {
+	display: none;
+}
+	
