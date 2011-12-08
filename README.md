@@ -1,22 +1,10 @@
 # [Comatose](http://github.com/codelogic/comatose) - A Wordpress Theme
 
-**[Comatose](http://github.com/codelogic/comatose)** is a personal project by [Paul Rohde](http://www.paulrohde.com) to design and build a wordpress theme that is light, efficient, minimalist, and is desgned for the display of photography and code. Type is awesome. Lets show it off.
+**[Comatose](http://github.com/codelogic/comatose)** is a personal project by [Paul Rohde](http://www.paulrohde.com) to design and build a wordpress theme that is light, efficient, minimalist, and is desgned for the display of photography and code.
 
 http://www.paulrohde.com/tags/comatose
 
-## Included Projects
-
-This project includes, or utilizes several 3rd party libraries:
-
-* [Cufon](http://github.com/sorccu/cufon)
-* [jQuery](http://jquery.com/)
-* [less.js](https://github.com/cloudhead/less.js)
-* [Golden-Grid-System](http://github.com/jonikorpi/Golden-Grid-System)
-* [html5.js](http://code.google.com/p/html5shim/)
-
 ## The MIT License
-
-*Copyright (c) 2011 Paul Rohde*
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
