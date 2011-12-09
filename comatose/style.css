@@ -1515,6 +1515,9 @@ p .alignnone {
       display: inline-block;
       width: 200px;
       float: right; } }
+@media only screen and (max-device-width: 480px) {
+  #main {
+    -webkit-text-size-adjust: 100%; } }
 #comments > ol {
   margin-left: 0;
   list-style-type: none; }

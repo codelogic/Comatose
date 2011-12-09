@@ -449,3 +449,7 @@ p .alignnone {
 		}
 	}
 }
+
+@media only screen and (max-device-width: 480px) {      
+        #main { -webkit-text-size-adjust:100% }               
+}
