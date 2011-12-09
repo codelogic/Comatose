@@ -305,12 +305,17 @@ p .alignnone {
 		clear: both;
 	}
 	
+	input[type="search"]::-webkit-search-cancel-button {
+		 -webkit-appearance: none;
+	}
+	
 	.searchform 
 	{
 		margin: 0 auto $text-lineheight / 2;
 		//width: 250px;
 		min-width: 230px;
 		clear: both;
+		
 		
 		.assistive-text {
 			display: none;
@@ -337,6 +342,8 @@ p .alignnone {
 			margin-left: -1px;
 			width: 22%;
 			@include border-radius(0 3px 3px 0);
+			
+			-webkit-appearance: none;
 		}
 		
 		.field {
@@ -344,6 +351,8 @@ p .alignnone {
 			max-width: none;
 			width: 74%; 
 			@include border-radius(3px 0 0 3px);
+			
+			-webkit-appearance: none;
 		}
 	}
 }
