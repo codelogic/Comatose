@@ -1517,7 +1517,10 @@ p .alignnone {
       float: right; } }
 @media only screen and (max-device-width: 480px) {
   /* Note: 100% instead of none should keep usability intact. */
-  /* http://www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+  /* 
+  	http://www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+  	http://stackoverflow.com/questions/5303263/fix-font-size-issue-on-mobile-safari-iphone-where-text-is-rendered-inconsisten
+  */
   #main {
     -webkit-text-size-adjust: 100%; } }
 #comments > ol {
