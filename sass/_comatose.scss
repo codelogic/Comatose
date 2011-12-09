@@ -450,6 +450,11 @@ p .alignnone {
 	}
 }
 
-@media only screen and (max-device-width: 480px) {      
-        #main { -webkit-text-size-adjust:100% }               
+@media only screen and (max-device-width: 480px) {    
+	/* Note: 100% instead of none should keep usability intact. */
+	/* http://www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+	
+        #main { 
+			-webkit-text-size-adjust: 100%;
+		}               
 }
