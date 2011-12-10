@@ -86,3 +86,107 @@
 		}
 	}
 }
+
+#primary #respond {
+	padding: 0 0 0 $text-lineheight;
+	
+	h3 {
+		small
+		{
+			margin-left: $text-lineheight / 2;
+			font-size: $text-fontsize;
+		}
+	}
+}
+
+#primary #commentform
+{
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	
+	label {
+		margin: 0;
+		width: 80px;
+		text-align: left;
+	}
+	
+	p {
+		margin: 0;
+		max-width: none;
+	}
+	
+	input {
+		width: 60%;
+		max-width: 300px;
+	}
+	
+	.required {
+		display: inline-block;
+		width: 8px;
+		margin-left: -8px;
+	}
+	
+	.logged-in-as {
+		display: block;
+		padding-top: $text-lineheight / 2;
+		padding-bottom: $text-lineheight / 2;
+		border-top: 1px solid $text-mute-color;
+		border-bottom: 1px solid $text-mute-color;
+		padding-bottom: $text-lineheight / 2;
+		margin-bottom: $text-lineheight / 2;
+	}
+
+	.comment-notes {
+		margin-bottom: $text-lineheight / 2;
+		.required {
+			margin-left: 0;
+		}
+	}
+	
+	.comment-form-author {
+		margin-bottom: $text-lineheight / 2;
+	}
+	
+	.comment-form-email {
+		margin-bottom: $text-lineheight / 2;
+	}
+	
+	.comment-form-url {
+		margin-bottom: $text-lineheight / 2;
+	}
+	
+	.comment-form-comment {
+		display: block;
+		width: 100%;
+	}
+	
+	#comment {
+		float: left;
+		clear: left;
+		width: 100%;
+		max-width: 800px;
+	}
+	
+	.form-allowed-tags {
+		clear: both;
+	}
+	
+	.form-allowed-tags, 
+	.form-allowed-tags code,
+	.comment-notes  
+	{
+		color: $text-mute-color;
+		font-size: $text-fontsize - 2; 
+		max-width: 800px;
+	}
+	
+	.form-allowed-tags code {
+	}
+	
+	#submit {
+		width: 30%;
+		min-width: 120px;
+	}
+}

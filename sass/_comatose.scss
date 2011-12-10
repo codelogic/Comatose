@@ -137,6 +137,14 @@
 .entry-content {
 	margin-bottom: $text-lineheight
 }
+
+.entry-format { 
+	display: none;
+}
+
+#main article header hgroup .entry-title {
+	margin-top: $text-lineheight;
+}
 		
 .entry-unrelated {
 	display: block;
@@ -253,8 +261,11 @@ p .alignnone {
 		> *:hover {
 			text-decoration: none;
 			color: $link-hover-color;
-		}
 	}
+}
+
+#nav-single {
+}
 
 #secondary {
 

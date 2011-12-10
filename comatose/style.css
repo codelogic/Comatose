@@ -1290,6 +1290,12 @@ input[type=submit].btn::-moz-focus-inner {
 .entry-content {
   margin-bottom: 20px; }
 
+.entry-format {
+  display: none; }
+
+#main article header hgroup .entry-title {
+  margin-top: 20px; }
+
 .entry-unrelated {
   display: block;
   margin-bottom: 20px; }
@@ -1577,3 +1583,66 @@ p .alignnone {
     margin-left: auto;
     margin-right: 0;
     text-decoration: none; }
+
+#primary #respond {
+  padding: 0 0 0 20px; }
+  #primary #respond h3 small {
+    margin-left: 10px;
+    font-size: 12px; }
+
+#primary #commentform {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0; }
+  #primary #commentform label {
+    margin: 0;
+    width: 80px;
+    text-align: left; }
+  #primary #commentform p {
+    margin: 0;
+    max-width: none; }
+  #primary #commentform input {
+    width: 60%;
+    max-width: 300px; }
+  #primary #commentform .required {
+    display: inline-block;
+    width: 8px;
+    margin-left: -8px; }
+  #primary #commentform .logged-in-as {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #b3b3b3;
+    border-bottom: 1px solid #b3b3b3;
+    padding-bottom: 10px;
+    margin-bottom: 10px; }
+  #primary #commentform .comment-notes {
+    margin-bottom: 10px; }
+    #primary #commentform .comment-notes .required {
+      margin-left: 0; }
+  #primary #commentform .comment-form-author {
+    margin-bottom: 10px; }
+  #primary #commentform .comment-form-email {
+    margin-bottom: 10px; }
+  #primary #commentform .comment-form-url {
+    margin-bottom: 10px; }
+  #primary #commentform .comment-form-comment {
+    display: block;
+    width: 100%; }
+  #primary #commentform #comment {
+    float: left;
+    clear: left;
+    width: 100%;
+    max-width: 800px; }
+  #primary #commentform .form-allowed-tags {
+    clear: both; }
+  #primary #commentform .form-allowed-tags,
+  #primary #commentform .form-allowed-tags code,
+  #primary #commentform .comment-notes {
+    color: #b3b3b3;
+    font-size: 10px;
+    max-width: 800px; }
+  #primary #commentform #submit {
+    width: 30%;
+    min-width: 120px; }
