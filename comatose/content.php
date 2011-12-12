@@ -38,7 +38,7 @@
 
 			<?php if ( comments_open() && ! post_password_required() ) : ?>
 			<div class="comments-link">
-				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Reply', 'comatose' ) . '</span>', _x( '1', 'comments number', 'comatose' ), _x( '%', 'comments number', 'comatose' ) ); ?>
+				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'comatose' ) . '</span>', __( '<b>1</b> Comment', 'comatose' ), __( '<b>%</b> Comments', 'comatose' ) ); ?>
 			</div>
 			<?php endif; ?>
 		</header><!-- .entry-header -->
@@ -94,7 +94,7 @@
 			<?php if ( $show_sep ) : ?>
 			<span class="sep"> | </span>
 			<?php endif; // End if $show_sep ?>
-			<span class="comments-link"><?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'comatose' ) . '</span>', __( '<b>1</b> Reply', 'comatose' ), __( '<b>%</b> Replies', 'comatose' ) ); ?></span>
+			<span class="comments-link"><?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'comatose' ) . '</span>', __( '<b>1</b> Comment', 'comatose' ), __( '<b>%</b> Comments', 'comatose' ) ); ?></span>
 			<?php endif; // End if comments_open() ?>
 
 			<?php edit_post_link( __( 'Edit', 'comatose' ), '<span class="edit-link">', '</span>' ); ?>
