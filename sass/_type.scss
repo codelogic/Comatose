@@ -17,6 +17,14 @@ body {
 	//border-top: 5px solid $text-alt-color;
 }
 
+::-moz-selection,
+::-webkit-selection,
+::selection {
+    text-shadow: none;
+    background: #444;
+    color: #fff;
+}
+
 p {
 	max-width: 800px;
 	font-size: $text-fontsize;
