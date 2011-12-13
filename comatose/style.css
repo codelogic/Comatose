@@ -1293,6 +1293,27 @@ input[type=submit].btn::-moz-focus-inner {
     height: auto !important; }
   #main article p {
     text-align: justify; }
+  #main #primary article.post-password-required .entry-content form {
+    border: none;
+    padding: 0;
+    background: none; }
+    #main #primary article.post-password-required .entry-content form p:first-child {
+      color: #b3b3b3;
+      font-size: 10px; }
+    #main #primary article.post-password-required .entry-content form input {
+      -webkit-appearance: none;
+      min-width: 75px; }
+    #main #primary article.post-password-required .entry-content form label {
+      border-left: 5px solid #202020;
+      padding: 2px 0 8px 15px;
+      max-width: none;
+      width: 35%;
+      text-align: left;
+      min-width: 150px; }
+      #main #primary article.post-password-required .entry-content form label input {
+        width: 100%;
+        max-width: none;
+        -webkit-appearance: none; }
 
 .entry-content {
   margin-bottom: 20px; }
@@ -1548,7 +1569,7 @@ p .alignnone {
   margin-top: 20px;
   clear: both; }
 #comments li.pingback {
-  margin-top: 0;
+  margin-top: 20px;
   padding-left: 40px;
   border-left: none;
   border-top: 1px solid #b3b3b3;
@@ -1592,16 +1613,21 @@ p .alignnone {
     text-decoration: none; }
 
 #primary #respond {
+  border-left: 5px solid #303030;
   padding: 0 0 0 20px; }
   #primary #respond h3 small {
     margin-left: 10px;
     font-size: 12px; }
 
+#primary .commentlist #respond {
+  border-left: none;
+  padding: 0 0 0 20px; }
+
 #primary #commentform {
   background: none;
   border: none;
   padding: 0;
-  margin: 0; }
+  margin: 0 0 20px 0; }
   #primary #commentform label {
     margin: 0;
     width: 80px;
@@ -1623,7 +1649,8 @@ p .alignnone {
     border-top: 1px solid #b3b3b3;
     border-bottom: 1px solid #b3b3b3;
     padding-bottom: 10px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    max-width: 800px; }
   #primary #commentform .comment-notes {
     margin-bottom: 10px; }
     #primary #commentform .comment-notes .required {

@@ -132,6 +132,40 @@
 			text-align: justify;
 		}
 	}
+	
+	#primary article.post-password-required .entry-content {
+		form {
+			border: none;
+			padding: 0;
+			background: none;
+			p:first-child {
+				color: $text-mute-color;
+				font-size: $text-fontsize - 2;
+			}
+			
+			input {
+				-webkit-appearance: none;
+				min-width: 75px;
+			}
+			
+			label {
+			
+				border-left:  5px solid $text-alt-color;
+				padding: 2px 0 ($text-lineheight - $text-fontsize) $text-lineheight - 5;
+				
+				max-width: none;
+				width: 35%;
+				text-align: left;
+				min-width: 150px;
+				
+				input {
+					width: 100%;
+					max-width: none;
+					-webkit-appearance: none;
+				}
+			}
+		}
+	}
 }
 
 .entry-content {

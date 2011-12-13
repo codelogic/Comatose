@@ -12,7 +12,7 @@
 	}
 	
 	li.pingback {
-		margin-top: 0;
+		margin-top: $text-lineheight;
 		padding-left: $text-lineheight*2;
 		border-left: none;
 		border-top: 1px solid $text-mute-color;
@@ -46,12 +46,9 @@
 		width: $text-lineheight * 2;
 		height: auto;
 		float: left;	
-				
-		
 	}
 	
 	.comment-meta {
-
 	}
 	
 	.nocomments {
@@ -88,6 +85,7 @@
 }
 
 #primary #respond {
+	border-left: 5px solid $text-color;
 	padding: 0 0 0 $text-lineheight;
 	
 	h3 {
@@ -99,12 +97,17 @@
 	}
 }
 
+#primary .commentlist #respond {
+	border-left: none;
+	padding: 0 0 0 $text-lineheight;
+}
+
 #primary #commentform
 {
 	background: none;
 	border: none;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 $text-lineheight 0;
 	
 	label {
 		margin: 0;
@@ -136,6 +139,7 @@
 		border-bottom: 1px solid $text-mute-color;
 		padding-bottom: $text-lineheight / 2;
 		margin-bottom: $text-lineheight / 2;
+		max-width: 800px;
 	}
 
 	.comment-notes {
