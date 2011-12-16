@@ -4,21 +4,12 @@
  *
  * Contains the closing of the id=main div and all content after
  *
- * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @package Comatose
+ * @subpackage v1
+ * @since Comatose v1.0
  */
 ?>
 		</div> <!-- main -->
-		
-		<!--<div id="footer-bar">
-			<?php
-				/* A sidebar in the footer? Yep. You can can customize
-				 * your footer with three columns of widgets.
-				 */
-				//get_sidebar( 'footer' );
-			?>
-		</div>-->
 		
 		<!-- page footer -->
 		<footer id="colophon"> <!-- note to self: colophon: A brief description of publication or production notes relevant to the edition, in modern books usually located at the reverse of the title page, but can also sometimes be located at the end of the book. Also, a printer's mark or logotype -->

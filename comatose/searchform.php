@@ -1,3 +1,12 @@
+<?php
+/**
+ * Theme Search Form
+ *
+ * @package Comatose
+ * @subpackage v1
+ * @since Comatose v1.0
+ */
+ ?>
 <div class="searchform">
 	<form method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
 		<label for="s" class="assistive-text">Search</label>

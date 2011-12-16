@@ -1,3 +1,12 @@
+<?php
+/**
+ * Main index page.
+ *
+ * @package Comatose
+ * @subpackage v1
+ * @since Comatose v1.0
+ */
+ ?>
 <?php get_header(); ?>
 
 		<div id="primary">

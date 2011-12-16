@@ -2,9 +2,9 @@
 /**
  * The default template for displaying content
  *
- * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @package Comatose
+ * @subpackage v1
+ * @since Comatose v1.0
  */
 ?>
 

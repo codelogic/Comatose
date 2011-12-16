@@ -2,9 +2,9 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @package Comatose
+ * @subpackage v1
+ * @since Comatose v1.0
  */
 
 get_header(); ?>

@@ -4,9 +4,9 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @package Comatose
+ * @subpackage v1
+ * @since v1
  */
 ?><!DOCTYPE html>
 <!--[if IE 6]>

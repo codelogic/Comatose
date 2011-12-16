@@ -1,6 +1,10 @@
 <?php
 /**
  * Comatose - Sidebar
+ * 
+ * @package Comatose
+ * @subpackage v1
+ * @since Comatose v1.0
  */
 
 if ( 'content' != $current_layout ) :
