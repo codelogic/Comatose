@@ -1572,7 +1572,7 @@ p .alignnone {
   	http://www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
   	http://stackoverflow.com/questions/5303263/fix-font-size-issue-on-mobile-safari-iphone-where-text-is-rendered-inconsisten
   */
-  #main {
+  #main, #colophon {
     -webkit-text-size-adjust: 100%; } }
 #comments > ol {
   margin-left: 0;

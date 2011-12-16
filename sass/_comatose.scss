@@ -533,7 +533,7 @@ p .alignnone {
 		http://stackoverflow.com/questions/5303263/fix-font-size-issue-on-mobile-safari-iphone-where-text-is-rendered-inconsisten
 	*/
 	
-        #main { 
+        #main, #colophon { 
 			-webkit-text-size-adjust: 100%;
-		}               
+		}          
 }
