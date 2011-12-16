@@ -1605,6 +1605,10 @@ p .alignnone {
   width: 40px;
   height: auto;
   float: left; }
+#comments img.avatar {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
 #comments .nocomments {
   margin: 40px;
   display: block;

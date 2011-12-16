@@ -48,6 +48,10 @@
 		float: left;	
 	}
 	
+	img.avatar {
+		@include border-radius(5px);
+	}
+	
 	.comment-meta {
 	}
 	
