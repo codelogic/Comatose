@@ -97,11 +97,6 @@
 				}
 			}
 			
-			.edit-link {
-				&:before {
-				  content: ' | ';
-				}
-			}
 		}
 		
 		div {
@@ -142,6 +137,12 @@
 				font-size: $text-fontsize - 2;
 				color: $text-mute-color;
 				margin-bottom: 0;
+			}
+			
+			.edit-link {
+				&:before {
+				  content: '\2014 \00A0';
+				}
 			}
 		}
 		
