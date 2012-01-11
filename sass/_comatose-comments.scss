@@ -46,6 +46,7 @@
 		width: $text-lineheight * 2;
 		height: auto;
 		float: left;	
+		zoom: 100%; /* Note, we manualy request an image larger than the actual width and height, so even though the zoom is set, the image still scales down */
 	}
 	
 	img.avatar {

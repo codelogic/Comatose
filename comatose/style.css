@@ -1605,7 +1605,9 @@ p .alignnone {
 #comments .avatar {
   width: 40px;
   height: auto;
-  float: left; }
+  float: left;
+  zoom: 100%;
+  /* Note, we manualy request an image larger than the actual width and height, so even though the zoom is set, the image still scales down */ }
 #comments img.avatar {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
