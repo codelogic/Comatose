@@ -1557,7 +1557,8 @@ p .alignnone {
       display: inline-block;
       float: left; }
     #colophon .site-feed-links {
-      margin: 0;
+      margin: 0 auto;
+      max-width: 250px;
       display: block;
       text-align: center;
       position: relative; }
