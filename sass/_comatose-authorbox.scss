@@ -1,0 +1,52 @@
+#authorbox {
+	border-left: 5px solid $text-color;
+	margin-top: $text-lineheight * 2;
+	clear: both;
+	
+	padding-left: $text-lineheight;
+	padding-right: $text-lineheight;
+	margin-bottom: $text-lineheight;
+	
+	.avatar {
+		float: left;
+		width: $text-lineheight * 3;
+	}
+	
+	.authorbox-head h1 {
+		margin-top: 0;
+		margin-left: $text-lineheight;
+		display: inline-block;
+	}
+}
+
+.authorinfo-meta {
+	margin-left: $text-lineheight * 4;
+	max-width: 800 - $text-lineheight * 5;
+}
+
+.author-links {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	margin-left: $text-lineheight * 4;
+		
+	@include clearfix;
+	
+	li {
+		float: left;
+		margin-left: 5px;
+	}
+	
+	li:first-child {
+		margin-left: 0;
+	}
+	
+	li:after {
+		content: " | ";
+	}
+	
+	li:last-child:after {
+		content: none;
+	}
+
+}

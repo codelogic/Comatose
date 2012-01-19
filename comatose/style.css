@@ -1602,16 +1602,6 @@ p .alignnone {
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 20px; }
-#comments .avatar {
-  width: 40px;
-  height: auto;
-  float: left;
-  zoom: 100%;
-  /* Note, we manualy request an image larger than the actual width and height, so even though the zoom is set, the image still scales down */ }
-#comments img.avatar {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px; }
 #comments .nocomments {
   margin: 40px;
   display: block;
@@ -1631,6 +1621,18 @@ p .alignnone {
     margin-left: auto;
     margin-right: 0;
     text-decoration: none; }
+
+.avatar {
+  width: 40px;
+  height: auto;
+  float: left;
+  zoom: 100%;
+  /* Note, we manualy request an image larger than the actual width and height, so even though the zoom is set, the image still scales down */ }
+
+img.avatar {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
 
 #primary #respond {
   border-left: 5px solid #303030;
@@ -1700,3 +1702,45 @@ p .alignnone {
   #primary #commentform #submit {
     width: 30%;
     min-width: 120px; }
+
+#authorbox {
+  border-left: 5px solid #303030;
+  margin-top: 40px;
+  clear: both;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px; }
+  #authorbox .avatar {
+    float: left;
+    width: 60px; }
+  #authorbox .authorbox-head h1 {
+    margin-top: 0;
+    margin-left: 20px;
+    display: inline-block; }
+
+.authorinfo-meta {
+  margin-left: 80px;
+  max-width: 700px; }
+
+.author-links {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 80px;
+  zoom: 1; }
+  .author-links:before, .author-links:after {
+    display: table;
+    content: "";
+    zoom: 1;
+    *display: inline; }
+  .author-links:after {
+    clear: both; }
+  .author-links li {
+    float: left;
+    margin-left: 5px; }
+  .author-links li:first-child {
+    margin-left: 0; }
+  .author-links li:after {
+    content: " | "; }
+  .author-links li:last-child:after {
+    content: none; }
