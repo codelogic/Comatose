@@ -1,8 +1,24 @@
 /*
 	Author: 
 */
-
 $(document).ready(function() {
-	Cufon.replace('h1, h2, h3, h4, h5, h6, legend, nav a, .nocomments', { hover: true });
-	Cufon.now();
+	function rendersNiceFontface() {
+		//result = navigator.appVersion.indexOf("Win") != -1 
+		//	|| navigator.appVersion.indexOf("Android") != -1;
+		//return result;
+		return true;
+	}
+
+	var supportsNiceFontface = !rendersNiceFontface();
+
+	Modernizr.load([
+		{
+			test : Modernizr.fontface && Modernizr.canvas && supportsNiceFontface,
+			
+			nope : [ 'lib/cufon.js', '../font/BebasNeueRegular_400.font.js', 'cufon-polyfill.js' ]
+		}
+	])
+
+
+		
 });

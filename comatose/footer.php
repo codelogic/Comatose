@@ -33,7 +33,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
 	<script>!window.jQuery && document.write(unescape('%3Cscript src="<?php echo(get_template_directory_uri() . '/js/lib/jquery-1.6.3.js'); ?>"%3E%3C/script%3E'))</script>
 	<script src="<?php echo(get_template_directory_uri() . '/js/lib/cufon.js'); ?>"></script>
-	<script src="<?php echo(get_template_directory_uri() . '/js/lib/bebas-neue-400.font.js'); ?>"></script>
+	<script src="<?php echo(get_template_directory_uri() . '/font/bebas-neue-400.font.js'); ?>"></script>
 
 	
 	<!-- Below is your script file -->
