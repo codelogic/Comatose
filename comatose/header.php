@@ -54,6 +54,19 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 	<?php wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.0.6.js' ); ?>
+	
+	<?php 
+	$conditional_scripts = array(
+		'cufon' => get_stylesheet_directory_uri().'/js/lib/cufon.js',
+		'cufonPolyfill' => get_stylesheet_directory_uri().'/js/cufon-polyfill.js',
+		'BebasNeueRegular' => get_stylesheet_directory_uri().'/font/bebas-neue-400.font.js'
+	);
+
+	/* You could tie the variables to anything, since I assume you're just using
+	   an inline script. But including it as a "localization" of modernizr makes
+	   as much sense as anything. */
+	wp_localize_script( 'modernizr', 'modernizrScripts', $conditional_scripts );
+	?>
 
 <?php
 	/* We add some JavaScript to pages with the comment form
