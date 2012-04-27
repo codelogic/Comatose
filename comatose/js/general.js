@@ -18,7 +18,4 @@ $(document).ready(function() {
 			nope : [ 'lib/cufon.js', '../font/BebasNeueRegular_400.font.js', 'cufon-polyfill.js' ]
 		}
 	])
-
-
-		
 });
