@@ -57,7 +57,7 @@
 				woo_tumblog_content();
 			endif;
 			
-			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'comatose' ) );
+			the_content( __( 'Continue reading', 'comatose' ) );
 			?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'comatose' ) . '</span>', 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
