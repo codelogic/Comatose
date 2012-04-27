@@ -4,7 +4,7 @@ Theme URI:      http://www.paulrohde.com/
 Description:    Comatose
 Author:         Paul Rohde
 Author URI:     http://www.paulrohde.com
-Version:        0.1.0
+Version:        0.1.1a
 */
 /* 
 
@@ -1189,6 +1189,7 @@ input[type=submit].btn::-moz-focus-inner {
 
 h1, h2, h3, h4, h5, h6, legend, nav a, .nocomments {
   font-family: BebasNeueRegular, sans-serif;
+  font-weight: normal;
   text-shadow: none !important; }
 
 #page {
@@ -1431,12 +1432,22 @@ p .alignnone {
     display: block;
     vertical-align: center; }
 
+.more-link:before {
+  margin-right: 12px;
+  font-size: 24px;
+  position: relative;
+  top: 3px;
+  content: '\00A0\00bb';
+  /* http://css-tricks.com/snippets/html/glyphs/ */
+  color: #049cdb; }
+
 .nav-previous {
   float: left; }
   .nav-previous a:before {
     margin-right: 12px;
     font-size: 24px;
     float: left;
+    margin-top: -2px;
     content: '\00ab';
     /* http://css-tricks.com/snippets/html/glyphs/ */
     color: #049cdb; }
@@ -1450,6 +1461,7 @@ p .alignnone {
     margin-right: 12px;
     font-size: 24px;
     float: right;
+    margin-top: -2px;
     content: '\00A0\00bb';
     /* http://css-tricks.com/snippets/html/glyphs/ */
     color: #049cdb; }

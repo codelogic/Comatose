@@ -296,35 +296,45 @@ p .alignnone {
 }
 
 	
-	.nav-previous {
-		float: left;
-		
-		a:before {
-			margin-right: $text-fontsize;
-			font-size: $text-fontsize * 2;
-			float: left;
-			content: '\00ab'; /* http://css-tricks.com/snippets/html/glyphs/ */
-			color: $link-color;
-		}
-		> *:hover {
-			text-decoration: none;
-			color: $link-hover-color;
-		}
-	}
+.more-link:before {
+	margin-right: $text-fontsize;
+	font-size: $text-fontsize * 2;
+	position: relative;
+	top: 3px;
+	content: '\00A0\00bb'; /* http://css-tricks.com/snippets/html/glyphs/ */
+	color: $link-color;
+}
 	
-	.nav-next {
+.nav-previous {
+	float: left;
+	
+	a:before {
+		margin-right: $text-fontsize;
+		font-size: $text-fontsize * 2;
+		float: left;
+		margin-top: -2px;
+		content: '\00ab'; /* http://css-tricks.com/snippets/html/glyphs/ */
+		color: $link-color;
+	}
+	> *:hover {
+		text-decoration: none;
+		color: $link-hover-color;
+	}
+}
+	
+.nav-next {
+	float: right;
+	a:before {
+		margin-right: $text-fontsize;
+		font-size: $text-fontsize * 2;
 		float: right;
-		
-		a:before {
-			margin-right: $text-fontsize;
-			font-size: $text-fontsize * 2;
-			float: right;
-			content: '\00A0\00bb'; /* http://css-tricks.com/snippets/html/glyphs/ */
-			color: $link-color;
-		}
-		> *:hover {
-			text-decoration: none;
-			color: $link-hover-color;
+		margin-top: -2px;
+		content: '\00A0\00bb'; /* http://css-tricks.com/snippets/html/glyphs/ */
+		color: $link-color;
+	}
+	> *:hover {
+		text-decoration: none;
+		color: $link-hover-color;
 	}
 }
 
