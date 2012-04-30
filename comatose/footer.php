@@ -26,26 +26,15 @@
 		
 	</div><!-- page -->
 	
-	<?php wp_footer(); ?>
 	
 	<!-- Remote jQuery with local fallback; taken from HTML5 Boilerplate http://html5boilerplate.com -->
 	<!-- jQuery version might not be the latest; check jquery.com -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
-	<script>!window.jQuery && document.write(unescape('%3Cscript src="<?php echo(get_template_directory_uri() . '/js/lib/jquery-1.6.3.js'); ?>"%3E%3C/script%3E'))</script>
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="<?php echo(get_template_directory_uri() . '/js/lib/jquery-1.6.3.js'); ?>"%3E%3C/script%3E'))</script> -->
 	<!-- <script src="<?php echo(get_template_directory_uri() . '/js/lib/cufon.js'); ?>"></script>
 	<script src="<?php echo(get_template_directory_uri() . '/font/bebas-neue-400.font.js'); ?>"></script> -->
-
 	
-	<!-- Below is your script file -->
-	<script src="<?php echo(get_template_directory_uri() . '/js/general.js'); ?>"></script>
-
-	<!-- Change UAXXXXXXXX1 to be your site's ID -->
-	<!-- <script>
-    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
-    Modernizr.load({
-		load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    });
-	</script> -->
+	<?php wp_footer(); ?>
 	
 </body>
 </html>

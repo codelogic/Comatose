@@ -294,12 +294,12 @@ address {
 
 code, pre, kbd, tt, var {
   padding: 0 3px 2px;
-  @include monospace-font;
+  @include monospace-font(inherit, inherit, $text-lineheight);
   @include border-radius(4px);
   text-shadow: none;
 }
 
-code, var, kbd, tt {
+code, kbd, tt, var{
 	background-color: $code-background;
 	padding: 1px 3px;
 	line-height: 0;

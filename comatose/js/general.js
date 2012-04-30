@@ -1,18 +1,16 @@
-/*
-	Author: 
-*/
 $(document).ready(function() {
-	function rendersNiceFontface() {
-		//result = navigator.appVersion.indexOf("Win") != -1 
-		//	|| navigator.appVersion.indexOf("Android") != -1;
-		//return result;
-		return true;
+	function platformSupportsExternalFontFace() {
+	
+		var result = navigator.userAgent.match("WindowsPhone");
+		
+		return !result;
 	}
-	var supportsNiceFontface = !rendersNiceFontface();
+	var supportsExternalFontface = platformSupportsExternalFontFace();
+	
 	Modernizr.load([
 		{
-			test : Modernizr.fontface && Modernizr.canvas && supportsNiceFontface,
-			nope : [ 'lib/cufon.js', '../font/BebasNeueRegular_400.font.js', 'cufon-polyfill.js' ]
+			test : Modernizr.fontface && supportsExternalFontface,
+			nope : [ modernizrScripts.cufon, modernizrScripts.BebasNeueRegular, modernizrScripts.cufonPolyfill ]
 		}
 	])
 });

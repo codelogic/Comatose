@@ -390,15 +390,15 @@ address {
 code, pre, kbd, tt, var {
   padding: 0 3px 2px;
   font-family: Consolas, "Monaco", Courier New, monospace;
-  font-size: 12px;
-  font-weight: normal;
+  font-size: inherit;
+  font-weight: inherit;
   line-height: 20px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   text-shadow: none; }
 
-code, var, kbd, tt {
+code, kbd, tt, var {
   background-color: #f0f0f0;
   padding: 1px 3px;
   line-height: 0;
