@@ -4,7 +4,7 @@ Theme URI:      http://www.paulrohde.com/
 Description:    Comatose
 Author:         Paul Rohde
 Author URI:     http://www.paulrohde.com
-Version:        0.1.1a
+Version:        0.1.1
 */
 /* 
 
@@ -1191,6 +1191,9 @@ h1, h2, h3, h4, h5, h6, legend, nav a, .nocomments {
   font-family: BebasNeueRegular, sans-serif;
   font-weight: normal;
   text-shadow: none !important; }
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, legend a:hover, .nocomments a:hover {
+  text-decoration: none; }
 
 #page {
   min-width: 250px;

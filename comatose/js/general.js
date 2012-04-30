@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	function platformSupportsExternalFontFace() {
 	
-		var result = navigator.userAgent.match("WindowsPhone");
+		var result = navigator.userAgent.match(/Windows Phone OS 7/i);
 		
 		return !result;
 	}
