@@ -6,6 +6,12 @@ h1, h2, h3, h4, h5, h6, legend, nav a, .nocomments {
 	text-shadow: none !important;
 }
 
+h1, h2, h3, h4, h5, h6, legend, .nocomments {
+	a:hover {
+		text-decoration: none;
+	}
+}
+
 #page {
 	min-width: 250px;
 	overflow: hidden;
