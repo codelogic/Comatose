@@ -212,6 +212,15 @@ h1, h2, h3, h4, h5, h6, legend, .nocomments {
 	display: none;
 }
 
+.tag-links a {
+	border: 1px solid $tag-border;
+	background-color: $tag-background;
+		padding: 1px 4px;
+	text-shadow: none;
+	text-transform: capitalize;
+	@include border-radius(4px);
+}
+
 #main article header hgroup .entry-title {
 	margin-top: $text-lineheight;
 }
