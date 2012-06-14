@@ -1660,7 +1660,10 @@ p .alignnone {
 #comments .bypostauthor {
   background-color: #f8f8f8;
   border-left: 5px solid #303030;
-  padding-top: 20px; }
+  padding-top: 20px;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0; }
   #comments .bypostauthor .reply {
     padding-bottom: 20px; }
 
