@@ -57,6 +57,8 @@
 	<?php wp_deregister_script( 'jquery' );
 		wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
 		wp_enqueue_script( 'jquery' ); ?>
+	
+	<!-- <?php wp_enqueue_script( 'sisyphus', get_template_directory_uri() . '/js/lib/sisyphus.min.js' ); ?> -->
 	<?php wp_enqueue_script( 'general', get_template_directory_uri() . '/js/general.js' ); ?>
 	
 	<?php 
