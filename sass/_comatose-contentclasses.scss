@@ -1,0 +1,23 @@
+/* special generic (At least to this theme) class for use in content styling. */
+
+.code-box {
+	padding: 0 3px 2px;
+	@include monospace-font(inherit, inherit, $text-lineheight);
+	@include border-radius(4px);
+	text-shadow: none;
+	
+	background-color: $pre-background;
+	display: block;
+	padding: ($text-lineheight - 1) / 2;
+	margin: 0 0 $text-lineheight;
+	line-height: $text-lineheight;
+	font-size: 12px;
+	border: 1px solid $pre-border-color;
+	@include border-radius(3px);
+  
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	overflow:auto;
+	overflow-y:none;
+	text-shadow: none;
+}
