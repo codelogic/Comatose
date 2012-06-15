@@ -14,5 +14,7 @@ jQuery(document).ready(function() {
 		}
 	])
 
-	jQuery(commentform).sisyphus();
+	var cf = jQuery('#commentform')
+	if(cf.length > 0)
+		cf.sisyphus();
 });
