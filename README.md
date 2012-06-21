@@ -1,8 +1,8 @@
 # [Comatose](http://github.com/codelogic/comatose) - A Wordpress Theme
 
-**[Comatose](http://github.com/codelogic/comatose)** is a personal project by [Paul Rohde](http://www.paulrohde.com) to design and build a wordpress theme that is light, efficient, minimalist, and is desgned for the display of photography and code.
+**[Comatose](http://github.com/codelogic/comatose)** is an open source wordpress theme maintained by [Paul Rohde](http://www.paulrohde.com) and designed to be light, efficient, minimalist, and excel at the display of photography and code.
 
-http://www.paulrohde.com/tags/comatose
+http://www.paulrohde.com/development/comatose/
 
 ## The MIT License
 
